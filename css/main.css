@@ -202,6 +202,49 @@ header {
     border-radius: 10px;
 }
 
+/* SESIÓN DE USUARIO */
+
+#sesion-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+.nombre-usuario {
+    color: #5D4037;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+.boton-CerrarSesion {
+    background-color: #3B1F0F;
+
+    color: white;
+
+    padding: 15px 22px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+.boton-CerrarSesion:hover {
+    background-color: #5D4037;
+}
+
 
 /* PRINCIPAL */
 
