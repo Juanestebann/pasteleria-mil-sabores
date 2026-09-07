@@ -1,0 +1,244 @@
+/* CONTENEDOR PRINCIPAL */
+
+#catalogo-completo {
+    max-width: 1200px;
+
+    margin: 40px auto;
+
+    padding: 0px 20px;
+}
+
+
+/* SEPARACIÓN HEADER */
+
+header {
+    border-bottom-style: solid;
+
+    border-bottom-width: 3px;
+
+    border-bottom-color: #8B4513;
+}
+
+
+/* TÍTULO */
+
+#catalogo-completo h2 {
+    color: #5D4037;
+
+    font-size: 32px;
+
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+
+/* DESCRIPCIÓN */
+
+#catalogo-completo > p {
+    color: #8B5E3C;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    margin-top: 0px;
+
+    margin-bottom: 30px;
+}
+
+
+/* CATEGORÍAS */
+
+#categorias {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+
+#categorias a {
+    background-color: #FFF5E1;
+
+    color: #5D4037;
+
+    text-decoration: none;
+
+    padding: 10px 20px;
+
+    border-style: solid;
+
+    border-color: #FFC0CB;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+#categorias a:hover {
+    background-color: #8B4513;
+
+    color: white;
+
+    border-color: #8B4513;
+}
+
+
+#categorias .categoria-activa {
+    background-color: #3B1F0F;
+
+    color: white;
+
+    border-color: #3B1F0F;
+}
+
+
+/* PRODUCTOS */
+
+#productos-completos {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+}
+
+
+/* TARJETA PRODUCTO */
+
+.producto-completo {
+    background-color: white;
+
+    border-style: solid;
+
+    border-color: #FFC0CB;
+
+    border-radius: 10px;
+
+    padding: 10px;
+
+    text-align: center;
+}
+
+
+/* IMAGEN */
+
+.producto-completo img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+
+/* NOMBRE */
+
+.producto-completo h3 {
+    color: #5D4037;
+
+    font-size: 16px;
+
+    margin: 10px 0px;
+}
+
+
+/* PRECIO */
+
+.producto-completo p {
+    color: #D89B2B;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-top: 5px;
+
+    margin-bottom: 12px;
+}
+
+
+/* ACCIONES */
+
+.acciones-producto {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+
+/* BOTÓN AÑADIR */
+
+.acciones-producto button {
+    background-color: #D89B2B;
+
+    color: white;
+
+    border-style: none;
+
+    border-radius: 6px;
+
+    padding: 9px 15px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* BOTÓN VER DETALLE */
+
+.acciones-producto a {
+    background-color: #8B4513;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    padding: 9px 15px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* TABLET */
+
+@media(min-width:760px) {
+
+    #productos-completos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* COMPUTADOR */
+
+@media(min-width:1024px) {
+
+    #productos-completos {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}

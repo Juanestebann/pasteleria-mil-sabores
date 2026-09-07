@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Carrito | Pastelería Mil Sabores</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/main.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/carrito.css">
+
+    <script
+        src="../js/carrito.js"
+        defer>
+    </script>
+
+    <script
+        src="../js/sesion.js"
+        defer>
+    </script>
+
+</head>
+
+
+<body>
+
+    <!-- BARRA SUPERIOR -->
+
+    <section id="barra-superior">
+
+        <p>
+            📍 Av. San Martín 1234, Concepción
+        </p>
+
+        <p>
+            ◷ Lun - Dom: 08:00 - 20:00
+        </p>
+
+        <p>
+            Síguenos en: Instagram
+        </p>
+
+    </section>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <section id="marca">
+
+            <h1>
+                Pastelería Mil Sabores
+            </h1>
+
+            <p>
+                Cafetería & Pastelería
+            </p>
+
+        </section>
+
+
+        <nav id="menu">
+
+            <a href="../index.html">
+                Inicio
+            </a>
+
+            <a href="productos.html">
+                Carta
+            </a>
+
+            <a href="../index.html#promocion">
+                Promociones
+            </a>
+
+            <a href="nosotros.html">
+                Nosotros
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </nav>
+
+
+        <section id="acciones-header">
+
+            <section id="buscador">
+
+                <input
+                    type="text"
+                    placeholder="Buscar producto...">
+
+                <button type="button">
+                    🔍
+                </button>
+
+            </section>
+
+
+            <a
+                class="boton-icono"
+                href="carrito.html">
+
+                🛒
+
+            </a>
+
+
+            <section id="sesion-header">
+
+                <a
+                    class="boton-IniciarSesion"
+                    href="login.html">
+
+                    Iniciar Sesión
+
+                </a>
+
+            </section>
+
+        </section>
+
+    </header>
+
+
+    <!-- CARRITO -->
+
+    <main>
+
+        <section id="carrito-contenedor">
+
+
+            <h2>
+                Mi carrito de compras
+            </h2>
+
+
+            <!-- NOTIFICACIÓN -->
+
+            <section id="notificacion-carrito">
+            </section>
+
+
+            <!-- CONTENIDO PRINCIPAL -->
+
+            <section id="carrito-principal">
+
+
+                <!-- PRODUCTOS -->
+
+                <section id="lista-carrito">
+
+                </section>
+
+
+                <!-- RESUMEN -->
+
+                <aside id="resumen-carrito">
+
+
+                    <!-- TOTAL -->
+
+                    <section id="total-carrito">
+
+                        <h3>
+                            TOTAL:
+                        </h3>
+
+                        <p id="precio-total">
+                            $0
+                        </p>
+
+                    </section>
+
+
+                    <!-- CUPÓN -->
+
+                    <section id="cupon-carrito">
+
+                        <label for="codigo-cupon">
+
+                            Ingrese el cupón de descuento
+
+                        </label>
+
+
+                        <section id="entrada-cupon">
+
+                            <input
+                                type="text"
+                                id="codigo-cupon"
+                                placeholder="Cupón">
+
+
+                            <button
+                                id="aplicar-cupon"
+                                type="button">
+
+                                APLICAR
+
+                            </button>
+
+                        </section>
+
+
+                        <p id="mensaje-cupon">
+                        </p>
+
+                    </section>
+
+
+                    <!-- PAGAR -->
+
+                    <button
+                        id="boton-pagar"
+                        type="button">
+
+                        PAGAR
+
+                    </button>
+
+                </aside>
+
+            </section>
+
+
+            <p id="carrito-vacio">
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <section id="footer-contenido">
+
+
+            <section class="footer-seccion">
+
+                <h2>
+                    Pastelería Mil Sabores
+                </h2>
+
+                <p>
+                    Tradición, calidad y dulces momentos
+                    para compartir en cada ocasión.
+                </p>
+
+            </section>
+
+
+            <section class="footer-seccion">
+
+                <h3>
+                    Enlaces rápidos
+                </h3>
+
+                <a href="productos.html">
+                    - Nuestra Carta
+                </a>
+
+                <a href="nosotros.html">
+                    - Nosotros
+                </a>
+
+                <a href="contacto.html">
+                    - Contacto
+                </a>
+
+                <a href="carrito.html">
+                    - Carrito
+                </a>
+
+            </section>
+
+
+            <section class="footer-seccion">
+
+                <h3>
+                    Contacto
+                </h3>
+
+                <p>
+                    📍 Av. San Martín 1234, Concepción
+                </p>
+
+                <p>
+                    ☎ +56 9 1234 5678
+                </p>
+
+                <p>
+                    📷 @pasteleriamilsabores
+                </p>
+
+            </section>
+
+        </section>
+
+
+        <section id="footer-derechos">
+
+            <p>
+                © 2026 Pastelería Mil Sabores.
+                Todos los derechos reservados.
+            </p>
+
+        </section>
+
+    </footer>
+
+</body>
+
+</html>

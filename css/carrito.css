@@ -1,0 +1,360 @@
+/* CONTENEDOR GENERAL */
+
+#carrito-contenedor {
+    max-width: 1100px;
+
+    margin: 50px auto;
+
+    padding: 0px 25px;
+}
+
+
+#carrito-contenedor h2 {
+    color: #5D4037;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+
+/* NOTIFICACIÓN */
+
+#notificacion-carrito {
+    display: none;
+
+    background-color: #FFF5E1;
+
+    color: #5D4037;
+
+    border: 1px solid #D89B2B;
+
+    border-radius: 8px;
+
+    padding: 14px 18px;
+
+    margin-bottom: 30px;
+
+    font-weight: bold;
+
+    width: 350px;
+
+    max-width: 100%;
+}
+
+/* ESTRUCTURA */
+
+#carrito-principal {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 40px;
+
+    align-items: start;
+}
+
+
+/* LISTA */
+
+#lista-carrito {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+/* PRODUCTO */
+
+.producto-carrito {
+    display: grid;
+
+    grid-template-columns: 140px 1fr 160px;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+
+/* IMAGEN */
+
+.producto-carrito img {
+    width: 140px;
+
+    height: 110px;
+
+    object-fit: contain;
+
+    border: none;
+}
+
+
+/* INFORMACIÓN */
+
+.informacion-carrito h3 {
+    color: #5D4037;
+
+    margin-top: 0px;
+
+    margin-bottom: 8px;
+
+    font-size: 18px;
+}
+
+
+.informacion-carrito p {
+    color: #8B5E3C;
+
+    font-size: 13px;
+
+    margin: 0px;
+
+    line-height: 1.4;
+}
+
+
+/* PRECIO */
+
+.control-producto {
+    text-align: center;
+}
+
+
+.precio-producto-carrito {
+    color: #5D4037;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+
+/* CANTIDAD */
+
+.control-cantidad {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.control-cantidad button {
+    width: 28px;
+
+    height: 28px;
+
+    border: 1px solid #5D4037;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    color: #5D4037;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    padding: 0px;
+}
+
+
+.control-cantidad span {
+    min-width: 45px;
+
+    padding: 4px 10px;
+
+    border: 1px solid #8B5E3C;
+
+    background-color: white;
+}
+
+
+/* RESUMEN */
+
+#resumen-carrito {
+    border-left: 2px solid #5D4037;
+
+    padding-left: 25px;
+
+    min-height: 300px;
+}
+
+
+/* TOTAL */
+
+#total-carrito {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-top: 1px solid #8B5E3C;
+
+    padding-top: 12px;
+}
+
+
+#total-carrito h3 {
+    color: #5D4037;
+
+    font-size: 18px;
+
+    margin: 0px;
+}
+
+
+#precio-total {
+    color: #5D4037;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin: 0px;
+}
+
+
+/* CUPÓN */
+
+#cupon-carrito {
+    margin-top: 70px;
+}
+
+
+#cupon-carrito label {
+    display: block;
+
+    color: #8B5E3C;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+}
+
+
+#entrada-cupon {
+    display: flex;
+
+    gap: 5px;
+}
+
+
+#entrada-cupon input {
+    width: 100%;
+
+    padding: 9px;
+
+    border: 1px solid #C89B6D;
+}
+
+
+#entrada-cupon button {
+    background-color: #FFF5E1;
+
+    color: #5D4037;
+
+    border: 1px solid #8B5E3C;
+
+    padding: 8px 12px;
+
+    cursor: pointer;
+}
+
+
+#mensaje-cupon {
+    color: #8B4513;
+
+    font-size: 12px;
+}
+
+
+/* PAGAR */
+
+#boton-pagar {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    background-color: #D89B2B;
+
+    color: white;
+
+    border: none;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* VACÍO */
+
+#carrito-vacio {
+    text-align: center;
+
+    color: #8B4513;
+
+    font-weight: bold;
+
+    margin-top: 30px;
+}
+
+
+/* TABLET */
+
+@media(max-width:900px) {
+
+    #carrito-principal {
+        grid-template-columns: 1fr;
+    }
+
+
+    #resumen-carrito {
+        border-left: none;
+
+        border-top: 2px solid #5D4037;
+
+        padding-left: 0px;
+
+        padding-top: 25px;
+    }
+
+}
+
+
+/* CELULAR */
+
+@media(max-width:600px) {
+
+    .producto-carrito {
+        grid-template-columns: 100px 1fr;
+    }
+
+
+    .producto-carrito img {
+        width: 100px;
+
+        height: 90px;
+    }
+
+
+    .control-producto {
+        grid-column: 1 / 3;
+    }
+
+}
