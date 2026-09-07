@@ -1,0 +1,484 @@
+/* HEADER */
+
+header {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.10);
+}
+
+
+/* SOBRE NOSOTROS */
+
+#sobre-nosotros {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 80px;
+
+    padding: 85px 100px 70px 100px;
+
+    background-color: #FFF9EC;
+
+    border-top: 2px solid #D89B2B;
+
+    border-bottom: 2px solid #D89B2B;
+
+}
+
+
+#sobre-nosotros-texto {
+    width: 45%;
+
+    max-width: 650px;
+}
+
+
+#sobre-nosotros-texto h2 {
+    font-size: 36px;
+
+    margin-top: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+#sobre-nosotros-texto h2::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+
+    height: 4px;
+
+    background-color: #D89B2B;
+
+    margin-top: 10px;
+
+    border-radius: 5px;
+}
+
+
+#sobre-nosotros-texto p {
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+.texto-dorado {
+    color: #D89B2B;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+#sobre-nosotros-imagen {
+    width: 45%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+#sobre-nosotros-imagen img {
+    width: 100%;
+
+    max-width: 470px;
+
+    height: auto;
+
+    border: 2px solid #D89B2B;
+
+    border-radius: 15px;
+
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.20);
+}
+
+
+/* HISTORIA */
+
+#historia {
+    padding: 60px 100px;
+
+    text-align: center;
+
+    background-color: white;
+
+    border-bottom: 2px solid #D89B2B;
+}
+
+
+#historia article {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+
+#historia h2 {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+
+#historia h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 3px;
+
+    background-color: #D89B2B;
+
+    margin: 10px auto 0px;
+
+    border-radius: 5px;
+}
+
+
+#historia p {
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* MISIÓN */
+
+#mision {
+    padding: 60px 100px;
+
+    text-align: center;
+
+    border-bottom: 2px solid #D89B2B;
+}
+
+
+.tarjeta-mision {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    background-color: white;
+
+    border: 2px solid #D89B2B;
+
+    border-radius: 15px;
+
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+#mision h2 {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+
+#mision h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 3px;
+
+    background-color: #D89B2B;
+
+    margin: 10px auto 0px;
+
+    border-radius: 5px;
+}
+
+
+#mision p {
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* VALORES */
+
+#valores {
+    padding: 60px 80px;
+
+    background-color: white;
+
+    text-align: center;
+
+    border-bottom: 2px solid #D89B2B;
+}
+
+
+#valores h2 {
+    font-size: 32px;
+
+    margin-bottom: 40px;
+}
+
+
+#valores h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 3px;
+
+    background-color: #D89B2B;
+
+    margin: 10px auto 0px;
+
+    border-radius: 5px;
+}
+
+
+#lista-valores {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+
+.valor {
+    width: 280px;
+
+    padding: 30px;
+
+    background-color: #FFF5E1;
+
+    border: 2px solid #D89B2B;
+
+    border-radius: 15px;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.10);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.valor:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.18);
+}
+
+
+.valor h3 {
+    color: #D89B2B;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+
+.valor p {
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+
+/* COMPROMISO */
+
+#compromiso {
+    background-color: #3B1F0F;
+
+    color: white;
+
+    padding: 60px 100px;
+
+    text-align: center;
+
+    border-bottom: 2px solid #D89B2B;
+}
+
+
+#compromiso article {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+
+#compromiso h2 {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+
+#compromiso h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 3px;
+
+    background-color: #D89B2B;
+
+    margin: 10px auto 0px;
+
+    border-radius: 5px;
+}
+
+
+#compromiso p {
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #2B160C;
+
+    color: white;
+
+    border-top: 3px solid #D89B2B;
+}
+
+
+#footer-contenido {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 50px 80px;
+}
+
+
+.footer-columna {
+    width: 33%;
+}
+
+
+.footer-columna h3 {
+    color: #D89B2B;
+
+    margin-bottom: 15px;
+}
+
+
+.footer-columna p {
+    line-height: 1.6;
+}
+
+
+.footer-columna a {
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-bottom: 10px;
+}
+
+
+.footer-columna a:hover {
+    color: #D89B2B;
+}
+
+
+#footer-derechos {
+    border-top: 1px solid #D89B2B;
+
+    text-align: center;
+
+    padding: 15px;
+}
+
+
+#footer-derechos p {
+    margin: 0px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    #sobre-nosotros {
+        flex-direction: column;
+
+        gap: 40px;
+
+        padding: 40px 30px;
+    }
+
+
+    #sobre-nosotros-texto {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    #sobre-nosotros-imagen {
+        width: 100%;
+    }
+
+
+    #sobre-nosotros-imagen img {
+        max-width: 500px;
+    }
+
+
+    #lista-valores {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .valor {
+        width: 80%;
+    }
+
+
+    #historia,
+    #mision,
+    #valores,
+    #compromiso {
+        padding: 40px 30px;
+    }
+
+
+    #footer-contenido {
+        flex-direction: column;
+
+        padding: 40px 30px;
+    }
+
+
+    .footer-columna {
+        width: 100%;
+    }
+
+}

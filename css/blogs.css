@@ -1,0 +1,348 @@
+/* HEADER */
+
+header {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.10);
+}
+
+
+/* PRESENTACIÓN */
+
+#blog-presentacion {
+    padding: 70px 100px;
+
+    text-align: center;
+
+    background-color: #FFF9EC;
+
+    border-top: 2px solid #D89B2B;
+
+    border-bottom: 2px solid #D89B2B;
+}
+
+
+#blog-presentacion article {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+#blog-presentacion h2 {
+    font-size: 38px;
+
+    margin-top: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+#blog-presentacion h2::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+
+    height: 4px;
+
+    background-color: #D89B2B;
+
+    margin: 10px auto 0px;
+
+    border-radius: 5px;
+}
+
+
+#blog-presentacion p {
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+.texto-dorado {
+    color: #D89B2B;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* LISTA DE NOTICIAS */
+
+#lista-noticias {
+    padding: 70px 100px;
+
+    background-color: white;
+}
+
+
+/* TARJETA DE NOTICIA */
+
+.noticia {
+    display: flex;
+
+    align-items: stretch;
+
+    max-width: 1150px;
+
+    margin: 0px auto 50px auto;
+
+    background-color: #FFF5E1;
+
+    border: 2px solid #D89B2B;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.noticia:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0px 12px 22px rgba(0, 0, 0, 0.18);
+}
+
+
+/* IMAGEN */
+
+.noticia-imagen {
+    width: 45%;
+
+    min-height: 330px;
+}
+
+
+.noticia-imagen img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* CONTENIDO */
+
+.noticia-contenido {
+    width: 55%;
+
+    padding: 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.noticia-categoria {
+    color: #D89B2B;
+
+    font-weight: bold;
+
+    margin-top: 0px;
+
+    margin-bottom: 5px;
+}
+
+
+.noticia-fecha {
+    color: #7A655A;
+
+    font-size: 14px;
+
+    margin-top: 0px;
+
+    margin-bottom: 15px;
+}
+
+
+.noticia-contenido h2 {
+    font-size: 30px;
+
+    margin-top: 0px;
+
+    margin-bottom: 20px;
+}
+
+
+.noticia-contenido h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 3px;
+
+    background-color: #D89B2B;
+
+    margin-top: 10px;
+
+    border-radius: 5px;
+}
+
+
+.noticia-contenido p {
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+/* BOTÓN */
+
+.boton-noticia {
+    display: inline-block;
+
+    width: fit-content;
+
+    margin-top: 10px;
+
+    padding: 13px 22px;
+
+    background-color: #3B1F0F;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+.boton-noticia:hover {
+    background-color: #5D4037;
+
+    transform: translateY(-3px);
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #2B160C;
+
+    color: white;
+
+    border-top: 3px solid #D89B2B;
+}
+
+
+#footer-contenido {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 50px 80px;
+}
+
+
+.footer-columna {
+    width: 33%;
+}
+
+
+.footer-columna h3 {
+    color: #D89B2B;
+
+    margin-bottom: 15px;
+}
+
+
+.footer-columna p {
+    line-height: 1.6;
+}
+
+
+.footer-columna a {
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-bottom: 10px;
+}
+
+
+.footer-columna a:hover {
+    color: #D89B2B;
+}
+
+
+#footer-derechos {
+    border-top: 1px solid #D89B2B;
+
+    text-align: center;
+
+    padding: 15px;
+}
+
+
+#footer-derechos p {
+    margin: 0px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    #blog-presentacion {
+        padding: 50px 30px;
+    }
+
+
+    #lista-noticias {
+        padding: 50px 30px;
+    }
+
+
+    .noticia {
+        flex-direction: column;
+    }
+
+
+    .noticia-imagen {
+        width: 100%;
+
+        min-height: 250px;
+    }
+
+
+    .noticia-contenido {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 30px;
+    }
+
+
+    #footer-contenido {
+        flex-direction: column;
+
+        padding: 40px 30px;
+    }
+
+
+    .footer-columna {
+        width: 100%;
+    }
+
+}

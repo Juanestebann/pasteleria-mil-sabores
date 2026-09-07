@@ -1,0 +1,366 @@
+/* HEADER */
+
+header {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.10);
+}
+
+
+/* PRESENTACIÓN DEL DETALLE */
+
+#detalle-presentacion {
+    padding: 70px 100px 50px 100px;
+
+    text-align: center;
+
+    background-color: #FFF9EC;
+
+    border-top: 2px solid #D89B2B;
+}
+
+
+#detalle-presentacion article {
+    max-width: 950px;
+
+    margin: auto;
+}
+
+
+.detalle-categoria {
+    color: #D89B2B;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.detalle-fecha {
+    color: #7A655A;
+
+    font-size: 14px;
+
+    margin-top: 0px;
+
+    margin-bottom: 20px;
+}
+
+
+#detalle-presentacion h2 {
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    margin-top: 0px;
+
+    margin-bottom: 20px;
+}
+
+
+#detalle-presentacion h2::after {
+    content: "";
+
+    display: block;
+
+    width: 80px;
+
+    height: 4px;
+
+    background-color: #D89B2B;
+
+    margin: 15px auto 0px;
+
+    border-radius: 5px;
+}
+
+
+.detalle-introduccion {
+    max-width: 800px;
+
+    margin: 25px auto 0px auto;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+}
+
+
+/* IMAGEN PRINCIPAL */
+
+#detalle-imagen {
+    padding: 0px 100px 60px 100px;
+
+    background-color: #FFF9EC;
+
+    display: flex;
+
+    justify-content: center;
+
+    border-bottom: 2px solid #D89B2B;
+}
+
+
+#detalle-imagen img {
+    width: 100%;
+
+    max-width: 1050px;
+
+    max-height: 520px;
+
+    object-fit: cover;
+
+    border: 2px solid #D89B2B;
+
+    border-radius: 15px;
+
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+/* CONTENIDO DEL ARTÍCULO */
+
+#detalle-contenido {
+    padding: 70px 100px;
+
+    background-color: white;
+
+    border-bottom: 2px solid #D89B2B;
+}
+
+
+#detalle-contenido article {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+#detalle-contenido h2 {
+    font-size: 28px;
+
+    margin-top: 45px;
+
+    margin-bottom: 18px;
+}
+
+
+#detalle-contenido h2:first-child {
+    margin-top: 0px;
+}
+
+
+#detalle-contenido h2::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+
+    height: 3px;
+
+    background-color: #D89B2B;
+
+    margin-top: 10px;
+
+    border-radius: 5px;
+}
+
+
+#detalle-contenido p {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* NAVEGACIÓN DEL DETALLE */
+
+#detalle-navegacion {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 40px 100px;
+
+    background-color: #FFF5E1;
+
+    border-bottom: 2px solid #D89B2B;
+}
+
+
+.boton-volver,
+.boton-fuente {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+
+.boton-volver {
+    background-color: #3B1F0F;
+
+    color: white;
+}
+
+
+.boton-fuente {
+    background-color: white;
+
+    color: #3B1F0F;
+
+    border: 2px solid #D89B2B;
+}
+
+
+.boton-volver:hover {
+    background-color: #5D4037;
+
+    transform: translateY(-3px);
+}
+
+
+.boton-fuente:hover {
+    background-color: #FFF9EC;
+
+    transform: translateY(-3px);
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #2B160C;
+
+    color: white;
+
+    border-top: 3px solid #D89B2B;
+}
+
+
+#footer-contenido {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 50px 80px;
+}
+
+
+.footer-columna {
+    width: 33%;
+}
+
+
+.footer-columna h3 {
+    color: #D89B2B;
+
+    margin-bottom: 15px;
+}
+
+
+.footer-columna p {
+    line-height: 1.6;
+}
+
+
+.footer-columna a {
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-bottom: 10px;
+}
+
+
+.footer-columna a:hover {
+    color: #D89B2B;
+}
+
+
+#footer-derechos {
+    border-top: 1px solid #D89B2B;
+
+    text-align: center;
+
+    padding: 15px;
+}
+
+
+#footer-derechos p {
+    margin: 0px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    #detalle-presentacion {
+        padding: 50px 30px 40px 30px;
+    }
+
+
+    #detalle-presentacion h2 {
+        font-size: 32px;
+    }
+
+
+    #detalle-imagen {
+        padding: 0px 30px 40px 30px;
+    }
+
+
+    #detalle-imagen img {
+        max-height: none;
+    }
+
+
+    #detalle-contenido {
+        padding: 50px 30px;
+    }
+
+
+    #detalle-navegacion {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 35px 30px;
+    }
+
+
+    .boton-volver,
+    .boton-fuente {
+        text-align: center;
+    }
+
+
+    #footer-contenido {
+        flex-direction: column;
+
+        padding: 40px 30px;
+    }
+
+
+    .footer-columna {
+        width: 100%;
+    }
+
+}
