@@ -15,6 +15,8 @@
 
     <!-- JAVASCRIPT DEL LOGIN -->
     <script src="../js/login.js" defer></script>
+    <!-- JAVASCRIPT DE SESION -->
+    <script src="../js/sesion.js" defer></script>
 </head>
 
 <body>
@@ -52,10 +54,7 @@
 
             <!-- BUSCADOR -->
             <section id="buscador">
-                <input
-                    type="text"
-                    placeholder="Buscar producto..."
-                >
+                <input type="text" placeholder="Buscar producto...">
 
                 <button type="button">
                     🔍
@@ -64,21 +63,19 @@
 
 
             <!-- CARRITO -->
-            <a
-                class="boton-icono"
-                href="carrito.html"
-            >
+            <a class="boton-icono" href="carrito.html">
                 🛒
             </a>
 
 
             <!-- BOTÓN LOGIN -->
-            <a
-                class="boton-IniciarSesion"
-                href="login.html"
-            >
-                Iniciar Sesión
-            </a>
+            <section id="sesion-header">
+
+                <a class="boton-IniciarSesion" href="login.html">
+                    Iniciar Sesión
+                </a>
+
+            </section>
 
         </section>
 
@@ -94,10 +91,7 @@
             <!-- LADO IZQUIERDO -->
             <article id="login-imagen">
 
-                <img
-                    src="../img/login1.png"
-                    alt="Pastelería Mil Sabores"
-                >
+                <img src="../img/login1.png" alt="Pastelería Mil Sabores">
 
             </article>
 
@@ -124,10 +118,7 @@
 
 
                 <!-- FORMULARIO -->
-                <form
-                    id="formulario-login"
-                    novalidate
-                >
+                <form id="formulario-login" novalidate>
 
                     <!-- CORREO -->
                     <section class="campo-formulario">
@@ -136,17 +127,9 @@
                             Correo electrónico
                         </label>
 
-                        <input
-                            type="email"
-                            id="correo"
-                            name="correo"
-                            placeholder="tu@email.com"
-                        >
+                        <input type="email" id="correo" name="correo" placeholder="tu@email.com">
 
-                        <p
-                            class="mensaje-error"
-                            id="error-correo"
-                        ></p>
+                        <p class="mensaje-error" id="error-correo"></p>
 
                     </section>
 
@@ -158,33 +141,19 @@
                             Contraseña
                         </label>
 
-                        <input
-                            type="password"
-                            id="contrasena"
-                            name="contrasena"
-                            placeholder="Tu contraseña"
-                        >
+                        <input type="password" id="contrasena" name="contrasena" placeholder="Tu contraseña">
 
-                        <p
-                            class="mensaje-error"
-                            id="error-contrasena"
-                        ></p>
+                        <p class="mensaje-error" id="error-contrasena"></p>
 
                     </section>
 
 
                     <!-- ERROR GENERAL LOGIN -->
-                    <p
-                        id="error-login"
-                        class="mensaje-error"
-                    ></p>
+                    <p id="error-login" class="mensaje-error"></p>
 
 
                     <!-- BOTÓN -->
-                    <button
-                        id="boton-login"
-                        type="submit"
-                    >
+                    <button id="boton-login" type="submit">
                         Iniciar sesión
                     </button>
 

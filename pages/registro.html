@@ -59,10 +59,7 @@
             <!-- BUSCADOR -->
             <section id="buscador">
 
-                <input
-                    type="text"
-                    placeholder="Buscar producto..."
-                >
+                <input type="text" placeholder="Buscar producto...">
 
                 <button type="button">
                     🔍
@@ -72,21 +69,19 @@
 
 
             <!-- CARRITO -->
-            <a
-                class="boton-icono"
-                href="carrito.html"
-            >
+            <a class="boton-icono" href="carrito.html">
                 🛒
             </a>
 
 
             <!-- LOGIN -->
-            <a
-                class="boton-IniciarSesion"
-                href="login.html"
-            >
-                Iniciar Sesión
-            </a>
+            <section id="sesion-header">
+
+                <a class="boton-IniciarSesion" href="login.html">
+                    Iniciar Sesión
+                </a>
+
+            </section>
 
         </section>
 
@@ -117,10 +112,7 @@
 
 
             <!-- FORMULARIO -->
-            <form
-                id="formulario-registro"
-                novalidate
-            >
+            <form id="formulario-registro" novalidate>
 
 
                 <!-- RUN Y NOMBRE -->
@@ -132,17 +124,9 @@
                             RUN
                         </label>
 
-                        <input
-                            type="text"
-                            id="run"
-                            name="run"
-                            placeholder="Ej: 19011022K"
-                        >
+                        <input type="text" id="run" name="run" placeholder="Ej: 19011022K">
 
-                        <p
-                            class="mensaje-error"
-                            id="error-run"
-                        ></p>
+                        <p class="mensaje-error" id="error-run"></p>
 
                     </section>
 
@@ -153,17 +137,9 @@
                             Nombre
                         </label>
 
-                        <input
-                            type="text"
-                            id="nombre"
-                            name="nombre"
-                            placeholder="Tu nombre"
-                        >
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
 
-                        <p
-                            class="mensaje-error"
-                            id="error-nombre"
-                        ></p>
+                        <p class="mensaje-error" id="error-nombre"></p>
 
                     </section>
 
@@ -177,17 +153,9 @@
                         Apellidos
                     </label>
 
-                    <input
-                        type="text"
-                        id="apellidos"
-                        name="apellidos"
-                        placeholder="Tus apellidos"
-                    >
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos">
 
-                    <p
-                        class="mensaje-error"
-                        id="error-apellidos"
-                    ></p>
+                    <p class="mensaje-error" id="error-apellidos"></p>
 
                 </section>
 
@@ -201,17 +169,9 @@
                             Correo electrónico
                         </label>
 
-                        <input
-                            type="email"
-                            id="correo"
-                            name="correo"
-                            placeholder="tu@email.com"
-                        >
+                        <input type="email" id="correo" name="correo" placeholder="tu@email.com">
 
-                        <p
-                            class="mensaje-error"
-                            id="error-correo"
-                        ></p>
+                        <p class="mensaje-error" id="error-correo"></p>
 
                     </section>
 
@@ -222,16 +182,9 @@
                             Fecha de nacimiento
                         </label>
 
-                        <input
-                            type="date"
-                            id="fechaNacimiento"
-                            name="fechaNacimiento"
-                        >
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento">
 
-                        <p
-                            class="mensaje-error"
-                            id="error-fecha"
-                        ></p>
+                        <p class="mensaje-error" id="error-fecha"></p>
 
                     </section>
 
@@ -247,10 +200,7 @@
                             Región
                         </label>
 
-                        <select
-                            id="region"
-                            name="region"
-                        >
+                        <select id="region" name="region">
 
                             <option value="">
                                 Seleccione una región
@@ -258,10 +208,7 @@
 
                         </select>
 
-                        <p
-                            class="mensaje-error"
-                            id="error-region"
-                        ></p>
+                        <p class="mensaje-error" id="error-region"></p>
 
                     </section>
 
@@ -272,10 +219,7 @@
                             Comuna
                         </label>
 
-                        <select
-                            id="comuna"
-                            name="comuna"
-                        >
+                        <select id="comuna" name="comuna">
 
                             <option value="">
                                 Seleccione una comuna
@@ -283,10 +227,7 @@
 
                         </select>
 
-                        <p
-                            class="mensaje-error"
-                            id="error-comuna"
-                        ></p>
+                        <p class="mensaje-error" id="error-comuna"></p>
 
                     </section>
 
@@ -300,17 +241,9 @@
                         Dirección
                     </label>
 
-                    <input
-                        type="text"
-                        id="direccion"
-                        name="direccion"
-                        placeholder="Ej: Av. Los Carrera 123"
-                    >
+                    <input type="text" id="direccion" name="direccion" placeholder="Ej: Av. Los Carrera 123">
 
-                    <p
-                        class="mensaje-error"
-                        id="error-direccion"
-                    ></p>
+                    <p class="mensaje-error" id="error-direccion"></p>
 
                 </section>
 
@@ -324,17 +257,9 @@
                             Contraseña
                         </label>
 
-                        <input
-                            type="password"
-                            id="contrasena"
-                            name="contrasena"
-                            placeholder="Crea una contraseña"
-                        >
+                        <input type="password" id="contrasena" name="contrasena" placeholder="Crea una contraseña">
 
-                        <p
-                            class="mensaje-error"
-                            id="error-contrasena"
-                        ></p>
+                        <p class="mensaje-error" id="error-contrasena"></p>
 
                     </section>
 
@@ -345,17 +270,10 @@
                             Confirmar contraseña
                         </label>
 
-                        <input
-                            type="password"
-                            id="confirmarContrasena"
-                            name="confirmarContrasena"
-                            placeholder="Repite tu contraseña"
-                        >
+                        <input type="password" id="confirmarContrasena" name="confirmarContrasena"
+                            placeholder="Repite tu contraseña">
 
-                        <p
-                            class="mensaje-error"
-                            id="error-confirmar-contrasena"
-                        ></p>
+                        <p class="mensaje-error" id="error-confirmar-contrasena"></p>
 
                     </section>
 
@@ -363,10 +281,7 @@
 
 
                 <!-- BOTÓN -->
-                <button
-                    id="boton-registro"
-                    type="submit"
-                >
+                <button id="boton-registro" type="submit">
                     Crear cuenta
                 </button>
 
