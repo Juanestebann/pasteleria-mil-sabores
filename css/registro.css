@@ -1,0 +1,383 @@
+/* =========================================
+   REGISTRO - PASTELERÍA MIL SABORES
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+
+#registro-principal {
+    min-height: 900px;
+    padding: 60px 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff5e1;
+}
+
+
+/* =========================================
+   TARJETA DEL REGISTRO
+========================================= */
+
+#registro-contenedor {
+    width: 100%;
+    max-width: 920px;
+
+    background-color: #ffffff;
+
+    padding: 55px 60px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(59, 31, 15, 0.18);
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+#registro-encabezado {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.registro-bienvenida {
+    display: block;
+
+    color: #d89b2b;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+#registro-encabezado h2 {
+    color: #3b1f0f;
+
+    font-size: 36px;
+
+    margin: 0 0 10px 0;
+}
+
+#registro-encabezado p {
+    max-width: 540px;
+
+    margin: 0 auto;
+
+    color: #6d5d55;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+#registro-encabezado::after {
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 3px;
+
+    margin: 18px auto 0;
+
+    background-color: #d89b2b;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+#formulario-registro {
+    width: 100%;
+}
+
+
+/* DOS COLUMNAS */
+
+.fila-formulario {
+    display: flex;
+
+    width: 100%;
+
+    gap: 22px;
+}
+
+
+/* CAMPO */
+
+.campo-formulario {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+
+/* LABEL */
+
+.campo-formulario label {
+    margin-bottom: 7px;
+
+    color: #3b1f0f;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* INPUTS Y SELECTS */
+
+.campo-formulario input,
+.campo-formulario select {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: 1px solid #d8ccc3;
+
+    border-radius: 8px;
+
+    background-color: #ffffff;
+
+    color: #3b1f0f;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+/* PLACEHOLDER */
+
+.campo-formulario input::placeholder {
+    color: #a89c95;
+}
+
+
+/* FOCUS */
+
+.campo-formulario input:focus,
+.campo-formulario select:focus {
+    border-color: #d89b2b;
+
+    box-shadow: 0 0 0 3px rgba(216, 155, 43, 0.15);
+}
+
+
+/* =========================================
+   MENSAJES DE ERROR
+========================================= */
+
+.mensaje-error {
+    min-height: 14px;
+
+    margin-top: 5px;
+    margin-bottom: 0;
+
+    color: #c0392b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+#boton-registro {
+    width: 100%;
+    height: 52px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #d89b2b;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#boton-registro:hover {
+    background-color: #b97818;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   ENLACE AL LOGIN
+========================================= */
+
+#registro-login {
+    position: relative;
+
+    margin-top: 30px;
+
+    text-align: center;
+}
+
+#registro-login::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #eaded5;
+}
+
+#registro-login p {
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-block;
+
+    margin: 0;
+
+    padding: 0 12px;
+
+    background-color: #ffffff;
+
+    color: #665750;
+
+    font-size: 14px;
+}
+
+#registro-login a {
+    margin-left: 5px;
+
+    color: #8b4513;
+
+    font-weight: bold;
+
+    text-decoration: underline;
+}
+
+#registro-login a:hover {
+    color: #d89b2b;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    #registro-principal {
+        padding: 50px 20px;
+    }
+
+    #registro-contenedor {
+        max-width: 760px;
+
+        padding: 45px 40px;
+    }
+
+    #registro-encabezado h2 {
+        font-size: 32px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 700px) {
+
+    #registro-principal {
+        padding: 35px 15px;
+    }
+
+    #registro-contenedor {
+        max-width: 500px;
+
+        padding: 40px 28px;
+    }
+
+    .fila-formulario {
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+    #registro-encabezado {
+        margin-bottom: 30px;
+    }
+
+    #registro-encabezado h2 {
+        font-size: 28px;
+    }
+
+    #registro-encabezado p {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================
+   CELULAR PEQUEÑO
+========================================= */
+
+@media (max-width: 420px) {
+
+    #registro-contenedor {
+        padding: 35px 20px;
+    }
+
+    .campo-formulario input,
+    .campo-formulario select {
+        height: 46px;
+    }
+
+    #boton-registro {
+        height: 48px;
+    }
+}
+#mensaje-registro {
+    margin-top: 15px;
+
+    text-align: center;
+
+    color: #2e7d32;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}

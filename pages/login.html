@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar Sesión | Pastelería Mil Sabores</title>
+
+    <!-- CSS GENERAL DEL PROYECTO -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- CSS DEL LOGIN -->
+    <link rel="stylesheet" href="../css/login.css">
+
+    <!-- JAVASCRIPT DEL LOGIN -->
+    <script src="../js/login.js" defer></script>
+</head>
+
+<body>
+
+    <!-- BARRA SUPERIOR -->
+    <section id="barra-superior">
+        <p>📍 Av. San Martín 1234, Concepción</p>
+        <p>◷ Lun - Dom: 08:00 - 20:00</p>
+        <p>Síguenos en: Instagram</p>
+    </section>
+
+
+    <!-- ENCABEZADO -->
+    <header>
+
+        <!-- MARCA -->
+        <section id="marca">
+            <h1>Pastelería Mil Sabores</h1>
+            <p>Cafetería & Pastelería</p>
+        </section>
+
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav id="menu">
+            <a href="../index.html">Inicio</a>
+            <a href="productos.html">Carta</a>
+            <a href="../index.html#promocion">Promociones</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+
+        <!-- ACCIONES DEL HEADER -->
+        <section id="acciones-header">
+
+            <!-- BUSCADOR -->
+            <section id="buscador">
+                <input
+                    type="text"
+                    placeholder="Buscar producto..."
+                >
+
+                <button type="button">
+                    🔍
+                </button>
+            </section>
+
+
+            <!-- CARRITO -->
+            <a
+                class="boton-icono"
+                href="carrito.html"
+            >
+                🛒
+            </a>
+
+
+            <!-- BOTÓN LOGIN -->
+            <a
+                class="boton-IniciarSesion"
+                href="login.html"
+            >
+                Iniciar Sesión
+            </a>
+
+        </section>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="login-principal">
+
+        <section id="login-contenedor">
+
+
+            <!-- LADO IZQUIERDO -->
+            <article id="login-imagen">
+
+                <img
+                    src="../img/login1.png"
+                    alt="Pastelería Mil Sabores"
+                >
+
+            </article>
+
+
+            <!-- LADO DERECHO -->
+            <article id="login-formulario">
+
+
+                <!-- ENCABEZADO LOGIN -->
+                <section id="login-encabezado">
+
+                    <span class="login-bienvenida">
+                        Bienvenido de nuevo
+                    </span>
+
+                    <h2>Iniciar sesión</h2>
+
+                    <p>
+                        Accede a tu cuenta y sigue disfrutando
+                        de los sabores que hacen especial cada momento.
+                    </p>
+
+                </section>
+
+
+                <!-- FORMULARIO -->
+                <form
+                    id="formulario-login"
+                    novalidate
+                >
+
+                    <!-- CORREO -->
+                    <section class="campo-formulario">
+
+                        <label for="correo">
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="tu@email.com"
+                        >
+
+                        <p
+                            class="mensaje-error"
+                            id="error-correo"
+                        ></p>
+
+                    </section>
+
+
+                    <!-- CONTRASEÑA -->
+                    <section class="campo-formulario">
+
+                        <label for="contrasena">
+                            Contraseña
+                        </label>
+
+                        <input
+                            type="password"
+                            id="contrasena"
+                            name="contrasena"
+                            placeholder="Tu contraseña"
+                        >
+
+                        <p
+                            class="mensaje-error"
+                            id="error-contrasena"
+                        ></p>
+
+                    </section>
+
+
+                    <!-- ERROR GENERAL LOGIN -->
+                    <p
+                        id="error-login"
+                        class="mensaje-error"
+                    ></p>
+
+
+                    <!-- BOTÓN -->
+                    <button
+                        id="boton-login"
+                        type="submit"
+                    >
+                        Iniciar sesión
+                    </button>
+
+                </form>
+
+
+                <!-- REGISTRO -->
+                <section id="login-registro">
+
+                    <p>
+                        ¿No tienes una cuenta?
+
+                        <a href="registro.html">
+                            Regístrate
+                        </a>
+                    </p>
+
+                </section>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <section id="footer-contenido">
+
+
+            <!-- INFORMACIÓN -->
+            <section class="footer-seccion">
+
+                <h2>
+                    Pastelería Mil Sabores
+                </h2>
+
+                <p>
+                    Tradición, calidad y dulces momentos
+                    para compartir en cada ocasión.
+                </p>
+
+            </section>
+
+
+            <!-- ENLACES -->
+            <section class="footer-seccion">
+
+                <h3>
+                    Enlaces rápidos
+                </h3>
+
+                <a href="productos.html">
+                    - Nuestra Carta
+                </a>
+
+                <a href="../index.html#promocion">
+                    - Promociones
+                </a>
+
+                <a href="nosotros.html">
+                    - Nosotros
+                </a>
+
+                <a href="contacto.html">
+                    - Contacto
+                </a>
+
+                <a href="carrito.html">
+                    - Carrito
+                </a>
+
+            </section>
+
+
+            <!-- CONTACTO -->
+            <section class="footer-seccion">
+
+                <h3>
+                    Contacto
+                </h3>
+
+                <p>
+                    📍 Av. San Martín 1234, Concepción
+                </p>
+
+                <p>
+                    ☎ +56 9 1234 5678
+                </p>
+
+                <p>
+                    📷 @pasteleriamilsabores
+                </p>
+
+            </section>
+
+        </section>
+
+
+        <!-- DERECHOS -->
+        <section id="footer-derechos">
+
+            <p>
+                © 2026 Pastelería Mil Sabores.
+                Todos los derechos reservados.
+            </p>
+
+        </section>
+
+    </footer>
+
+</body>
+
+</html>

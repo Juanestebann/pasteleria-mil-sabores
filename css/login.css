@@ -1,0 +1,498 @@
+/* =========================================
+   LOGIN - PASTELERÍA MIL SABORES
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+
+#login-principal {
+    background-color: #fff5e1;
+
+    min-height: 720px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 45px 40px;
+}
+
+/* =========================================
+   CONTENEDOR DEL LOGIN
+========================================= */
+
+#login-contenedor {
+    width: 100%;
+
+    max-width: 1250px;
+
+    display: flex;
+
+    background-color: #ffffff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(59, 31, 15, 0.18);
+}
+
+
+/* =========================================
+   LADO IZQUIERDO - IMAGEN
+========================================= */
+
+#login-imagen {
+    width: 50%;
+
+    min-height: 610px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+#login-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+}
+
+
+/* CAPA OSCURA SOBRE LA IMAGEN */
+
+#login-imagen::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(59, 31, 15, 0.15),
+        rgba(59, 31, 15, 0.60)
+    );
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   TEXTO SOBRE LA IMAGEN
+========================================= */
+
+#login-imagen-texto {
+    position: absolute;
+
+    top: 55px;
+    left: 45px;
+
+    width: 70%;
+
+    color: #ffffff;
+
+    z-index: 2;
+}
+
+
+#login-imagen-texto h2 {
+    font-size: 31px;
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    margin-bottom: 18px;
+}
+
+
+#login-imagen-texto h2::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 2px;
+
+    background-color: #ffffff;
+
+    margin-top: 18px;
+}
+
+
+#login-imagen-texto p {
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    max-width: 260px;
+}
+
+
+/* =========================================
+   LADO DERECHO - FORMULARIO
+========================================= */
+
+#login-formulario {
+    width: 50%;
+
+    padding: 70px 65px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+#login-encabezado {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#login-encabezado h2 {
+    color: #3b1f0f;
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+}
+
+
+#login-encabezado p {
+    color: #6d5d55;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    max-width: 430px;
+
+    margin: 0 auto;
+}
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+#formulario-login {
+    width: 100%;
+}
+
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 18px;
+}
+
+
+/* LABEL */
+
+.campo-formulario label {
+    color: #3b1f0f;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+
+/* INPUT */
+
+.campo-formulario input {
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 16px;
+
+    border: 1px solid #d5c8be;
+
+    border-radius: 7px;
+
+    background-color: #ffffff;
+
+    color: #3b1f0f;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+.campo-formulario input::placeholder {
+    color: #a69991;
+}
+
+
+/* INPUT SELECCIONADO */
+
+.campo-formulario input:focus {
+    border-color: #d89b2b;
+
+    box-shadow: 0 0 0 3px rgba(216, 155, 43, 0.15);
+}
+
+
+/* =========================================
+   MENSAJE ERROR
+========================================= */
+
+.mensaje-error {
+    color: #c0392b;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+
+    min-height: 14px;
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+#boton-login {
+    width: 100%;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #d89b2b;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 8px;
+}
+
+
+#boton-login:hover {
+    background-color: #b97818;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   REGISTRO
+========================================= */
+
+#login-registro {
+    margin-top: 28px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+#login-registro p {
+    color: #665750;
+
+    font-size: 14px;
+
+    background-color: #ffffff;
+
+    display: inline-block;
+
+    padding: 0 12px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+#login-registro a {
+    color: #8b4513;
+
+    font-weight: bold;
+
+    margin-left: 5px;
+
+    text-decoration: underline;
+}
+
+
+#login-registro a:hover {
+    color: #d89b2b;
+}
+
+
+/* LÍNEA DETRÁS DE "REGÍSTRATE" */
+
+#login-registro::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #eaded5;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    #login-contenedor {
+        max-width: 760px;
+    }
+
+
+    #login-imagen {
+        width: 43%;
+    }
+
+
+    #login-formulario {
+        width: 57%;
+
+        padding: 45px 35px;
+    }
+
+
+    #login-imagen-texto {
+        top: 40px;
+        left: 30px;
+
+        width: 80%;
+    }
+
+
+    #login-imagen-texto h2 {
+        font-size: 26px;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 700px) {
+
+    #login-principal {
+        padding: 35px 15px;
+    }
+
+
+    #login-contenedor {
+        flex-direction: column;
+
+        max-width: 480px;
+    }
+
+
+    #login-imagen {
+        width: 100%;
+
+        min-height: 250px;
+    }
+
+
+    #login-formulario {
+        width: 100%;
+
+        padding: 40px 30px;
+    }
+
+
+    #login-imagen-texto {
+        top: 35px;
+        left: 30px;
+    }
+
+
+    #login-imagen-texto h2 {
+        font-size: 25px;
+    }
+
+
+    #login-encabezado h2 {
+        font-size: 28px;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR PEQUEÑO
+========================================= */
+
+@media (max-width: 420px) {
+
+    #login-principal {
+        padding: 25px 10px;
+    }
+
+
+    #login-formulario {
+        padding: 35px 22px;
+    }
+
+
+    #login-imagen {
+        min-height: 220px;
+    }
+
+}
+.login-bienvenida {
+    display: block;
+
+    color: #d89b2b;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
