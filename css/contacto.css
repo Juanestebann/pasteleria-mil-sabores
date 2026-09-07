@@ -242,6 +242,32 @@ header {
 }
 
 
+/* MENSAJES DE ERROR */
+
+.mensaje-error {
+    color: #B00020;
+
+    font-size: 14px;
+
+    margin-top: 6px;
+
+    margin-bottom: 0px;
+
+    min-height: 18px;
+}
+
+
+/* MENSAJE DE ÉXITO */
+
+#mensaje-exito {
+    color: #2E7D32;
+
+    font-weight: bold;
+
+    margin-top: 20px;
+}
+
+
 #formulario-contacto button {
     background-color: #3B1F0F;
 

@@ -4,29 +4,20 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Productos | Pastelería Mil Sabores</title>
 
-    <link
-        rel="stylesheet"
-        href="../css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 
-    <link
-        rel="stylesheet"
-        href="../css/productos.css">
+    <link rel="stylesheet" href="../css/productos.css">
 
-    <script
-        src="../js/productos.js"
-        defer>
+    <script src="../js/productos.js" defer>
     </script>
 
-    <script
-        src="../js/sesion.js"
-        defer>
+    <script src="../js/sesion.js" defer>
     </script>
+
 </head>
 
 
@@ -72,8 +63,8 @@
                 Promociones
             </a>
 
-            
-            <a href="blogs.html">Blogs</a>
+            <a href="blogs.html">
+                Blogs
             </a>
 
             <a href="nosotros.html">
@@ -91,10 +82,7 @@
 
             <section id="buscador">
 
-                <input
-                    type="text"
-                    id="buscar-producto"
-                    placeholder="Buscar producto...">
+                <input type="text" id="buscar-producto" placeholder="Buscar producto...">
 
                 <button type="button">
                     🔍
@@ -103,9 +91,7 @@
             </section>
 
 
-            <a
-                class="boton-icono"
-                href="carrito.html">
+            <a class="boton-icono" href="carrito.html">
 
                 🛒
 
@@ -114,9 +100,7 @@
 
             <section id="sesion-header">
 
-                <a
-                    class="boton-IniciarSesion"
-                    href="login.html">
+                <a class="boton-IniciarSesion" href="login.html">
 
                     Iniciar Sesión
 
@@ -148,82 +132,63 @@
 
             <nav id="categorias">
 
-                <a
-                    href="#"
-                    class="categoria-activa"
-                    data-categoria="todos">
+                <a href="#" class="categoria-activa" data-categoria="todos">
 
                     Todos
 
                 </a>
 
 
-                <a
-                    href="#"
-                    data-categoria="cuadradas">
+                <a href="#" data-categoria="cuadradas">
 
                     Tortas Cuadradas
 
                 </a>
 
 
-                <a
-                    href="#"
-                    data-categoria="circulares">
+                <a href="#" data-categoria="circulares">
 
                     Tortas Circulares
 
                 </a>
 
 
-                <a
-                    href="#"
-                    data-categoria="individuales">
+                <a href="#" data-categoria="individuales">
 
                     Postres Individuales
 
                 </a>
 
 
-                <a
-                    href="#"
-                    data-categoria="sin-azucar">
+                <a href="#" data-categoria="sin-azucar">
 
                     Sin Azúcar
 
                 </a>
 
 
-                <a
-                    href="#"
-                    data-categoria="tradicional">
+                <a href="#" data-categoria="tradicional">
 
                     Tradicional
 
                 </a>
 
 
-                <a
-                    href="#"
-                    data-categoria="sin-gluten">
+                <a href="#" data-categoria="sin-gluten">
 
                     Sin Gluten
 
                 </a>
 
 
-                <a
-                    href="#"
-                    data-categoria="veganos">
+                <a href="#" data-categoria="veganos">
 
                     Veganos
 
                 </a>
 
 
-                <a
-                    href="#"
-                    data-categoria="especiales">
+                <a href="#" data-categoria="especiales">
 
                     Tortas Especiales
 
@@ -232,617 +197,14 @@
             </nav>
 
 
-            <!-- PRODUCTOS -->
+            <!--
+                LOS PRODUCTOS YA NO SE ESCRIBEN AQUÍ.
+
+                JavaScript carga los productos desde
+                el arreglo datosProductos.
+            -->
 
             <section id="productos-completos">
-
-
-                <!-- TC001 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="cuadradas"
-                    data-codigo="TC001">
-
-                    <img
-                        src="../img/Torta Cuadrada de Chocolate.png"
-                        alt="Torta Cuadrada de Chocolate">
-
-                    <h3>
-                        Torta Cuadrada de Chocolate
-                    </h3>
-
-                    <p>
-                        $45.000 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=TC001">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
-
-
-                <!-- TC002 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="cuadradas"
-                    data-codigo="TC002">
-
-                    <img
-                        src="../img/Torta Cuadrada de Frutas.png"
-                        alt="Torta Cuadrada de Frutas">
-
-                    <h3>
-                        Torta Cuadrada de Frutas
-                    </h3>
-
-                    <p>
-                        $50.000 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=TC002">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
-
-
-                <!-- TT001 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="circulares"
-                    data-codigo="TT001">
-
-                    <img
-                        src="../img/Torta Circular de Vainilla.png"
-                        alt="Torta Circular de Vainilla">
-
-                    <h3>
-                        Torta Circular de Vainilla
-                    </h3>
-
-                    <p>
-                        $40.000 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=TT001">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
-
-
-                <!-- TT002 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="circulares"
-                    data-codigo="TT002">
-
-                    <img
-                        src="../img/Torta Circular de Manjar.png"
-                        alt="Torta Circular de Manjar">
-
-                    <h3>
-                        Torta Circular de Manjar
-                    </h3>
-
-                    <p>
-                        $42.000 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=TT002">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
-
-
-                <!-- PI001 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="individuales"
-                    data-codigo="PI001">
-
-                    <img
-                        src="../img/Mousse de Chocolate.png"
-                        alt="Mousse de Chocolate">
-
-                    <h3>
-                        Mousse de Chocolate
-                    </h3>
-
-                    <p>
-                        $5.000 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=PI001">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
-
-
-                <!-- PI002 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="individuales"
-                    data-codigo="PI002">
-
-                    <img
-                        src="../img/Tiramisú Clásico.png"
-                        alt="Tiramisú Clásico">
-
-                    <h3>
-                        Tiramisú Clásico
-                    </h3>
-
-                    <p>
-                        $5.500 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=PI002">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
-
-
-                <!-- PSA001 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="sin-azucar"
-                    data-codigo="PSA001">
-
-                    <img
-                        src="../img/Torta Sin Azúcar de Naranja.png"
-                        alt="Torta Sin Azúcar de Naranja">
-
-                    <h3>
-                        Torta Sin Azúcar de Naranja
-                    </h3>
-
-                    <p>
-                        $48.000 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=PSA001">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
-
-
-                <!-- PSA002 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="sin-azucar"
-                    data-codigo="PSA002">
-
-                    <img
-                        src="../img/Cheesecake Sin Azúcar.png"
-                        alt="Cheesecake Sin Azúcar">
-
-                    <h3>
-                        Cheesecake Sin Azúcar
-                    </h3>
-
-                    <p>
-                        $47.000 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=PSA002">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
-
-
-                <!-- PT001 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="tradicional"
-                    data-codigo="PT001">
-
-                    <img
-                        src="../img/Empanada de Manzana.png"
-                        alt="Empanada de Manzana">
-
-                    <h3>
-                        Empanada de Manzana
-                    </h3>
-
-                    <p>
-                        $3.000 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=PT001">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
-
-
-                <!-- PT002 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="tradicional"
-                    data-codigo="PT002">
-
-                    <img
-                        src="../img/Tarta de Santiago.png"
-                        alt="Tarta de Santiago">
-
-                    <h3>
-                        Tarta de Santiago
-                    </h3>
-
-                    <p>
-                        $6.000 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=PT002">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
-
-
-                <!-- PG001 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="sin-gluten"
-                    data-codigo="PG001">
-
-                    <img
-                        src="../img/Brownie Sin Gluten.png"
-                        alt="Brownie Sin Gluten">
-
-                    <h3>
-                        Brownie Sin Gluten
-                    </h3>
-
-                    <p>
-                        $4.000 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=PG001">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
-
-
-                <!-- PG002 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="sin-gluten"
-                    data-codigo="PG002">
-
-                    <img
-                        src="../img/Pan Sin Gluten.png"
-                        alt="Pan Sin Gluten">
-
-                    <h3>
-                        Pan Sin Gluten
-                    </h3>
-
-                    <p>
-                        $3.500 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=PG002">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
-
-
-                <!-- PV001 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="veganos"
-                    data-codigo="PV001">
-
-                    <img
-                        src="../img/Torta Vegana de Chocolate.png"
-                        alt="Torta Vegana de Chocolate">
-
-                    <h3>
-                        Torta Vegana de Chocolate
-                    </h3>
-
-                    <p>
-                        $50.000 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=PV001">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
-
-
-                <!-- PV002 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="veganos"
-                    data-codigo="PV002">
-
-                    <img
-                        src="../img/Galletas Veganas de Avena.png"
-                        alt="Galletas Veganas de Avena">
-
-                    <h3>
-                        Galletas Veganas de Avena
-                    </h3>
-
-                    <p>
-                        $4.500 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=PV002">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
-
-
-                <!-- TE001 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="especiales"
-                    data-codigo="TE001">
-
-                    <img
-                        src="../img/Torta Especial de Cumpleaños.png"
-                        alt="Torta Especial de Cumpleaños">
-
-                    <h3>
-                        Torta Especial de Cumpleaños
-                    </h3>
-
-                    <p>
-                        $55.000 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=TE001">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
-
-
-                <!-- TE002 -->
-
-                <article
-                    class="producto-completo"
-                    data-categoria="especiales"
-                    data-codigo="TE002">
-
-                    <img
-                        src="../img/Torta Especial de Boda.png"
-                        alt="Torta Especial de Boda">
-
-                    <h3>
-                        Torta Especial de Boda
-                    </h3>
-
-                    <p>
-                        $60.000 CLP
-                    </p>
-
-                    <section class="acciones-producto">
-
-                        <button
-                            class="boton-agregar"
-                            type="button">
-
-                            Añadir
-
-                        </button>
-
-                        <a href="detalle-producto.html?id=TE002">
-                            Ver detalle
-                        </a>
-
-                    </section>
-
-                </article>
 
             </section>
 

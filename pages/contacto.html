@@ -9,7 +9,9 @@
 
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/contacto.css">
+
     <script src="../js/sesion.js" defer></script>
+    <script src="../js/contacto.js" defer></script>
 </head>
 
 <body>
@@ -67,9 +69,11 @@
 
             </section>
 
+
             <a class="boton-icono" href="carrito.html">
                 🛒
             </a>
+
 
             <section id="sesion-header">
 
@@ -120,6 +124,7 @@
             <article id="informacion-contacto">
 
                 <h2>Información de contacto</h2>
+
 
                 <section class="dato-contacto">
 
@@ -183,48 +188,63 @@
 
                 <h2>Envíanos un mensaje</h2>
 
-                <form>
 
+                <form id="formulario" novalidate>
+
+
+                    <!-- NOMBRE -->
                     <section class="campo-formulario">
 
                         <label for="nombre">
                             Nombre completo
                         </label>
 
-                        <input type="text" id="nombre" name="nombre">
+                        <input type="text" id="nombre" name="nombre" maxlength="100" placeholder="Ingrese su nombre">
+
+                        <p class="mensaje-error" id="error-nombre"></p>
 
                     </section>
 
 
+                    <!-- CORREO -->
                     <section class="campo-formulario">
 
                         <label for="correo">
                             Correo electrónico
                         </label>
 
-                        <input type="email" id="correo" name="correo">
+                        <input type="email" id="correo" name="correo" maxlength="100" placeholder="ejemplo@gmail.com">
+
+                        <p class="mensaje-error" id="error-correo"></p>
 
                     </section>
 
 
+                    <!-- ASUNTO -->
                     <section class="campo-formulario">
 
                         <label for="asunto">
                             Asunto
                         </label>
 
-                        <input type="text" id="asunto" name="asunto">
+                        <input type="text" id="asunto" name="asunto" maxlength="100" placeholder="Ingrese el asunto">
+
+                        <p class="mensaje-error" id="error-asunto"></p>
 
                     </section>
 
 
+                    <!-- MENSAJE -->
                     <section class="campo-formulario">
 
                         <label for="mensaje">
                             Mensaje
                         </label>
 
-                        <textarea id="mensaje" name="mensaje"></textarea>
+                        <textarea id="mensaje" name="mensaje" maxlength="500"
+                            placeholder="Escriba su mensaje"></textarea>
+
+                        <p class="mensaje-error" id="error-mensaje"></p>
 
                     </section>
 
@@ -232,6 +252,9 @@
                     <button type="submit">
                         Enviar mensaje
                     </button>
+
+
+                    <p id="mensaje-exito"></p>
 
                 </form>
 
