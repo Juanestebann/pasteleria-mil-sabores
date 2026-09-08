@@ -138,42 +138,50 @@ header {
 
 #buscador {
     display: flex;
-
     align-items: center;
 }
 
-
 #buscador input {
     width: 170px;
+    height: 40px;
 
-    padding: 10px 15px;
+    padding: 0 15px;
 
-    border-style: solid;
+    border: 1px solid #B0BEC5;
+    border-right: none;
 
-    border-color: #B0BEC5;
-
-    border-radius: 8px 0px 0px 8px;
+    border-radius: 8px 0 0 8px;
 
     font-size: 14px;
+    outline: none;
 }
-
 
 #buscador button {
+    width: 48px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
     background-color: #3B1F0F;
 
-    color: white;
+    border: 1px solid #3B1F0F;
+    border-radius: 0 8px 8px 0;
 
-    padding: 10px 15px;
-
-    border-style: solid;
-
-    border-color: #3B1F0F;
-
-    border-radius: 0px 8px 8px 0px;
-
-    font-size: 14px;
+    cursor: pointer;
 }
 
+#buscador button i {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+#buscador button:hover {
+    background-color: #5D4037;
+}
 
 /* CARRITO */
 

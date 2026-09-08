@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ver Usuario | Pastelería Mil Sabores</title>
+
+    <!-- CSS BASE DEL PANEL -->
+    <link rel="stylesheet" href="../../css/admin.css">
+
+    <!-- CSS DE VER USUARIO -->
+    <link rel="stylesheet" href="../../css/admin-ver-usuario.css">
+
+    <!-- ICONOS -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- JS -->
+    <script src="../../js/admin/ver-usuario.js" defer></script>
+</head>
+
+<body>
+
+    <section id="admin-aplicacion">
+
+
+        <!-- =========================================
+             MENÚ LATERAL
+        ========================================== -->
+
+        <aside id="menu-admin">
+
+            <section id="marca-admin">
+
+                <h1>
+                    Pastelería
+                    <span>Mil Sabores</span>
+                </h1>
+
+                <p>
+                    Panel de administración
+                </p>
+
+            </section>
+
+
+            <nav id="navegacion-admin">
+
+                <a href="../index.html">
+                    Inicio
+                </a>
+
+                <a href="../productos/productos.html">
+                    Productos
+                </a>
+
+                <a
+                    href="usuarios.html"
+                    class="opcion-activa"
+                >
+                    Usuarios
+                </a>
+
+                <a href="../../index.html">
+                    Volver a la tienda
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- =========================================
+             CONTENIDO
+        ========================================== -->
+
+        <section id="contenido-admin">
+
+
+            <!-- =====================================
+                 CABECERA
+            ====================================== -->
+
+            <header id="cabecera-admin">
+
+                <section>
+
+                    <h2>
+                        Panel de administración
+                    </h2>
+
+                    <p>
+                        Bienvenido,
+                        <span id="nombre-usuario-admin"></span>
+                    </p>
+
+                </section>
+
+
+                <section id="sesion-admin">
+
+                    <span id="perfil-usuario-admin"></span>
+
+                    <button
+                        id="cerrar-sesion-admin"
+                        type="button"
+                    >
+                        Cerrar Sesión
+                    </button>
+
+                </section>
+
+            </header>
+
+
+            <!-- =====================================
+                 PRINCIPAL
+            ====================================== -->
+
+            <main id="principal-admin">
+
+
+                <!-- PRESENTACIÓN -->
+                <section id="ver-usuario-presentacion">
+
+                    <section>
+
+                        <h2>
+                            Información del usuario
+                        </h2>
+
+                        <p>
+                            Consulta los datos registrados
+                            del usuario seleccionado.
+                        </p>
+
+                    </section>
+
+
+                    <a
+                        id="boton-volver"
+                        href="usuarios.html"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Volver
+                    </a>
+
+                </section>
+
+
+                <!-- =================================
+                     TARJETA USUARIO
+                ================================== -->
+
+                <section id="tarjeta-ver-usuario">
+
+
+                    <!-- PERFIL -->
+                    <section id="perfil-ver-usuario">
+
+                        <section id="avatar-usuario">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </section>
+
+
+                        <section>
+
+                            <h2 id="nombre-usuario">
+                                Usuario
+                            </h2>
+
+                            <span id="rol-usuario">
+                                Cliente
+                            </span>
+
+                        </section>
+
+                    </section>
+
+
+                    <!-- =================================
+                         DATOS
+                    ================================== -->
+
+                    <section id="datos-usuario">
+
+
+                        <!-- RUN -->
+                        <section class="dato-usuario">
+
+                            <span class="dato-etiqueta">
+                                RUN
+                            </span>
+
+                            <p id="dato-run">
+                                -
+                            </p>
+
+                        </section>
+
+
+                        <!-- CORREO -->
+                        <section class="dato-usuario">
+
+                            <span class="dato-etiqueta">
+                                Correo electrónico
+                            </span>
+
+                            <p id="dato-correo">
+                                -
+                            </p>
+
+                        </section>
+
+
+                        <!-- FECHA -->
+                        <section class="dato-usuario">
+
+                            <span class="dato-etiqueta">
+                                Fecha de nacimiento
+                            </span>
+
+                            <p id="dato-fecha">
+                                -
+                            </p>
+
+                        </section>
+
+
+                        <!-- ROL -->
+                        <section class="dato-usuario">
+
+                            <span class="dato-etiqueta">
+                                Rol
+                            </span>
+
+                            <p id="dato-rol">
+                                -
+                            </p>
+
+                        </section>
+
+
+                        <!-- REGIÓN -->
+                        <section class="dato-usuario">
+
+                            <span class="dato-etiqueta">
+                                Región
+                            </span>
+
+                            <p id="dato-region">
+                                -
+                            </p>
+
+                        </section>
+
+
+                        <!-- COMUNA -->
+                        <section class="dato-usuario">
+
+                            <span class="dato-etiqueta">
+                                Comuna
+                            </span>
+
+                            <p id="dato-comuna">
+                                -
+                            </p>
+
+                        </section>
+
+
+                        <!-- DIRECCIÓN -->
+                        <section class="dato-usuario dato-ancho-completo">
+
+                            <span class="dato-etiqueta">
+                                Dirección
+                            </span>
+
+                            <p id="dato-direccion">
+                                -
+                            </p>
+
+                        </section>
+
+                    </section>
+
+
+                    <!-- =================================
+                         ACCIONES
+                    ================================== -->
+
+                    <section id="acciones-ver-usuario">
+
+                        <a
+                            id="boton-editar-usuario"
+                            href="#"
+                        >
+                            <i class="fa-solid fa-pen"></i>
+                            Editar usuario
+                        </a>
+
+                    </section>
+
+                </section>
+
+
+                <!-- =================================
+                     ERROR
+                ================================== -->
+
+                <section id="mensaje-usuario-no-encontrado">
+
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <h3>
+                        Usuario no encontrado
+                    </h3>
+
+                    <p>
+                        No fue posible encontrar la información
+                        del usuario solicitado.
+                    </p>
+
+                    <a href="usuarios.html">
+                        Volver al listado
+                    </a>
+
+                </section>
+
+            </main>
+
+        </section>
+
+    </section>
+
+</body>
+
+</html>

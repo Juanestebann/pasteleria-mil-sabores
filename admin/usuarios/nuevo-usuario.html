@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nuevo Usuario | Pastelería Mil Sabores</title>
+
+    <!-- CSS BASE DEL PANEL -->
+    <link rel="stylesheet" href="../../css/admin.css">
+
+    <!-- CSS NUEVO USUARIO -->
+    <link rel="stylesheet" href="../../css/admin-nuevo-usuario.css">
+
+    <!-- ICONOS -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- JS -->
+    <script src="../../js/admin/nuevo-usuario.js" defer></script>
+</head>
+
+<body>
+
+    <section id="admin-aplicacion">
+
+        <!-- MENÚ LATERAL -->
+        <aside id="menu-admin">
+
+            <section id="marca-admin">
+
+                <h1>
+                    Pastelería
+                    <span>Mil Sabores</span>
+                </h1>
+
+                <p>
+                    Panel de administración
+                </p>
+
+            </section>
+
+
+            <nav id="navegacion-admin">
+
+                <a href="../index.html">
+                    Inicio
+                </a>
+
+                <a href="../productos/productos.html">
+                    Productos
+                </a>
+
+                <a
+                    href="usuarios.html"
+                    class="opcion-activa"
+                >
+                    Usuarios
+                </a>
+
+                <a href="../../index.html">
+                    Volver a la tienda
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- CONTENIDO -->
+        <section id="contenido-admin">
+
+            <!-- CABECERA -->
+            <header id="cabecera-admin">
+
+                <section>
+
+                    <h2>
+                        Panel de administración
+                    </h2>
+
+                    <p>
+                        Bienvenido,
+                        <span id="nombre-usuario-admin"></span>
+                    </p>
+
+                </section>
+
+
+                <section id="sesion-admin">
+
+                    <span id="perfil-usuario-admin"></span>
+
+                    <button
+                        id="cerrar-sesion-admin"
+                        type="button"
+                    >
+                        Cerrar Sesión
+                    </button>
+
+                </section>
+
+            </header>
+
+
+            <!-- PRINCIPAL -->
+            <main id="principal-admin">
+
+                <!-- PRESENTACIÓN -->
+                <section id="nuevo-usuario-presentacion">
+
+                    <section>
+
+                        <h2>
+                            Nuevo usuario
+                        </h2>
+
+                        <p>
+                            Registra un nuevo usuario en el sistema.
+                        </p>
+
+                    </section>
+
+
+                    <a
+                        id="boton-volver"
+                        href="usuarios.html"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Volver
+                    </a>
+
+                </section>
+
+
+                <!-- FORMULARIO -->
+                <section id="tarjeta-nuevo-usuario">
+
+                    <form
+                        id="formulario-nuevo-usuario"
+                        novalidate
+                    >
+
+                        <!-- RUN / ROL -->
+                        <section class="fila-formulario">
+
+                            <section class="campo-formulario">
+
+                                <label for="run">
+                                    RUN
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="run"
+                                    name="run"
+                                    placeholder="Ej: 19011022K"
+                                >
+
+                                <p
+                                    class="mensaje-error"
+                                    id="error-run"
+                                ></p>
+
+                            </section>
+
+
+                            <section class="campo-formulario">
+
+                                <label for="tipoUsuario">
+                                    Rol
+                                </label>
+
+                                <select
+                                    id="tipoUsuario"
+                                    name="tipoUsuario"
+                                >
+                                    <option value="">
+                                        Seleccione un rol
+                                    </option>
+
+                                    <option value="Cliente">
+                                        Cliente
+                                    </option>
+
+                                    <option value="Vendedor">
+                                        Vendedor
+                                    </option>
+
+                                    <option value="Administrador">
+                                        Administrador
+                                    </option>
+                                </select>
+
+                                <p
+                                    class="mensaje-error"
+                                    id="error-tipo"
+                                ></p>
+
+                            </section>
+
+                        </section>
+
+
+                        <!-- NOMBRE / APELLIDOS -->
+                        <section class="fila-formulario">
+
+                            <section class="campo-formulario">
+
+                                <label for="nombre">
+                                    Nombre
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nombre"
+                                    name="nombre"
+                                    placeholder="Nombre del usuario"
+                                >
+
+                                <p
+                                    class="mensaje-error"
+                                    id="error-nombre"
+                                ></p>
+
+                            </section>
+
+
+                            <section class="campo-formulario">
+
+                                <label for="apellidos">
+                                    Apellidos
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="apellidos"
+                                    name="apellidos"
+                                    placeholder="Apellidos del usuario"
+                                >
+
+                                <p
+                                    class="mensaje-error"
+                                    id="error-apellidos"
+                                ></p>
+
+                            </section>
+
+                        </section>
+
+
+                        <!-- CORREO / FECHA -->
+                        <section class="fila-formulario">
+
+                            <section class="campo-formulario">
+
+                                <label for="correo">
+                                    Correo electrónico
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="correo"
+                                    name="correo"
+                                    placeholder="usuario@correo.com"
+                                >
+
+                                <p
+                                    class="mensaje-error"
+                                    id="error-correo"
+                                ></p>
+
+                            </section>
+
+
+                            <section class="campo-formulario">
+
+                                <label for="fechaNacimiento">
+                                    Fecha de nacimiento
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="fechaNacimiento"
+                                    name="fechaNacimiento"
+                                >
+
+                                <p
+                                    class="mensaje-error"
+                                    id="error-fecha"
+                                ></p>
+
+                            </section>
+
+                        </section>
+
+
+                        <!-- REGIÓN / COMUNA -->
+                        <section class="fila-formulario">
+
+                            <section class="campo-formulario">
+
+                                <label for="region">
+                                    Región
+                                </label>
+
+                                <select
+                                    id="region"
+                                    name="region"
+                                >
+                                    <option value="">
+                                        Seleccione una región
+                                    </option>
+                                </select>
+
+                                <p
+                                    class="mensaje-error"
+                                    id="error-region"
+                                ></p>
+
+                            </section>
+
+
+                            <section class="campo-formulario">
+
+                                <label for="comuna">
+                                    Comuna
+                                </label>
+
+                                <select
+                                    id="comuna"
+                                    name="comuna"
+                                >
+                                    <option value="">
+                                        Seleccione una comuna
+                                    </option>
+                                </select>
+
+                                <p
+                                    class="mensaje-error"
+                                    id="error-comuna"
+                                ></p>
+
+                            </section>
+
+                        </section>
+
+
+                        <!-- DIRECCIÓN -->
+                        <section class="campo-formulario">
+
+                            <label for="direccion">
+                                Dirección
+                            </label>
+
+                            <input
+                                type="text"
+                                id="direccion"
+                                name="direccion"
+                                placeholder="Ej: Av. Los Carrera 123"
+                            >
+
+                            <p
+                                class="mensaje-error"
+                                id="error-direccion"
+                            ></p>
+
+                        </section>
+
+
+                        <!-- CONTRASEÑAS -->
+                        <section class="fila-formulario">
+
+                            <section class="campo-formulario">
+
+                                <label for="contrasena">
+                                    Contraseña
+                                </label>
+
+                                <input
+                                    type="password"
+                                    id="contrasena"
+                                    name="contrasena"
+                                    placeholder="Ingrese una contraseña"
+                                >
+
+                                <p
+                                    class="mensaje-error"
+                                    id="error-contrasena"
+                                ></p>
+
+                            </section>
+
+
+                            <section class="campo-formulario">
+
+                                <label for="confirmarContrasena">
+                                    Confirmar contraseña
+                                </label>
+
+                                <input
+                                    type="password"
+                                    id="confirmarContrasena"
+                                    name="confirmarContrasena"
+                                    placeholder="Repita la contraseña"
+                                >
+
+                                <p
+                                    class="mensaje-error"
+                                    id="error-confirmar"
+                                ></p>
+
+                            </section>
+
+                        </section>
+
+
+                        <!-- MENSAJE DE ÉXITO -->
+                        <p id="mensaje-nuevo-usuario"></p>
+
+
+                        <!-- BOTONES -->
+                        <section id="acciones-nuevo-usuario">
+
+                            <a
+                                id="boton-cancelar"
+                                href="usuarios.html"
+                            >
+                                Cancelar
+                            </a>
+
+                            <button
+                                id="boton-guardar"
+                                type="submit"
+                            >
+                                <i class="fa-solid fa-user-plus"></i>
+                                Crear usuario
+                            </button>
+
+                        </section>
+
+                    </form>
+
+                </section>
+
+            </main>
+
+        </section>
+
+    </section>
+
+</body>
+
+</html>

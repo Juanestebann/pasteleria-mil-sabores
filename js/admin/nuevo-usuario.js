@@ -1,42 +1,162 @@
 // =========================================
-// ELEMENTOS DEL FORMULARIO
+// NUEVO USUARIO
+// PASTELERÍA MIL SABORES
 // =========================================
-
-const formularioRegistro = document.getElementById("formulario-registro");
-
-const run = document.getElementById("run");
-const nombre = document.getElementById("nombre");
-const apellidos = document.getElementById("apellidos");
-const correo = document.getElementById("correo");
-const fechaNacimiento = document.getElementById("fechaNacimiento");
-const region = document.getElementById("region");
-const comuna = document.getElementById("comuna");
-const direccion = document.getElementById("direccion");
-const contrasena = document.getElementById("contrasena");
-const confirmarContrasena = document.getElementById("confirmarContrasena");
-const mensajeRegistro =
-    document.getElementById("mensaje-registro");
 
 
 // =========================================
-// MENSAJES DE ERROR
+// USUARIO ACTIVO
 // =========================================
 
-const errorRun = document.getElementById("error-run");
-const errorNombre = document.getElementById("error-nombre");
-const errorApellidos = document.getElementById("error-apellidos");
-const errorCorreo = document.getElementById("error-correo");
-const errorFecha = document.getElementById("error-fecha");
-const errorRegion = document.getElementById("error-region");
-const errorComuna = document.getElementById("error-comuna");
-const errorDireccion = document.getElementById("error-direccion");
-const errorContrasena = document.getElementById("error-contrasena");
-const errorConfirmarContrasena =
-    document.getElementById("error-confirmar-contrasena");
+const usuarioActivo =
+    JSON.parse(localStorage.getItem("usuarioActivo"));
 
 
 // =========================================
-// REGIONES Y COMUNAS
+// CONTROL DE ACCESO
+// =========================================
+
+if (!usuarioActivo) {
+
+    window.location.href =
+        "../../pages/login.html";
+
+}
+
+else if (usuarioActivo.tipoUsuario !== "Administrador") {
+
+    window.location.href =
+        "../index.html";
+
+}
+
+
+// =========================================
+// CABECERA
+// =========================================
+
+const nombreUsuarioAdmin =
+    document.getElementById("nombre-usuario-admin");
+
+const perfilUsuarioAdmin =
+    document.getElementById("perfil-usuario-admin");
+
+const cerrarSesionAdmin =
+    document.getElementById("cerrar-sesion-admin");
+
+
+if (usuarioActivo) {
+
+    nombreUsuarioAdmin.textContent =
+        usuarioActivo.nombre || "Administrador";
+
+    perfilUsuarioAdmin.textContent =
+        usuarioActivo.tipoUsuario;
+
+}
+
+
+// =========================================
+// CERRAR SESIÓN
+// =========================================
+
+cerrarSesionAdmin.addEventListener(
+    "click",
+    function() {
+
+        localStorage.removeItem("usuarioActivo");
+
+        window.location.href =
+            "../../pages/login.html";
+
+    }
+);
+
+
+// =========================================
+// ELEMENTOS FORMULARIO
+// =========================================
+
+const formulario =
+    document.getElementById("formulario-nuevo-usuario");
+
+const run =
+    document.getElementById("run");
+
+const tipoUsuario =
+    document.getElementById("tipoUsuario");
+
+const nombre =
+    document.getElementById("nombre");
+
+const apellidos =
+    document.getElementById("apellidos");
+
+const correo =
+    document.getElementById("correo");
+
+const fechaNacimiento =
+    document.getElementById("fechaNacimiento");
+
+const region =
+    document.getElementById("region");
+
+const comuna =
+    document.getElementById("comuna");
+
+const direccion =
+    document.getElementById("direccion");
+
+const contrasena =
+    document.getElementById("contrasena");
+
+const confirmarContrasena =
+    document.getElementById("confirmarContrasena");
+
+const mensajeNuevoUsuario =
+    document.getElementById("mensaje-nuevo-usuario");
+
+
+// =========================================
+// ERRORES
+// =========================================
+
+const errorRun =
+    document.getElementById("error-run");
+
+const errorTipo =
+    document.getElementById("error-tipo");
+
+const errorNombre =
+    document.getElementById("error-nombre");
+
+const errorApellidos =
+    document.getElementById("error-apellidos");
+
+const errorCorreo =
+    document.getElementById("error-correo");
+
+const errorFecha =
+    document.getElementById("error-fecha");
+
+const errorRegion =
+    document.getElementById("error-region");
+
+const errorComuna =
+    document.getElementById("error-comuna");
+
+const errorDireccion =
+    document.getElementById("error-direccion");
+
+const errorContrasena =
+    document.getElementById("error-contrasena");
+
+const errorConfirmar =
+    document.getElementById("error-confirmar");
+
+
+// =========================================
+// REGIONES / COMUNAS
 // =========================================
 
 const regiones = [
@@ -556,39 +676,43 @@ const regiones = [
             "Primavera",
             "Punta Arenas",
             "Río Verde",
-            "San Gregorio",
-            "Timaukel",
-            "Torres del Paine"
+            "San Gregorio", "Timaukel","Torres del Paine"
         ]
     }
 
 ];
 
+
 // =========================================
-// CARGAR REGIONES AL INICIAR
+// CARGAR REGIONES
 // =========================================
 
 function cargarRegiones() {
 
-    region.innerHTML = "";
-
-    const opcionInicial = document.createElement("option");
-
-    opcionInicial.value = "";
-    opcionInicial.textContent = "Seleccione una región";
-
-    region.appendChild(opcionInicial);
+    region.innerHTML =
+        '<option value="">Seleccione una región</option>';
 
 
-    regiones.forEach(function(item) {
+    regiones.forEach(
+        function(item) {
 
-        const opcion = document.createElement("option");
+            const opcion =
+                document.createElement("option");
 
-        opcion.value = item.nombre;
-        opcion.textContent = item.nombre;
 
-        region.appendChild(opcion);
-    });
+            opcion.value =
+                item.nombre;
+
+
+            opcion.textContent =
+                item.nombre;
+
+
+            region.appendChild(opcion);
+
+        }
+    );
+
 }
 
 
@@ -596,36 +720,50 @@ function cargarRegiones() {
 // CARGAR COMUNAS
 // =========================================
 
-function cargarComunas() {
+function cargarComunas(regionSeleccionada) {
 
-    comuna.innerHTML = "";
-
-    const opcionInicial = document.createElement("option");
-
-    opcionInicial.value = "";
-    opcionInicial.textContent = "Seleccione una comuna";
-
-    comuna.appendChild(opcionInicial);
+    comuna.innerHTML =
+        '<option value="">Seleccione una comuna</option>';
 
 
-    const regionSeleccionada = regiones.find(function(item) {
+    const datosRegion =
+        regiones.find(
+            function(item) {
 
-        return item.nombre === region.value;
-    });
+                return item.nombre ===
+                    regionSeleccionada;
+
+            }
+        );
 
 
-    if (regionSeleccionada) {
+    if (!datosRegion) {
 
-        regionSeleccionada.comunas.forEach(function(nombreComuna) {
+        return;
 
-            const opcion = document.createElement("option");
+    }
 
-            opcion.value = nombreComuna;
-            opcion.textContent = nombreComuna;
+
+    datosRegion.comunas.forEach(
+        function(nombreComuna) {
+
+            const opcion =
+                document.createElement("option");
+
+
+            opcion.value =
+                nombreComuna;
+
+
+            opcion.textContent =
+                nombreComuna;
+
 
             comuna.appendChild(opcion);
-        });
-    }
+
+        }
+    );
+
 }
 
 
@@ -633,72 +771,28 @@ function cargarComunas() {
 // EVENTO REGIÓN
 // =========================================
 
-region.addEventListener("change", function() {
+region.addEventListener(
+    "change",
+    function() {
 
-    cargarComunas();
-});
+        cargarComunas(
+            region.value
+        );
 
-
-// CARGAR REGIONES AUTOMÁTICAMENTE
-cargarRegiones();
+    }
+);
 
 
 // =========================================
-// VALIDAR RUN CHILENO
+// OBTENER USUARIOS
 // =========================================
 
-function validarRun(runIngresado) {
+function obtenerUsuarios() {
 
-    if (runIngresado.length < 7 || runIngresado.length > 9) {
-        return false;
-    }
+    return JSON.parse(
+        localStorage.getItem("usuarios")
+    ) || [];
 
-    if (runIngresado.includes(".") || runIngresado.includes("-")) {
-        return false;
-    }
-
-    const cuerpo = runIngresado.slice(0, -1);
-    const digitoIngresado = runIngresado.slice(-1).toUpperCase();
-
-    if (isNaN(cuerpo)) {
-        return false;
-    }
-
-    let suma = 0;
-    let multiplicador = 2;
-
-
-    for (let i = cuerpo.length - 1; i >= 0; i--) {
-
-        suma += Number(cuerpo[i]) * multiplicador;
-
-        multiplicador++;
-
-        if (multiplicador === 8) {
-            multiplicador = 2;
-        }
-    }
-
-
-    const resto = 11 - (suma % 11);
-
-    let digitoCalculado;
-
-    if (resto === 11) {
-
-        digitoCalculado = "0";
-
-    } else if (resto === 10) {
-
-        digitoCalculado = "K";
-
-    } else {
-
-        digitoCalculado = String(resto);
-    }
-
-
-    return digitoCalculado === digitoIngresado;
 }
 
 
@@ -709,15 +803,29 @@ function validarRun(runIngresado) {
 function limpiarErrores() {
 
     errorRun.textContent = "";
+
+    errorTipo.textContent = "";
+
     errorNombre.textContent = "";
+
     errorApellidos.textContent = "";
+
     errorCorreo.textContent = "";
+
     errorFecha.textContent = "";
+
     errorRegion.textContent = "";
+
     errorComuna.textContent = "";
+
     errorDireccion.textContent = "";
+
     errorContrasena.textContent = "";
-    errorConfirmarContrasena.textContent = "";
+
+    errorConfirmar.textContent = "";
+
+    mensajeNuevoUsuario.textContent = "";
+
 }
 
 
@@ -725,336 +833,364 @@ function limpiarErrores() {
 // VALIDAR FORMULARIO
 // =========================================
 
-formularioRegistro.addEventListener("submit", function(evento) {
-
-    evento.preventDefault();
+function validarFormulario() {
 
     limpiarErrores();
 
-    let formularioValido = true;
+
+    let valido = true;
 
 
-    const runIngresado = run.value.trim().toUpperCase();
-    const nombreIngresado = nombre.value.trim();
-    const apellidosIngresados = apellidos.value.trim();
-    const correoIngresado = correo.value.trim().toLowerCase();
-    const direccionIngresada = direccion.value.trim();
-    const contrasenaIngresada = contrasena.value;
-    const confirmarIngresada = confirmarContrasena.value;
+    const runIngresado =
+        run.value.trim();
+
+    const nombreIngresado =
+        nombre.value.trim();
+
+    const apellidosIngresados =
+        apellidos.value.trim();
+
+    const correoIngresado =
+        correo.value.trim().toLowerCase();
+
+    const direccionIngresada =
+        direccion.value.trim();
+
+    const contrasenaIngresada =
+        contrasena.value;
 
 
-    // =====================================
     // RUN
-    // =====================================
-
     if (runIngresado === "") {
 
-        errorRun.textContent = "El RUN es obligatorio.";
-        formularioValido = false;
-
-    } else if (!validarRun(runIngresado)) {
-
         errorRun.textContent =
-            "Ingrese un RUN válido, sin puntos ni guion.";
+            "El RUN es obligatorio.";
 
-        formularioValido = false;
+        valido = false;
+
     }
 
 
-    // =====================================
-    // NOMBRE
-    // =====================================
+    // ROL
+    if (tipoUsuario.value === "") {
 
+        errorTipo.textContent =
+            "Seleccione un rol.";
+
+        valido = false;
+
+    }
+
+
+    // NOMBRE
     if (nombreIngresado === "") {
 
         errorNombre.textContent =
             "El nombre es obligatorio.";
 
-        formularioValido = false;
+        valido = false;
 
-    } else if (nombreIngresado.length > 50) {
-
-        errorNombre.textContent =
-            "El nombre no puede superar los 50 caracteres.";
-
-        formularioValido = false;
     }
 
 
-    // =====================================
     // APELLIDOS
-    // =====================================
-
     if (apellidosIngresados === "") {
 
         errorApellidos.textContent =
             "Los apellidos son obligatorios.";
 
-        formularioValido = false;
+        valido = false;
 
-    } else if (apellidosIngresados.length > 100) {
-
-        errorApellidos.textContent =
-            "Los apellidos no pueden superar los 100 caracteres.";
-
-        formularioValido = false;
     }
 
 
-    // =====================================
     // CORREO
-    // =====================================
-
     if (correoIngresado === "") {
 
         errorCorreo.textContent =
             "El correo es obligatorio.";
 
-        formularioValido = false;
+        valido = false;
 
-    } else if (correoIngresado.length > 100) {
+    }
 
-        errorCorreo.textContent =
-            "El correo no puede superar los 100 caracteres.";
-
-        formularioValido = false;
-
-    } else if (
+    else if (
         !correoIngresado.endsWith("@duoc.cl") &&
         !correoIngresado.endsWith("@profesor.duoc.cl") &&
         !correoIngresado.endsWith("@gmail.com")
     ) {
 
         errorCorreo.textContent =
-            "Ingrese un correo @duoc.cl, @profesor.duoc.cl o @gmail.com.";
+            "Ingrese un correo válido.";
 
-        formularioValido = false;
+        valido = false;
+
     }
 
 
-    // =====================================
-    // FECHA DE NACIMIENTO
-    // OPCIONAL
-    // =====================================
+    // FECHA
+    if (fechaNacimiento.value === "") {
 
-    if (fechaNacimiento.value !== "") {
+        errorFecha.textContent =
+            "Seleccione la fecha de nacimiento.";
 
-        const fechaIngresada = new Date(fechaNacimiento.value);
-        const fechaActual = new Date();
+        valido = false;
 
-        if (fechaIngresada > fechaActual) {
-
-            errorFecha.textContent =
-                "La fecha de nacimiento no puede ser futura.";
-
-            formularioValido = false;
-        }
     }
 
 
-    // =====================================
     // REGIÓN
-    // =====================================
-
     if (region.value === "") {
 
         errorRegion.textContent =
-            "Debe seleccionar una región.";
+            "Seleccione una región.";
 
-        formularioValido = false;
+        valido = false;
+
     }
 
 
-    // =====================================
     // COMUNA
-    // =====================================
-
     if (comuna.value === "") {
 
         errorComuna.textContent =
-            "Debe seleccionar una comuna.";
+            "Seleccione una comuna.";
 
-        formularioValido = false;
+        valido = false;
+
     }
 
 
-    // =====================================
     // DIRECCIÓN
-    // =====================================
-
     if (direccionIngresada === "") {
 
         errorDireccion.textContent =
             "La dirección es obligatoria.";
 
-        formularioValido = false;
+        valido = false;
 
-    } else if (direccionIngresada.length > 300) {
-
-        errorDireccion.textContent =
-            "La dirección no puede superar los 300 caracteres.";
-
-        formularioValido = false;
     }
 
 
-    // =====================================
     // CONTRASEÑA
-    // =====================================
-
     if (contrasenaIngresada === "") {
 
         errorContrasena.textContent =
             "La contraseña es obligatoria.";
 
-        formularioValido = false;
+        valido = false;
 
-    } else if (
-        contrasenaIngresada.length < 4 ||
-        contrasenaIngresada.length > 10
-    ) {
+    }
+
+    else if (contrasenaIngresada.length < 4) {
 
         errorContrasena.textContent =
-            "La contraseña debe tener entre 4 y 10 caracteres.";
+            "La contraseña debe tener al menos 4 caracteres.";
 
-        formularioValido = false;
+        valido = false;
+
     }
 
 
-    // =====================================
-    // CONFIRMAR CONTRASEÑA
-    // =====================================
+    // CONFIRMAR
+    if (confirmarContrasena.value === "") {
 
-    if (confirmarIngresada === "") {
+        errorConfirmar.textContent =
+            "Confirme la contraseña.";
 
-        errorConfirmarContrasena.textContent =
-            "Debe confirmar la contraseña.";
+        valido = false;
 
-        formularioValido = false;
+    }
 
-    } else if (confirmarIngresada !== contrasenaIngresada) {
+    else if (
+        contrasenaIngresada !==
+        confirmarContrasena.value
+    ) {
 
-        errorConfirmarContrasena.textContent =
+        errorConfirmar.textContent =
             "Las contraseñas no coinciden.";
 
-        formularioValido = false;
+        valido = false;
+
     }
 
 
-    // =====================================
-    // DETENER SI HAY ERRORES
-    // =====================================
+    return valido;
 
-    if (!formularioValido) {
-        return;
+}
+
+
+// =========================================
+// CREAR USUARIO
+// =========================================
+
+formulario.addEventListener(
+    "submit",
+    function(evento) {
+
+        evento.preventDefault();
+
+
+        if (!validarFormulario()) {
+
+            return;
+
+        }
+
+
+        const usuarios =
+            obtenerUsuarios();
+
+
+        const correoIngresado =
+            correo.value
+                .trim()
+                .toLowerCase();
+
+
+        const runIngresado =
+            run.value
+                .trim()
+                .toUpperCase();
+
+
+        // =================================
+        // CORREO DUPLICADO
+        // =================================
+
+        const correoExiste =
+            usuarios.some(
+                function(usuario) {
+
+                    return usuario.correo ===
+                        correoIngresado;
+
+                }
+            );
+
+
+        if (correoExiste) {
+
+            errorCorreo.textContent =
+                "Este correo ya está registrado.";
+
+            return;
+
+        }
+
+
+        // =================================
+        // RUN DUPLICADO
+        // =================================
+
+        const runExiste =
+            usuarios.some(
+                function(usuario) {
+
+                    return (
+                        usuario.run &&
+                        usuario.run.toUpperCase() ===
+                        runIngresado
+                    );
+
+                }
+            );
+
+
+        if (runExiste) {
+
+            errorRun.textContent =
+                "Este RUN ya está registrado.";
+
+            return;
+
+        }
+
+
+        // =================================
+        // NUEVO USUARIO
+        // =================================
+
+        const nuevoUsuario = {
+
+            run: runIngresado,
+
+            nombre:
+                nombre.value.trim(),
+
+            apellidos:
+                apellidos.value.trim(),
+
+            correo:
+                correoIngresado,
+
+            fechaNacimiento:
+                fechaNacimiento.value,
+
+            region:
+                region.value,
+
+            comuna:
+                comuna.value,
+
+            direccion:
+                direccion.value.trim(),
+
+            contrasena:
+                contrasena.value,
+
+            tipoUsuario:
+                tipoUsuario.value
+
+        };
+
+
+        // =================================
+        // GUARDAR
+        // =================================
+
+        usuarios.push(
+            nuevoUsuario
+        );
+
+
+        localStorage.setItem(
+            "usuarios",
+            JSON.stringify(usuarios)
+        );
+
+
+        // =================================
+        // MENSAJE
+        // =================================
+
+        mensajeNuevoUsuario.textContent =
+            "Usuario creado correctamente.";
+
+
+        // =================================
+        // REDIRECCIONAR
+        // =================================
+
+        setTimeout(
+            function() {
+
+                window.location.href =
+                    "ver-usuario.html?correo=" +
+                    encodeURIComponent(
+                        nuevoUsuario.correo
+                    );
+
+            },
+            1200
+        );
+
     }
-
-
-    // =====================================
-    // OBTENER USUARIOS GUARDADOS
-    // =====================================
-
-    const usuarios =
-        JSON.parse(localStorage.getItem("usuarios")) || [];
-
-
-    // =====================================
-    // VALIDAR CORREO DUPLICADO
-    // =====================================
-
-    const correoExiste = usuarios.some(function(usuario) {
-
-        return usuario.correo === correoIngresado;
-    });
-
-
-    if (correoExiste) {
-
-        errorCorreo.textContent =
-            "Este correo ya se encuentra registrado.";
-
-        return;
-    }
-
-
-    // =====================================
-    // VALIDAR RUN DUPLICADO
-    // =====================================
-
-    const runExiste = usuarios.some(function(usuario) {
-
-        return usuario.run === runIngresado;
-    });
-
-
-    if (runExiste) {
-
-        errorRun.textContent =
-            "Este RUN ya se encuentra registrado.";
-
-        return;
-    }
-
-
-    // =====================================
-    // CREAR USUARIO
-    // =====================================
-
-    const nuevoUsuario = {
-
-        run: runIngresado,
-
-        nombre: nombreIngresado,
-
-        apellidos: apellidosIngresados,
-
-        correo: correoIngresado,
-
-        fechaNacimiento: fechaNacimiento.value,
-
-        region: region.value,
-
-        comuna: comuna.value,
-
-        direccion: direccionIngresada,
-
-        contrasena: contrasenaIngresada,
-
-        tipoUsuario: "Cliente"
-    };
-
-
-    // =====================================
-    // GUARDAR
-    // =====================================
-
-    usuarios.push(nuevoUsuario);
-
-    localStorage.setItem(
-        "usuarios",
-        JSON.stringify(usuarios)
-    );
-
-
-    // =====================================
-    // MENSAJE Y REDIRECCIÓN
-    // =====================================
-mensajeRegistro.textContent =
-    "Usuario creado exitosamente.";
-
-
-// GUARDAR AL USUARIO COMO ACTIVO
-localStorage.setItem(
-    "usuarioActivo",
-    JSON.stringify(nuevoUsuario)
 );
 
 
-// ESPERAR UN MOMENTO Y MANDAR AL INICIO
-setTimeout(function() {
+// =========================================
+// INICIAR
+// =========================================
 
-    window.location.href = "../index.html";
-
-}, 1500);
-
-});
+cargarRegiones();

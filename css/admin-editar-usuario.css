@@ -1,0 +1,353 @@
+/* =========================================
+   EDITAR USUARIO
+   PASTELERÍA MIL SABORES
+========================================= */
+
+
+/* PRESENTACIÓN */
+
+#editar-usuario-presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+    padding: 28px 30px;
+
+    background-color: #ffffff;
+
+    border-left: 5px solid #D89B2B;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+#editar-usuario-presentacion h2 {
+    margin: 0 0 8px;
+
+    color: #3B1F0F;
+
+    font-size: 25px;
+}
+
+
+#editar-usuario-presentacion p {
+    margin: 0;
+
+    color: #5D4037;
+}
+
+
+/* VOLVER */
+
+#boton-volver {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 17px;
+
+    background-color: #F6F0E7;
+
+    color: #3B1F0F;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+#boton-volver:hover {
+    background-color: #E8DCCB;
+}
+
+
+/* TARJETA */
+
+#tarjeta-editar-usuario {
+    background-color: #ffffff;
+
+    padding: 30px;
+
+    border: 1px solid #E7C9A9;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* FILAS */
+
+.fila-formulario {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* CAMPOS */
+
+.campo-formulario {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+
+.campo-formulario label {
+    margin-bottom: 7px;
+
+    color: #3B1F0F;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+.campo-formulario input,
+.campo-formulario select {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 14px;
+
+    border: 1px solid #D9CBC0;
+
+    border-radius: 8px;
+
+    background-color: #ffffff;
+
+    color: #5D4037;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+.campo-formulario input:focus,
+.campo-formulario select:focus {
+    border-color: #D89B2B;
+
+    box-shadow: 0 0 0 3px rgba(216, 155, 43, 0.10);
+}
+
+
+/* READONLY */
+
+.campo-formulario input[readonly] {
+    background-color: #F7F2EA;
+
+    color: #795548;
+
+    cursor: not-allowed;
+}
+
+
+/* ERRORES */
+
+.mensaje-error {
+    min-height: 14px;
+
+    margin: 5px 0 0;
+
+    color: #B3261E;
+
+    font-size: 12px;
+}
+
+
+/* MENSAJE ÉXITO */
+
+#mensaje-edicion {
+    min-height: 20px;
+
+    margin: 0 0 15px;
+
+    text-align: center;
+
+    color: #2E7D32;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+/* BOTONES */
+
+#acciones-editar-usuario {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #EEE4DB;
+}
+
+
+#boton-cancelar {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 11px 18px;
+
+    background-color: #F6F0E7;
+
+    color: #3B1F0F;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+#boton-cancelar:hover {
+    background-color: #E8DCCB;
+}
+
+
+#boton-guardar {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #D89B2B;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+#boton-guardar:hover {
+    background-color: #B97818;
+}
+
+
+/* USUARIO NO ENCONTRADO */
+
+#mensaje-usuario-no-encontrado {
+    display: none;
+
+    background-color: #ffffff;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+#mensaje-usuario-no-encontrado i {
+    color: #D89B2B;
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+
+#mensaje-usuario-no-encontrado h3 {
+    margin: 0 0 10px;
+
+    color: #3B1F0F;
+}
+
+
+#mensaje-usuario-no-encontrado p {
+    color: #795548;
+}
+
+
+#mensaje-usuario-no-encontrado a {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 10px 16px;
+
+    background-color: #D89B2B;
+
+    color: #ffffff;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width: 800px) {
+
+    #editar-usuario-presentacion {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .fila-formulario {
+        grid-template-columns: 1fr;
+    }
+
+
+    #acciones-editar-usuario {
+        flex-direction: column;
+    }
+
+
+    #boton-cancelar,
+    #boton-guardar {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+}

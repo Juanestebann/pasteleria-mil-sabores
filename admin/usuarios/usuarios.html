@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Usuarios | Pastelería Mil Sabores</title>
+
+    <!-- CSS ORIGINAL DEL PANEL - NO MODIFICAR -->
+    <link rel="stylesheet" href="../../css/admin.css">
+
+    <!-- CSS SOLO DE USUARIOS -->
+    <link rel="stylesheet" href="../../css/admin-usuarios.css">
+
+    <!-- JS SOLO DE USUARIOS -->
+    <script src="../../js/admin/usuarios-admin.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <section id="admin-aplicacion">
+
+
+        <!-- =========================================
+             MENÚ LATERAL
+        ========================================== -->
+
+        <aside id="menu-admin">
+
+            <section id="marca-admin">
+
+                <h1>
+                    Pastelería
+                    <span>Mil Sabores</span>
+                </h1>
+
+                <p>
+                    Panel de administración
+                </p>
+
+            </section>
+
+
+            <nav id="navegacion-admin">
+
+                <a href="../index.html">
+                    Inicio
+                </a>
+
+                <a href="../productos/productos.html">
+                    Productos
+                </a>
+
+                <a
+                    href="usuarios.html"
+                    class="opcion-activa"
+                >
+                    Usuarios
+                </a>
+
+                <a href="../../index.html">
+                    Volver a la tienda
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- =========================================
+             CONTENIDO
+        ========================================== -->
+
+        <section id="contenido-admin">
+
+
+            <!-- =====================================
+                 CABECERA
+            ====================================== -->
+
+            <header id="cabecera-admin">
+
+                <section>
+
+                    <h2>
+                        Panel de administración
+                    </h2>
+
+                    <p>
+                        Bienvenido,
+                        <span id="nombre-usuario-admin"></span>
+                    </p>
+
+                </section>
+
+
+                <section id="sesion-admin">
+
+                    <span id="perfil-usuario-admin"></span>
+
+                    <button
+                        id="cerrar-sesion-admin"
+                        type="button"
+                    >
+                        Cerrar Sesión
+                    </button>
+
+                </section>
+
+            </header>
+
+
+            <!-- =====================================
+                 PRINCIPAL
+            ====================================== -->
+
+            <main id="principal-admin">
+
+
+                <!-- PRESENTACIÓN -->
+                <section id="usuarios-presentacion">
+
+                    <h2>
+                        Gestión de usuarios
+                    </h2>
+
+                    <p>
+                        Como Administrador puedes ver, crear y editar
+                        los usuarios registrados en el sistema.
+                    </p>
+
+                </section>
+
+
+                <!-- =================================
+                     HERRAMIENTAS
+                ================================== -->
+
+                <section id="usuarios-herramientas">
+
+
+                    <!-- BUSCADOR -->
+                    <section id="usuarios-buscador">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            id="buscar-usuario"
+                            placeholder="Buscar usuario..."
+                        >
+
+                    </section>
+
+
+                    <!-- FILTRO -->
+                    <section id="usuarios-filtro">
+
+                        <label for="filtro-rol">
+                            Filtrar por rol:
+                        </label>
+
+                        <select id="filtro-rol">
+
+                            <option value="Todos">
+                                Todos los roles
+                            </option>
+
+                            <option value="Cliente">
+                                Cliente
+                            </option>
+
+                            <option value="Vendedor">
+                                Vendedor
+                            </option>
+
+                            <option value="Administrador">
+                                Administrador
+                            </option>
+
+                        </select>
+
+                    </section>
+
+
+                    <!-- NUEVO USUARIO -->
+                    <a
+                        id="boton-nuevo-usuario"
+                        href="nuevo-usuario.html"
+                    >
+                        <i class="fa-solid fa-user-plus">   Nuevo Usuario </i>
+                    </a>
+
+                </section>
+
+
+                <!-- =================================
+                     LISTADO
+                ================================== -->
+
+                <section id="usuarios-listado">
+
+
+                    <section id="usuarios-listado-header">
+
+                        <h2>
+                            Usuarios registrados
+                        </h2>
+
+                        <p id="cantidad-usuarios">
+                            Mostrando 0 usuario(s)
+                        </p>
+
+                    </section>
+
+
+                    <!-- TABLA -->
+                    <section id="tabla-contenedor">
+
+                        <table id="tabla-usuarios">
+
+                            <thead>
+
+                                <tr>
+                                    <th>RUN</th>
+                                    <th>Nombre</th>
+                                    <th>Correo</th>
+                                    <th>Región</th>
+                                    <th>Comuna</th>
+                                    <th>Rol</th>
+                                    <th>Acciones</th>
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="cuerpo-tabla-usuarios">
+
+                                <!-- JavaScript cargará los usuarios aquí -->
+
+                            </tbody>
+
+                        </table>
+
+                    </section>
+
+
+                    <p id="mensaje-sin-usuarios">
+                        No existen usuarios registrados.
+                    </p>
+
+                </section>
+
+
+                <!-- =================================
+                     ACCIONES RÁPIDAS
+                ================================== -->
+
+                <section id="acciones-rapidas">
+
+                    <h2>
+                        Acciones rápidas
+                    </h2>
+
+                    <p>
+                        Accede rápidamente a las principales
+                        funciones de usuarios.
+                    </p>
+
+
+                    <section id="acciones-rapidas-contenedor">
+
+
+                        <!-- NUEVO -->
+                        <a
+                            class="accion-rapida"
+                            href="nuevo-usuario.html"
+                        >
+
+                        <span class="accion-icono">
+    <i class="fa-solid fa-user-plus"></i>
+</span>
+
+                            <section>
+
+                                <h3>
+                                    Nuevo usuario
+                                </h3>
+
+                                <p>
+                                    Registra un nuevo usuario
+                                    en el sistema.
+                                </p>
+
+                            </section>
+
+                            <span class="accion-flecha">
+                                ›
+                            </span>
+
+                        </a>
+
+
+                        <!-- MOSTRAR -->
+                        <a
+                    class="accion-rapida"
+                    href="#"
+                    id="accion-mostrar-usuarios"
+                    >           
+        <span class="accion-icono">
+            <i class="fa-solid fa-users"></i>
+        </span>
+
+    <section>
+        <h3>Mostrar usuarios</h3>
+
+        <p>
+            Consulta la información de los usuarios.
+        </p>
+    </section>
+
+    <span class="accion-flecha">
+        ›
+    </span>
+</a>
+
+
+                        <!-- EDITAR -->
+                        <a
+            class="accion-rapida"
+                href="#"
+        id="accion-editar-usuario"  
+            >
+    <span class="accion-icono">
+        <i class="fa-solid fa-pen"></i>
+    </span>
+
+    <section>
+        <h3>Editar usuario</h3>
+
+        <p>
+            Selecciona un usuario del listado para modificar sus datos.
+        </p>
+    </section>
+
+    <span class="accion-flecha">
+        ›
+    </span>
+</a>
+                    </section>
+
+                </section>
+
+            </main>
+
+        </section>
+
+    </section>
+
+</body>
+
+</html>
