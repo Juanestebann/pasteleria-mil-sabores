@@ -1,0 +1,380 @@
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0px;
+
+    background-color: #F7F2EA;
+
+    color: #5D4037;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* APLICACIÓN */
+
+#admin-aplicacion {
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* ========================================= */
+/* MENÚ LATERAL */
+/* ========================================= */
+
+#menu-admin {
+    width: 260px;
+
+    min-height: 100vh;
+
+    background-color: #3B1F0F;
+
+    color: white;
+
+    padding: 30px 20px;
+
+    position: fixed;
+
+    left: 0px;
+
+    top: 0px;
+}
+
+
+/* MARCA */
+
+#marca-admin {
+    text-align: center;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #795548;
+}
+
+
+#marca-admin h1 {
+    margin: 0px;
+
+    font-size: 25px;
+}
+
+
+#marca-admin h1 span {
+    display: block;
+
+    color: #D89B2B;
+}
+
+
+#marca-admin p {
+    margin-top: 10px;
+
+    margin-bottom: 0px;
+
+    color: #F3E2C7;
+
+    font-size: 14px;
+}
+
+
+/* NAVEGACIÓN */
+
+#navegacion-admin {
+    margin-top: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+#navegacion-admin a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 18px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+#navegacion-admin a:hover {
+    background-color: #5D4037;
+}
+
+
+#navegacion-admin .opcion-activa {
+    background-color: #D89B2B;
+}
+
+
+/* ========================================= */
+/* CONTENIDO */
+/* ========================================= */
+
+#contenido-admin {
+    width: calc(100% - 260px);
+
+    margin-left: 260px;
+
+    min-height: 100vh;
+}
+
+
+/* CABECERA */
+
+#cabecera-admin {
+    background-color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px 40px;
+
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.10);
+}
+
+
+#cabecera-admin h2 {
+    margin: 0px;
+
+    color: #3B1F0F;
+}
+
+
+#cabecera-admin p {
+    margin-top: 7px;
+
+    margin-bottom: 0px;
+}
+
+
+#nombre-usuario-admin {
+    font-weight: bold;
+}
+
+
+/* SESIÓN */
+
+#sesion-admin {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+#perfil-usuario-admin {
+    background-color: #FFF5E1;
+
+    color: #8B4513;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+}
+
+
+#cerrar-sesion-admin {
+    background-color: #3B1F0F;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 11px 17px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+#cerrar-sesion-admin:hover {
+    background-color: #5D4037;
+}
+
+
+/* ========================================= */
+/* PRINCIPAL */
+/* ========================================= */
+
+#principal-admin {
+    padding: 40px;
+}
+
+
+/* BIENVENIDA */
+
+#bienvenida-admin {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    border-left: 5px solid #D89B2B;
+
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+#bienvenida-admin h2 {
+    margin-top: 0px;
+
+    color: #3B1F0F;
+}
+
+
+#bienvenida-admin p {
+    margin-bottom: 0px;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================= */
+/* TARJETAS */
+/* ========================================= */
+
+#tarjetas-admin {
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+
+.tarjeta-admin {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    border: 1px solid #E7C9A9;
+
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.tarjeta-admin h3 {
+    margin-top: 0px;
+
+    color: #8B4513;
+
+    font-size: 23px;
+}
+
+
+.tarjeta-admin p {
+    line-height: 1.6;
+
+    min-height: 50px;
+}
+
+
+.tarjeta-admin a {
+    display: inline-block;
+
+    background-color: #D89B2B;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 11px 18px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media(max-width: 800px) {
+
+    #admin-aplicacion {
+        display: block;
+    }
+
+
+    #menu-admin {
+        position: static;
+
+        width: 100%;
+
+        min-height: auto;
+    }
+
+
+    #contenido-admin {
+        width: 100%;
+
+        margin-left: 0px;
+    }
+
+
+    #navegacion-admin {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    #cabecera-admin {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 20px;
+    }
+
+
+    #sesion-admin {
+        flex-wrap: wrap;
+    }
+
+
+    #principal-admin {
+        padding: 25px;
+    }
+
+
+    #tarjetas-admin {
+        grid-template-columns: 1fr;
+    }
+
+}

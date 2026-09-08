@@ -1,14 +1,99 @@
-const formularioLogin = document.getElementById("formulario-login");
+// =========================================
+// USUARIOS INTERNOS
+// =========================================
 
-const correo = document.getElementById("correo");
-const contrasena = document.getElementById("contrasena");
+const usuariosInternos = [
 
-const errorCorreo = document.getElementById("error-correo");
-const errorContrasena = document.getElementById("error-contrasena");
-const errorLogin = document.getElementById("error-login");
+    {
+        nombre: "Administrador",
+        apellidos: "Mil Sabores",
+        correo: "admin@gmail.com",
+        contrasena: "admin123",
+        tipoUsuario: "Administrador"
+    },
+
+    {
+        nombre: "Vendedor",
+        apellidos: "Mil Sabores",
+        correo: "vendedor@gmail.com",
+        contrasena: "vend123",
+        tipoUsuario: "Vendedor"
+    }
+
+];
 
 
-formularioLogin.addEventListener("submit", function(evento) {
+// =========================================
+// GUARDAR USUARIOS INTERNOS
+// =========================================
+
+let usuariosIniciales =
+    JSON.parse(localStorage.getItem("usuarios")) || [];
+
+
+usuariosInternos.forEach(function (usuarioInterno) {
+
+    const posicionUsuario =
+        usuariosIniciales.findIndex(function (usuario) {
+
+            return (
+                usuario.correo.toLowerCase() ===
+                usuarioInterno.correo.toLowerCase()
+            );
+
+        });
+
+
+    // Si ya existe, actualizar sus datos
+    if (posicionUsuario !== -1) {
+
+        usuariosIniciales[posicionUsuario] =
+            usuarioInterno;
+
+    } else {
+
+        // Si no existe, agregarlo
+        usuariosIniciales.push(usuarioInterno);
+
+    }
+
+});
+
+
+localStorage.setItem(
+    "usuarios",
+    JSON.stringify(usuariosIniciales)
+);
+
+
+// =========================================
+// OBTENER ELEMENTOS
+// =========================================
+
+const formularioLogin =
+    document.getElementById("formulario-login");
+
+const correo =
+    document.getElementById("correo");
+
+const contrasena =
+    document.getElementById("contrasena");
+
+const errorCorreo =
+    document.getElementById("error-correo");
+
+const errorContrasena =
+    document.getElementById("error-contrasena");
+
+const errorLogin =
+    document.getElementById("error-login");
+
+
+// =========================================
+// INICIAR SESIÓN
+// =========================================
+
+formularioLogin.addEventListener("submit", function (evento) {
 
     // Evita que el formulario recargue la página
     evento.preventDefault();
@@ -20,9 +105,12 @@ formularioLogin.addEventListener("submit", function(evento) {
     errorLogin.textContent = "";
 
 
-    // Obtener los valores
-    const correoIngresado = correo.value.trim().toLowerCase();
-    const contrasenaIngresada = contrasena.value;
+    // Obtener valores
+    const correoIngresado =
+        correo.value.trim().toLowerCase();
+
+    const contrasenaIngresada =
+        contrasena.value;
 
 
     let formularioValido = true;
@@ -34,7 +122,8 @@ formularioLogin.addEventListener("submit", function(evento) {
 
     if (correoIngresado === "") {
 
-        errorCorreo.textContent = "El correo es obligatorio.";
+        errorCorreo.textContent =
+            "El correo es obligatorio.";
 
         formularioValido = false;
 
@@ -81,15 +170,19 @@ formularioLogin.addEventListener("submit", function(evento) {
     }
 
 
-    // Si hay errores en los campos,
-    // no continúa con el inicio de sesión
+    // =========================================
+    // DETENER SI HAY ERRORES
+    // =========================================
+
     if (!formularioValido) {
+
         return;
+
     }
 
 
     // =========================================
-    // OBTENER USUARIOS REGISTRADOS
+    // OBTENER USUARIOS
     // =========================================
 
     const usuariosGuardados =
@@ -100,14 +193,15 @@ formularioLogin.addEventListener("submit", function(evento) {
     // BUSCAR USUARIO
     // =========================================
 
-    const usuarioEncontrado = usuariosGuardados.find(function(usuario) {
+    const usuarioEncontrado =
+        usuariosGuardados.find(function (usuario) {
 
-        return (
-            usuario.correo.toLowerCase() === correoIngresado &&
-            usuario.contrasena === contrasenaIngresada
-        );
+            return (
+                usuario.correo.toLowerCase() === correoIngresado &&
+                usuario.contrasena === contrasenaIngresada
+            );
 
-    });
+        });
 
 
     // =========================================
@@ -116,20 +210,42 @@ formularioLogin.addEventListener("submit", function(evento) {
 
     if (usuarioEncontrado) {
 
-        // Guardar el usuario que inició sesión
+        // Guardar usuario activo
         localStorage.setItem(
             "usuarioActivo",
             JSON.stringify(usuarioEncontrado)
         );
 
 
-        // Redirigir al inicio
-        window.location.href = "../index.html";
+        // Obtener tipo de usuario
+        const tipoUsuario =
+            usuarioEncontrado.tipoUsuario || "Cliente";
+
+
+        // =========================================
+        // REDIRECCIÓN SEGÚN TIPO
+        // =========================================
+
+        if (
+            tipoUsuario === "Administrador" ||
+            tipoUsuario === "Vendedor"
+        ) {
+
+            window.location.href =
+                "../admin/index.html";
+
+        } else {
+
+            window.location.href =
+                "../index.html";
+
+        }
 
     } else {
 
         errorLogin.textContent =
             "El email o la contraseña no son correctos.";
+
     }
 
 });
