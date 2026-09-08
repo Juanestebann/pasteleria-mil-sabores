@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Nuevo Producto | Pastelería Mil Sabores
+    </title>
+
+
+    <!-- CSS ORIGINAL DEL PANEL -->
+    <link
+        rel="stylesheet"
+        href="../../css/admin.css">
+    <!-- CSS SOLO DE NUEVO PRODUCTO -->
+    <link
+        rel="stylesheet"
+        href="../../css/admin-nuevo-producto.css">
+    <!-- ICONOS -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- JS NUEVO PRODUCTO -->
+    <script
+        src="../../js/admin/nuevo-producto.js"
+        defer>
+    </script>
+</head>
+<body>
+    <section id="admin-aplicacion">
+        <aside id="menu-admin">
+            <section id="marca-admin">
+                <h1> Pastelería<span> Mil Sabores</span></h1>
+                <p> Panel de administración</p>
+            </section>
+            <nav id="navegacion-admin"><a href="../index.html"> Inicio</a>
+                <a href="productos.html" class="opcion-activa">Productos</a>
+                <a href="../usuarios/usuarios.html">Usuarios </a>
+                <a href="../../index.html">Volver a la tienda</a>
+            </nav>
+        </aside>
+        <!--CONTENIDO -->
+        <section id="contenido-admin">
+            <!-- CABECERA-->
+            <header id="cabecera-admin">
+                <section>
+                    <h2>Panel de administración </h2>
+                    <p>Bienvenido,<span id="nombre-usuario-admin"></span></p>
+                </section>
+                <section id="sesion-admin">
+                    <span id="rol-usuario-admin">
+                    </span>
+                    <button
+                        id="cerrar-sesion-admin"
+                        type="button">
+
+                        Cerrar Sesión
+
+                    </button>
+                </section>
+            </header>
+            <!-- =====================================
+                 PRINCIPAL
+            ====================================== -->
+
+            <main id="principal-admin">
+
+
+                <!-- =================================
+                     PRESENTACIÓN
+                ================================== -->
+
+                <section id="nuevo-producto-presentacion">
+
+
+                    <section>
+
+                        <h2>
+                            Nuevo producto
+                        </h2>
+
+
+                        <p>
+                            Completa los datos para agregar
+                            un nuevo producto al sistema.
+                        </p>
+
+                    </section>
+
+
+                    <a
+                        id="volver-productos"
+                        href="productos.html">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Volver a productos
+
+                    </a>
+
+
+                </section>
+
+
+                <!-- =================================
+                     FORMULARIO
+                ================================== -->
+
+                <form id="formulario-nuevo-producto">
+
+
+                    <!-- CÓDIGO -->
+
+                    <section class="campo-formulario">
+
+                        <label for="codigo">
+                            Código
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="codigo"
+                            maxlength="10"
+                            placeholder="Ejemplo: TC003">
+
+
+                        <p
+                            class="mensaje-error"
+                            id="error-codigo">
+                        </p>
+
+                    </section>
+
+
+                    <!-- NOMBRE -->
+
+                    <section class="campo-formulario">
+
+                        <label for="nombre">
+                            Nombre
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            maxlength="100"
+                            placeholder="Nombre del producto">
+
+
+                        <p
+                            class="mensaje-error"
+                            id="error-nombre">
+                        </p>
+
+                    </section>
+
+
+                    <!-- PRECIO -->
+
+                    <section class="campo-formulario">
+
+                        <label for="precio">
+                            Precio
+                        </label>
+
+
+                        <input
+                            type="number"
+                            id="precio"
+                            min="1"
+                            placeholder="Ejemplo: 45000">
+
+
+                        <p
+                            class="mensaje-error"
+                            id="error-precio">
+                        </p>
+
+                    </section>
+
+
+                    <!-- CATEGORÍA -->
+
+                    <section class="campo-formulario">
+
+                        <label for="categoria">
+                            Categoría
+                        </label>
+
+
+                        <select id="categoria">
+
+
+                            <option value="">
+                                Seleccione una categoría
+                            </option>
+
+
+                            <option value="cuadradas">
+                                Tortas Cuadradas
+                            </option>
+
+
+                            <option value="circulares">
+                                Tortas Circulares
+                            </option>
+
+
+                            <option value="individuales">
+                                Postres Individuales
+                            </option>
+
+
+                            <option value="sin-azucar">
+                                Sin Azúcar
+                            </option>
+
+
+                            <option value="tradicional">
+                                Pastelería Tradicional
+                            </option>
+
+
+                            <option value="sin-gluten">
+                                Sin Gluten
+                            </option>
+
+
+                            <option value="veganos">
+                                Veganos
+                            </option>
+
+
+                            <option value="especiales">
+                                Tortas Especiales
+                            </option>
+
+
+                        </select>
+
+
+                        <p
+                            class="mensaje-error"
+                            id="error-categoria">
+                        </p>
+
+                    </section>
+
+                    <!-- STOCK -->
+                    <section class="campo-formulario">
+
+                        <label for="stock">
+                            Stock
+                        </label>
+
+
+                        <input
+                            type="number"
+                            id="stock"
+                            min="0"
+                            placeholder="Ejemplo: 10">
+
+
+                        <p
+                            class="mensaje-error"
+                            id="error-stock">
+                        </p>
+
+                    </section>
+
+                    <!-- STOCK CRÍTICO -->
+                    <section class="campo-formulario">
+
+                        <label for="stock-critico">
+                            Stock crítico
+                        </label>
+
+
+                        <input
+                            type="number"
+                            id="stock-critico"
+                            min="0"
+                            placeholder="Ejemplo: 3">
+
+
+                        <p
+                            class="mensaje-error"
+                            id="error-stock-critico">
+                        </p>
+
+                    </section>
+
+                    <!-- IMAGEN -->
+                    <section class="campo-formulario campo-completo">
+
+                        <label for="imagen">
+                            Imagen
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="imagen"
+                            placeholder="../img/Nombre imagen.png">
+
+
+                        <p
+                            class="mensaje-error"
+                            id="error-imagen">
+                        </p>
+
+                    </section>
+
+                    <!-- DESCRIPCIÓN -->
+                    <section class="campo-formulario campo-completo">
+
+                        <label for="descripcion">
+                            Descripción
+                        </label>
+
+
+                        <textarea
+                            id="descripcion"
+                            maxlength="500"
+                            placeholder="Descripción del producto">
+                        </textarea>
+
+                        <p
+                            class="mensaje-error"
+                            id="error-descripcion">
+                        </p>
+
+                    </section>
+
+                    <!-- MENSAJE -->
+
+                    <p id="mensaje-producto">
+                    </p>
+
+                    <!-- BOTONES -->
+
+                    <section id="acciones-formulario">
+
+                        <button
+                            id="guardar-producto"
+                            type="submit">
+
+                            <i class="fa-solid fa-floppy-disk"></i>
+
+                            Guardar producto
+                        </button>
+
+                        <a href="productos.html">Cancelar</a>
+                    </section>
+                </form>
+            </main>
+        </section>
+    </section>
+</body>
+</html>

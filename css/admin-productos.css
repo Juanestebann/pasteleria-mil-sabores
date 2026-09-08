@@ -1,0 +1,679 @@
+/* =========================================
+   PRODUCTOS - PANEL ADMINISTRATIVO
+   PASTELERÍA MIL SABORES
+========================================= */
+
+
+/* =========================================
+   PERFIL DE USUARIO
+========================================= */
+
+#rol-usuario-admin {
+    background-color: #FFF5E1;
+
+    color: #8B4513;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   PRESENTACIÓN
+========================================= */
+
+#productos-presentacion {
+    background-color: #ffffff;
+
+    padding: 28px 30px;
+
+    margin-bottom: 25px;
+
+    border-left: 5px solid #D89B2B;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+#productos-presentacion h2 {
+    margin: 0 0 10px 0;
+
+    color: #3B1F0F;
+
+    font-size: 25px;
+}
+
+
+#productos-presentacion p {
+    margin: 0;
+
+    color: #5D4037;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   RESUMEN
+========================================= */
+
+#productos-resumen {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+.producto-resumen {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    background-color: #ffffff;
+
+    padding: 22px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.resumen-icono {
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background-color: #FFF1D7;
+
+    color: #9A5B13;
+
+    font-size: 21px;
+}
+
+
+.resumen-icono i {
+    color: #9A5B13;
+}
+
+
+.producto-resumen h3 {
+    margin: 0 0 6px;
+
+    color: #3B1F0F;
+
+    font-size: 15px;
+}
+
+
+.producto-resumen p {
+    margin: 0;
+
+    color: #D89B2B;
+
+    font-size: 27px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   HERRAMIENTAS
+========================================= */
+
+#productos-herramientas {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background-color: #ffffff;
+
+    padding: 18px 20px;
+
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   BUSCADOR
+========================================= */
+
+#productos-buscador {
+    flex: 1;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 15px;
+
+    border: 1px solid #D9CBC0;
+
+    border-radius: 8px;
+
+    background-color: #ffffff;
+}
+
+
+#productos-buscador i {
+    color: #6D4C41;
+
+    font-size: 17px;
+
+    flex-shrink: 0;
+}
+
+
+#productos-buscador input {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    background-color: transparent;
+
+    color: #5D4037;
+
+    font-size: 14px;
+}
+
+
+#productos-buscador input::placeholder {
+    color: #9A8D86;
+}
+
+
+#productos-buscador:focus-within {
+    border-color: #D89B2B;
+
+    box-shadow: 0 0 0 3px rgba(216, 155, 43, 0.10);
+}
+
+
+/* =========================================
+   FILTRO
+========================================= */
+
+#productos-filtro {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+#productos-filtro label {
+    color: #3B1F0F;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+#productos-filtro select {
+    width: 210px;
+
+    height: 48px;
+
+    padding: 0 14px;
+
+    border: 1px solid #D9CBC0;
+
+    border-radius: 8px;
+
+    background-color: #ffffff;
+
+    color: #5D4037;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+#productos-filtro select:focus {
+    border-color: #D89B2B;
+
+    box-shadow: 0 0 0 3px rgba(216, 155, 43, 0.10);
+}
+
+
+/* =========================================
+   NUEVO PRODUCTO
+========================================= */
+
+#boton-nuevo-producto {
+    min-width: 160px;
+
+    height: 42px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 0 14px;
+
+    background-color: #D89B2B;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-family: Verdana, Geneva, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    box-shadow: 0 2px 5px rgba(59, 31, 15, 0.12);
+
+    transition: 0.2s;
+}
+
+
+#boton-nuevo-producto i {
+    color: #ffffff;
+
+    font-size: 14px;
+}
+
+
+#boton-nuevo-producto:hover {
+    background-color: #B97818;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   LISTADO
+========================================= */
+
+#productos-listado {
+    background-color: #ffffff;
+
+    padding: 22px;
+
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+#productos-listado-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+#productos-listado-header h2 {
+    margin: 0 0 5px;
+
+    color: #3B1F0F;
+
+    font-size: 23px;
+}
+
+
+#productos-listado-header p {
+    margin: 0;
+
+    color: #795548;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TABLA
+========================================= */
+
+#tabla-contenedor-productos {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+#tabla-productos {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+
+    min-width: 1050px;
+}
+
+
+#tabla-productos thead {
+    background-color: #F7F2EA;
+}
+
+
+#tabla-productos th {
+    padding: 14px 12px;
+
+    color: #3B1F0F;
+
+    text-align: left;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+#tabla-productos td {
+    padding: 13px 12px;
+
+    color: #5D4037;
+
+    border-bottom: 1px solid #EEE4DB;
+
+    vertical-align: middle;
+}
+
+
+#tabla-productos tbody tr {
+    transition: 0.2s;
+}
+
+
+#tabla-productos tbody tr:hover {
+    background-color: #FFF9F0;
+}
+
+
+/* =========================================
+   IMAGEN
+========================================= */
+
+.imagen-producto-admin {
+    width: 65px;
+
+    height: 55px;
+
+    object-fit: contain;
+
+    display: block;
+
+    border-radius: 6px;
+}
+
+
+/* =========================================
+   ESTADO STOCK
+========================================= */
+
+.estado-stock {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 15px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* DISPONIBLE */
+
+.stock-normal {
+    background-color: #E9F4E9;
+
+    color: #397443;
+}
+
+
+/* STOCK CRÍTICO */
+
+.stock-critico {
+    background-color: #FDE4E4;
+
+    color: #B3261E;
+}
+
+
+/* =========================================
+   ACCIONES
+========================================= */
+
+.celda-acciones {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   EDITAR
+========================================= */
+
+.boton-editar-producto {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 36px;
+
+    padding: 8px 12px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #D89B2B;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+
+.boton-editar-producto:hover {
+    background-color: #B97818;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   ELIMINAR
+========================================= */
+
+.boton-eliminar-producto {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 36px;
+
+    padding: 8px 12px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #B3261E;
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+
+.boton-eliminar-producto:hover {
+    background-color: #8C1D18;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   SIN PRODUCTOS
+========================================= */
+
+#mensaje-sin-productos {
+    display: none;
+
+    padding: 30px;
+
+    margin: 0;
+
+    text-align: center;
+
+    color: #795548;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width: 1100px) {
+
+    #productos-resumen {
+        grid-template-columns: 1fr;
+    }
+
+
+    #productos-herramientas {
+        flex-wrap: wrap;
+    }
+
+
+    #productos-buscador {
+        width: 100%;
+
+        flex-basis: 100%;
+    }
+
+
+    #productos-filtro {
+        flex: 1;
+    }
+
+}
+
+
+@media(max-width: 700px) {
+
+    #productos-herramientas {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    #productos-filtro {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    #productos-filtro select {
+        width: 100%;
+    }
+
+
+    #boton-nuevo-producto {
+        width: 100%;
+    }
+
+
+    #productos-listado-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+}
