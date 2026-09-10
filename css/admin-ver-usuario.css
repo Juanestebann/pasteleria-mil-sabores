@@ -3,100 +3,30 @@
    PASTELERÍA MIL SABORES
 ========================================= */
 
-
 /* =========================================
    PRESENTACIÓN
 ========================================= */
 
-#ver-usuario-presentacion {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    margin-bottom: 25px;
-
-    padding: 28px 30px;
-
-    background-color: #ffffff;
-
-    border-left: 5px solid #D89B2B;
-
-    border-radius: 12px;
-
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
-
-
 #ver-usuario-presentacion h2 {
     margin: 0 0 8px;
 
-    color: #3B1F0F;
-
-    font-size: 25px;
 }
 
-
 #ver-usuario-presentacion p {
-    margin: 0;
-
-    color: #5D4037;
 
     line-height: 1.5;
 }
 
-
 /* VOLVER */
 
 #boton-volver {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 8px;
 
     padding: 11px 17px;
-
-    background-color: #F6F0E7;
-
-    color: #3B1F0F;
-
-    border-radius: 8px;
-
-    text-decoration: none;
-
-    font-weight: bold;
 
     font-size: 14px;
 
     transition: 0.2s;
 }
-
-
-#boton-volver:hover {
-    background-color: #E8DCCB;
-}
-
-
-/* =========================================
-   TARJETA PRINCIPAL
-========================================= */
-
-#tarjeta-ver-usuario {
-    background-color: #ffffff;
-
-    padding: 30px;
-
-    border-radius: 12px;
-
-    border: 1px solid #E7C9A9;
-
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
-
 
 /* =========================================
    PERFIL
@@ -113,9 +43,8 @@
 
     margin-bottom: 25px;
 
-    border-bottom: 1px solid #EEE4DB;
+    border-bottom: 1px solid var(--color-borde-suave);
 }
-
 
 #avatar-usuario {
     width: 70px;
@@ -132,39 +61,20 @@
 
     border-radius: 50%;
 
-    background-color: #FFF1D7;
+    background-color: var(--color-fondo-cliente);
 
     color: #9A5B13;
 
     font-size: 30px;
 }
 
-
 #perfil-ver-usuario h2 {
     margin: 0 0 8px;
 
-    color: #3B1F0F;
+    color: var(--color-principal);
 
     font-size: 24px;
 }
-
-
-#rol-usuario {
-    display: inline-block;
-
-    padding: 6px 12px;
-
-    border-radius: 15px;
-
-    background-color: #FFF1D7;
-
-    color: #8B5A00;
-
-    font-size: 12px;
-
-    font-weight: bold;
-}
-
 
 /* =========================================
    DATOS
@@ -180,24 +90,22 @@
     margin-bottom: 30px;
 }
 
-
 .dato-usuario {
     padding: 18px;
 
     background-color: #FAF7F2;
 
-    border: 1px solid #EEE4DB;
+    border: 1px solid var(--color-borde-suave);
 
     border-radius: 9px;
 }
-
 
 .dato-etiqueta {
     display: block;
 
     margin-bottom: 7px;
 
-    color: #8B4513;
+    color: var(--color-marca);
 
     font-size: 12px;
 
@@ -208,22 +116,19 @@
     letter-spacing: 0.5px;
 }
 
-
 .dato-usuario p {
     margin: 0;
 
-    color: #3B1F0F;
+    color: var(--color-principal);
 
     font-size: 15px;
 
     line-height: 1.4;
 }
 
-
 .dato-ancho-completo {
     grid-column: 1 / -1;
 }
-
 
 /* =========================================
    ACCIONES
@@ -236,100 +141,27 @@
 
     padding-top: 20px;
 
-    border-top: 1px solid #EEE4DB;
+    border-top: 1px solid var(--color-borde-suave);
 }
 
-
 #boton-editar-usuario {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    padding: 11px 18px;
-
-    background-color: #D89B2B;
-
-    color: #ffffff;
-
-    border-radius: 8px;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    font-size: 14px;
 
     transition: 0.2s;
 }
-
-
-#boton-editar-usuario:hover {
-    background-color: #B97818;
-}
-
 
 /* =========================================
    USUARIO NO ENCONTRADO
 ========================================= */
 
-#mensaje-usuario-no-encontrado {
-    display: none;
-
-    background-color: #ffffff;
-
-    padding: 45px 30px;
-
-    text-align: center;
-
-    border-radius: 12px;
-
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
-
-
-#mensaje-usuario-no-encontrado i {
-    color: #D89B2B;
-
-    font-size: 38px;
-
-    margin-bottom: 15px;
-}
-
-
 #mensaje-usuario-no-encontrado h3 {
-    margin: 0 0 10px;
-
-    color: #3B1F0F;
 
     font-size: 22px;
 }
 
-
 #mensaje-usuario-no-encontrado p {
     margin: 0 0 20px;
 
-    color: #795548;
 }
-
-
-#mensaje-usuario-no-encontrado a {
-    display: inline-block;
-
-    padding: 10px 16px;
-
-    background-color: #D89B2B;
-
-    color: white;
-
-    border-radius: 7px;
-
-    text-decoration: none;
-
-    font-weight: bold;
-}
-
 
 /* =========================================
    RESPONSIVE
@@ -337,27 +169,17 @@
 
 @media(max-width: 800px) {
 
-    #ver-usuario-presentacion {
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
-
     #datos-usuario {
         grid-template-columns: 1fr;
     }
-
 
     .dato-ancho-completo {
         grid-column: auto;
     }
 
-
     #acciones-ver-usuario {
         justify-content: stretch;
     }
-
 
     #boton-editar-usuario {
         width: 100%;

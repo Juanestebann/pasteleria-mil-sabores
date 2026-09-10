@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="modelo-borde">
 
 <head>
     <meta charset="UTF-8">
@@ -8,17 +8,25 @@
     <title>Usuarios | Pastelería Mil Sabores</title>
 
     <!-- CSS ORIGINAL DEL PANEL - NO MODIFICAR -->
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/componentes.css">
+    <link rel="stylesheet" href="../../css/formularios.css">
+    <link rel="stylesheet" href="../../css/tablas.css">
     <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/admin-usuarios.css">
+
+
+
 
     <!-- CSS SOLO DE USUARIOS -->
-    <link rel="stylesheet" href="../../css/admin-usuarios.css">
+
 
     <!-- JS SOLO DE USUARIOS -->
     <script src="../../js/admin/usuarios-admin.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
-<body>
+<body class="pagina-admin">
 
     <section id="admin-aplicacion">
 
@@ -98,7 +106,7 @@
 
                 <section id="sesion-admin">
 
-                    <span id="perfil-usuario-admin"></span>
+                    <span id="perfil-usuario-admin" class="badge-sesion"></span>
 
                     <button
                         id="cerrar-sesion-admin"
@@ -120,7 +128,7 @@
 
 
                 <!-- PRESENTACIÓN -->
-                <section id="usuarios-presentacion">
+                <section id="usuarios-presentacion" class="panel panel-presentacion">
 
                     <h2>
                         Gestión de usuarios
@@ -138,11 +146,11 @@
                      HERRAMIENTAS
                 ================================== -->
 
-                <section id="usuarios-herramientas">
+                <section id="usuarios-herramientas" class="panel herramientas-admin">
 
 
                     <!-- BUSCADOR -->
-                    <section id="usuarios-buscador">
+                    <section id="usuarios-buscador" class="buscador-admin">
 
                     <i class="fa-solid fa-magnifying-glass"></i>
 
@@ -156,13 +164,13 @@
 
 
                     <!-- FILTRO -->
-                    <section id="usuarios-filtro">
+                    <section id="usuarios-filtro" class="filtro-admin">
 
                         <label for="filtro-rol">
                             Filtrar por rol:
                         </label>
 
-                        <select id="filtro-rol">
+                        <select id="filtro-rol" class="control-formulario">
 
                             <option value="Todos">
                                 Todos los roles
@@ -188,8 +196,7 @@
                     <!-- NUEVO USUARIO -->
                     <a
                         id="boton-nuevo-usuario"
-                        href="nuevo-usuario.html"
-                    >
+                        href="nuevo-usuario.html" class="btn btn-principal btn-listado btn-elevable">
                         <i class="fa-solid fa-user-plus">   Nuevo Usuario </i>
                     </a>
 
@@ -200,10 +207,10 @@
                      LISTADO
                 ================================== -->
 
-                <section id="usuarios-listado">
+                <section id="usuarios-listado" class="panel listado-admin">
 
 
-                    <section id="usuarios-listado-header">
+                    <section id="usuarios-listado-header" class="listado-cabecera">
 
                         <h2>
                             Usuarios registrados
@@ -217,9 +224,9 @@
 
 
                     <!-- TABLA -->
-                    <section id="tabla-contenedor">
+                    <section id="tabla-contenedor" class="tabla-contenedor">
 
-                        <table id="tabla-usuarios">
+                        <table id="tabla-usuarios" class="tabla-admin">
 
                             <thead>
 
@@ -247,7 +254,7 @@
                     </section>
 
 
-                    <p id="mensaje-sin-usuarios">
+                    <p id="mensaje-sin-usuarios" class="mensaje-listado-vacio">
                         No existen usuarios registrados.
                     </p>
 
@@ -258,7 +265,7 @@
                      ACCIONES RÁPIDAS
                 ================================== -->
 
-                <section id="acciones-rapidas">
+                <section id="acciones-rapidas" class="panel">
 
                     <h2>
                         Acciones rápidas
@@ -308,7 +315,7 @@
                     class="accion-rapida"
                     href="#"
                     id="accion-mostrar-usuarios"
-                    >           
+                    >
         <span class="accion-icono">
             <i class="fa-solid fa-users"></i>
         </span>
@@ -331,7 +338,7 @@
                         <a
             class="accion-rapida"
                 href="#"
-        id="accion-editar-usuario"  
+        id="accion-editar-usuario"
             >
     <span class="accion-icono">
         <i class="fa-solid fa-pen"></i>

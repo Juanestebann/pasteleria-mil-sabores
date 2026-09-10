@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="modelo-borde">
 
 <head>
     <meta charset="UTF-8">
@@ -8,16 +8,22 @@
     <title>Registro | Pastelería Mil Sabores</title>
 
     <!-- CSS GENERAL -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+    <link rel="stylesheet" href="../css/formularios.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/registro.css">
+
+
+
 
     <!-- CSS DEL REGISTRO -->
-    <link rel="stylesheet" href="../css/registro.css">
 
     <!-- JAVASCRIPT DEL REGISTRO -->
     <script src="../js/registro.js" defer></script>
 </head>
 
-<body>
+<body class="sitio-publico">
 
     <!-- BARRA SUPERIOR -->
     <section id="barra-superior">
@@ -27,7 +33,6 @@
         <p>Síguenos en: Instagram</p>
 
     </section>
-
 
     <!-- ENCABEZADO -->
     <header>
@@ -39,7 +44,6 @@
             <p>Cafetería & Pastelería</p>
 
         </section>
-
 
         <!-- MENÚ DE NAVEGACIÓN -->
         <nav id="menu">
@@ -58,7 +62,6 @@
 
         </nav>
 
-
         <!-- ACCIONES DEL HEADER -->
         <section id="acciones-header">
 
@@ -73,12 +76,10 @@
 
             </section>
 
-
             <!-- CARRITO -->
             <a class="boton-icono" href="carrito.html">
                 🛒
             </a>
-
 
             <!-- LOGIN -->
             <section id="sesion-header">
@@ -93,12 +94,10 @@
 
     </header>
 
-
     <!-- CONTENIDO PRINCIPAL -->
     <main id="registro-principal">
 
         <section id="registro-contenedor">
-
 
             <!-- ENCABEZADO DEL REGISTRO -->
             <section id="registro-encabezado">
@@ -116,10 +115,8 @@
 
             </section>
 
-
             <!-- FORMULARIO -->
-            <form id="formulario-registro" novalidate>
-
+            <form id="formulario-registro" novalidate class="formulario-acceso">
 
                 <!-- RUN Y NOMBRE -->
                 <section class="fila-formulario">
@@ -136,7 +133,6 @@
 
                     </section>
 
-
                     <section class="campo-formulario">
 
                         <label for="nombre">
@@ -151,7 +147,6 @@
 
                 </section>
 
-
                 <!-- APELLIDOS -->
                 <section class="campo-formulario">
 
@@ -164,7 +159,6 @@
                     <p class="mensaje-error" id="error-apellidos"></p>
 
                 </section>
-
 
                 <!-- CORREO Y FECHA -->
                 <section class="fila-formulario">
@@ -181,7 +175,6 @@
 
                     </section>
 
-
                     <section class="campo-formulario">
 
                         <label for="fechaNacimiento">
@@ -195,7 +188,6 @@
                     </section>
 
                 </section>
-
 
                 <!-- REGIÓN Y COMUNA -->
                 <section class="fila-formulario">
@@ -218,7 +210,6 @@
 
                     </section>
 
-
                     <section class="campo-formulario">
 
                         <label for="comuna">
@@ -239,7 +230,6 @@
 
                 </section>
 
-
                 <!-- DIRECCIÓN -->
                 <section class="campo-formulario">
 
@@ -252,7 +242,6 @@
                     <p class="mensaje-error" id="error-direccion"></p>
 
                 </section>
-
 
                 <!-- CONTRASEÑAS -->
                 <section class="fila-formulario">
@@ -269,7 +258,6 @@
 
                     </section>
 
-
                     <section class="campo-formulario">
 
                         <label for="confirmarContrasena">
@@ -285,18 +273,15 @@
 
                 </section>
 
-
                 <!-- BOTÓN -->
-                <button id="boton-registro" type="submit">
+                <button id="boton-registro" type="submit" class="btn btn-principal btn-acceso">
                     Crear cuenta
                 </button>
 
-
                 <!-- MENSAJE DE ÉXITO -->
-                <p id="mensaje-registro"></p>
+                <p id="mensaje-registro" class="mensaje-exito"></p>
 
             </form>
-
 
             <!-- VOLVER AL LOGIN -->
             <section id="registro-login">
@@ -315,88 +300,71 @@
 
     </main>
 
-
     <!-- FOOTER -->
-    <footer>
+    <footer class="footer-publico">
 
         <section id="footer-contenido">
 
+            <!-- COLUMNA 1 -->
+            <article class="footer-columna">
 
-            <!-- INFORMACIÓN -->
-            <section class="footer-seccion">
-
-                <h2>
-                    Pastelería Mil Sabores
-                </h2>
+                <h3>Pastelería Mil Sabores</h3>
 
                 <p>
-                    Tradición, calidad y dulces momentos
-                    para compartir en cada ocasión.
+                    Cafetería & Pastelería
                 </p>
 
-            </section>
+                <p>
+                    Momentos dulces para compartir.
+                </p>
+
+            </article>
 
 
-            <!-- ENLACES -->
-            <section class="footer-seccion">
+            <!-- COLUMNA 2 -->
+            <article class="footer-columna">
 
-                <h3>
-                    Enlaces rápidos
-                </h3>
-
-                <a href="productos.html">
-                    - Nuestra Carta
-                </a>
-
-                <a href="../index.html#promocion">
-                    - Promociones
-                </a>
-
-                <a href="nosotros.html">
-                    - Nosotros
-                </a>
-
-                <a href="contacto.html">
-                    - Contacto
-                </a>
-
-                <a href="carrito.html">
-                    - Carrito
-                </a>
-
-            </section>
-
-
-            <!-- CONTACTO -->
-            <section class="footer-seccion">
-
-                <h3>
-                    Contacto
-                </h3>
+                <h3>Contacto</h3>
 
                 <p>
                     📍 Av. San Martín 1234, Concepción
                 </p>
 
                 <p>
-                    ☎ +56 9 1234 5678
+                    ◷ Lun - Dom: 08:00 - 20:00
                 </p>
 
                 <p>
-                    📷 @pasteleriamilsabores
+                    contacto@milsabores.cl
                 </p>
 
-            </section>
+            </article>
+
+
+            <!-- COLUMNA 3 -->
+            <article class="footer-columna">
+
+                <h3>Enlaces rápidos</h3>
+
+                <a href="../index.html">Inicio</a>
+
+                <a href="productos.html">Carta</a>
+
+                <a href="nosotros.html">Nosotros</a>
+
+                <a href="contacto.html">Contacto</a>
+
+                <a href="#">Instagram</a>
+
+            </article>
 
         </section>
 
 
-        <!-- DERECHOS -->
         <section id="footer-derechos">
 
             <p>
-                © 2026 Pastelería Mil Sabores.
-                Todos los derechos reservados.
+                © 2026 Pastelería Mil Sabores - Todos los derechos reservados
             </p>
 
         </section>

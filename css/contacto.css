@@ -1,10 +1,5 @@
 /* HEADER */
 
-header {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.10);
-}
-
-
 /* PRESENTACIÓN */
 
 #contacto-presentacion {
@@ -14,18 +9,16 @@ header {
 
     background-color: #FFF9EC;
 
-    border-top: 2px solid #D89B2B;
+    border-top: 2px solid var(--color-acento);
 
-    border-bottom: 2px solid #D89B2B;
+    border-bottom: 2px solid var(--color-acento);
 }
-
 
 #contacto-presentacion article {
     max-width: 850px;
 
     margin: auto;
 }
-
 
 #contacto-presentacion h2 {
     font-size: 38px;
@@ -34,7 +27,6 @@ header {
 
     margin-bottom: 20px;
 }
-
 
 #contacto-presentacion h2::after {
     content: "";
@@ -45,29 +37,18 @@ header {
 
     height: 4px;
 
-    background-color: #D89B2B;
+    background-color: var(--color-acento);
 
     margin: 10px auto 0px;
 
     border-radius: 5px;
 }
 
-
 #contacto-presentacion p {
     font-size: 18px;
 
     line-height: 1.6;
 }
-
-
-.texto-dorado {
-    color: #D89B2B;
-
-    font-size: 18px;
-
-    font-weight: bold;
-}
-
 
 /* CONTACTO PRINCIPAL */
 
@@ -82,11 +63,10 @@ header {
 
     padding: 70px 100px;
 
-    background-color: white;
+    background-color: var(--color-blanco);
 
-    border-bottom: 2px solid #D89B2B;
+    border-bottom: 2px solid var(--color-acento);
 }
-
 
 /* INFORMACIÓN DE CONTACTO */
 
@@ -97,15 +77,14 @@ header {
 
     padding: 40px;
 
-    background-color: #FFF5E1;
+    background-color: var(--color-fondo);
 
-    border: 2px solid #D89B2B;
+    border: 2px solid var(--color-acento);
 
     border-radius: 15px;
 
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12);
 }
-
 
 #informacion-contacto h2 {
     font-size: 30px;
@@ -114,7 +93,6 @@ header {
 
     margin-bottom: 30px;
 }
-
 
 #informacion-contacto h2::after {
     content: "";
@@ -125,32 +103,28 @@ header {
 
     height: 3px;
 
-    background-color: #D89B2B;
+    background-color: var(--color-acento);
 
     margin-top: 10px;
 
     border-radius: 5px;
 }
 
-
 .dato-contacto {
     margin-bottom: 25px;
 }
 
-
 .dato-contacto h3 {
-    color: #D89B2B;
+    color: var(--color-acento);
 
     margin-bottom: 8px;
 }
-
 
 .dato-contacto p {
     margin: 0px;
 
     line-height: 1.5;
 }
-
 
 /* FORMULARIO */
 
@@ -161,15 +135,14 @@ header {
 
     padding: 40px;
 
-    background-color: white;
+    background-color: var(--color-blanco);
 
-    border: 2px solid #D89B2B;
+    border: 2px solid var(--color-acento);
 
     border-radius: 15px;
 
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12);
 }
-
 
 #formulario-contacto h2 {
     font-size: 30px;
@@ -178,7 +151,6 @@ header {
 
     margin-bottom: 30px;
 }
-
 
 #formulario-contacto h2::after {
     content: "";
@@ -189,95 +161,80 @@ header {
 
     height: 3px;
 
-    background-color: #D89B2B;
+    background-color: var(--color-acento);
 
     margin-top: 10px;
 
     border-radius: 5px;
 }
 
-
 .campo-formulario {
+    display: block;
+
     margin-bottom: 20px;
 }
 
-
 .campo-formulario label {
+    color: inherit;
+    font-size: inherit;
+
     display: block;
 
     margin-bottom: 8px;
 
-    font-weight: bold;
 }
-
 
 .campo-formulario input,
 .campo-formulario textarea {
-    width: 100%;
+    color: initial;
 
     padding: 12px;
 
-    border: 1px solid #B89B8A;
-
-    border-radius: 8px;
+    border-color: #B89B8A;
 
     font-size: 16px;
 
     box-sizing: border-box;
 }
 
-
 .campo-formulario textarea {
     height: 140px;
 
-    resize: vertical;
 }
-
 
 .campo-formulario input:focus,
 .campo-formulario textarea:focus {
+    box-shadow: none;
+
     outline: none;
 
-    border: 2px solid #D89B2B;
+    border: 2px solid var(--color-acento);
 }
-
 
 /* MENSAJES DE ERROR */
 
 .mensaje-error {
-    color: #B00020;
+    color: var(--color-error-contacto);
 
     font-size: 14px;
 
     margin-top: 6px;
 
-    margin-bottom: 0px;
-
     min-height: 18px;
 }
-
 
 /* MENSAJE DE ÉXITO */
 
 #mensaje-exito {
-    color: #2E7D32;
-
-    font-weight: bold;
 
     margin-top: 20px;
 }
 
-
 #formulario-contacto button {
-    background-color: #3B1F0F;
-
-    color: white;
 
     border: none;
 
     padding: 14px 25px;
-
-    border-radius: 8px;
 
     font-size: 16px;
 
@@ -286,14 +243,6 @@ header {
     transition: transform 0.3s, background-color 0.3s;
 }
 
-
-#formulario-contacto button:hover {
-    background-color: #5D4037;
-
-    transform: translateY(-3px);
-}
-
-
 /* UBICACIÓN */
 
 #ubicacion {
@@ -301,11 +250,10 @@ header {
 
     text-align: center;
 
-    background-color: #FFF5E1;
+    background-color: var(--color-fondo);
 
-    border-bottom: 2px solid #D89B2B;
+    border-bottom: 2px solid var(--color-acento);
 }
-
 
 #ubicacion article {
     max-width: 1000px;
@@ -313,13 +261,11 @@ header {
     margin: auto;
 }
 
-
 #ubicacion h2 {
     font-size: 32px;
 
     margin-bottom: 20px;
 }
-
 
 #ubicacion h2::after {
     content: "";
@@ -330,20 +276,18 @@ header {
 
     height: 3px;
 
-    background-color: #D89B2B;
+    background-color: var(--color-acento);
 
     margin: 10px auto 0px;
 
     border-radius: 5px;
 }
 
-
 #ubicacion p {
     font-size: 18px;
 
     line-height: 1.6;
 }
-
 
 #mapa {
     margin-top: 30px;
@@ -356,84 +300,14 @@ header {
 
     justify-content: center;
 
-    background-color: white;
+    background-color: var(--color-blanco);
 
-    border: 2px solid #D89B2B;
+    border: 2px solid var(--color-acento);
 
     border-radius: 15px;
 
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.10);
 }
-
-
-/* FOOTER */
-
-footer {
-    background-color: #2B160C;
-
-    color: white;
-
-    border-top: 3px solid #D89B2B;
-}
-
-
-#footer-contenido {
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 50px;
-
-    padding: 50px 80px;
-}
-
-
-.footer-columna {
-    width: 33%;
-}
-
-
-.footer-columna h3 {
-    color: #D89B2B;
-
-    margin-bottom: 15px;
-}
-
-
-.footer-columna p {
-    line-height: 1.6;
-}
-
-
-.footer-columna a {
-    display: block;
-
-    color: white;
-
-    text-decoration: none;
-
-    margin-bottom: 10px;
-}
-
-
-.footer-columna a:hover {
-    color: #D89B2B;
-}
-
-
-#footer-derechos {
-    border-top: 1px solid #D89B2B;
-
-    text-align: center;
-
-    padding: 15px;
-}
-
-
-#footer-derechos p {
-    margin: 0px;
-}
-
 
 /* RESPONSIVE */
 
@@ -443,7 +317,6 @@ footer {
         padding: 50px 30px;
     }
 
-
     #contacto-principal {
         flex-direction: column;
 
@@ -452,7 +325,6 @@ footer {
         padding: 50px 30px;
     }
 
-
     #informacion-contacto,
     #formulario-contacto {
         width: 100%;
@@ -460,21 +332,8 @@ footer {
         max-width: 650px;
     }
 
-
     #ubicacion {
         padding: 50px 30px;
-    }
-
-
-    #footer-contenido {
-        flex-direction: column;
-
-        padding: 40px 30px;
-    }
-
-
-    .footer-columna {
-        width: 100%;
     }
 
 }

@@ -2,11 +2,6 @@
    REGISTRO - PASTELERÍA MIL SABORES
 ========================================= */
 
-* {
-    box-sizing: border-box;
-}
-
-
 /* =========================================
    CONTENIDO PRINCIPAL
 ========================================= */
@@ -19,9 +14,8 @@
     justify-content: center;
     align-items: center;
 
-    background-color: #fff5e1;
+    background-color: var(--color-fondo);
 }
-
 
 /* =========================================
    TARJETA DEL REGISTRO
@@ -31,7 +25,7 @@
     width: 100%;
     max-width: 920px;
 
-    background-color: #ffffff;
+    background-color: var(--color-blanco);
 
     padding: 55px 60px;
 
@@ -39,7 +33,6 @@
 
     box-shadow: 0 10px 30px rgba(59, 31, 15, 0.18);
 }
-
 
 /* =========================================
    ENCABEZADO
@@ -53,7 +46,7 @@
 .registro-bienvenida {
     display: block;
 
-    color: #d89b2b;
+    color: var(--color-acento);
 
     font-size: 13px;
     font-weight: bold;
@@ -65,7 +58,7 @@
 }
 
 #registro-encabezado h2 {
-    color: #3b1f0f;
+    color: var(--color-principal);
 
     font-size: 36px;
 
@@ -93,11 +86,10 @@
 
     margin: 18px auto 0;
 
-    background-color: #d89b2b;
+    background-color: var(--color-acento);
 
     border-radius: 10px;
 }
-
 
 /* =========================================
    FORMULARIO
@@ -106,7 +98,6 @@
 #formulario-registro {
     width: 100%;
 }
-
 
 /* DOS COLUMNAS */
 
@@ -118,121 +109,31 @@
     gap: 22px;
 }
 
-
 /* CAMPO */
 
 .campo-formulario {
     width: 100%;
 
-    display: flex;
-    flex-direction: column;
-
-    margin-bottom: 20px;
 }
-
-
-/* LABEL */
-
-.campo-formulario label {
-    margin-bottom: 7px;
-
-    color: #3b1f0f;
-
-    font-size: 14px;
-    font-weight: 600;
-}
-
 
 /* INPUTS Y SELECTS */
 
 .campo-formulario input,
 .campo-formulario select {
-    width: 100%;
-    height: 50px;
-
-    padding: 0 15px;
-
-    border: 1px solid #d8ccc3;
-
-    border-radius: 8px;
-
-    background-color: #ffffff;
-
-    color: #3b1f0f;
-
-    font-size: 14px;
-
-    outline: none;
 
     transition: 0.2s;
 }
-
-
-/* PLACEHOLDER */
-
-.campo-formulario input::placeholder {
-    color: #a89c95;
-}
-
-
-/* FOCUS */
-
-.campo-formulario input:focus,
-.campo-formulario select:focus {
-    border-color: #d89b2b;
-
-    box-shadow: 0 0 0 3px rgba(216, 155, 43, 0.15);
-}
-
-
-/* =========================================
-   MENSAJES DE ERROR
-========================================= */
-
-.mensaje-error {
-    min-height: 14px;
-
-    margin-top: 5px;
-    margin-bottom: 0;
-
-    color: #c0392b;
-
-    font-size: 12px;
-}
-
 
 /* =========================================
    BOTÓN
 ========================================= */
 
 #boton-registro {
-    width: 100%;
-    height: 52px;
 
     margin-top: 10px;
 
-    border: none;
-
-    border-radius: 8px;
-
-    background-color: #d89b2b;
-
-    color: #ffffff;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    cursor: pointer;
-
     transition: 0.2s;
 }
-
-#boton-registro:hover {
-    background-color: #b97818;
-
-    transform: translateY(-1px);
-}
-
 
 /* =========================================
    ENLACE AL LOGIN
@@ -271,7 +172,7 @@
 
     padding: 0 12px;
 
-    background-color: #ffffff;
+    background-color: var(--color-blanco);
 
     color: #665750;
 
@@ -281,7 +182,7 @@
 #registro-login a {
     margin-left: 5px;
 
-    color: #8b4513;
+    color: var(--color-marca);
 
     font-weight: bold;
 
@@ -289,9 +190,8 @@
 }
 
 #registro-login a:hover {
-    color: #d89b2b;
+    color: var(--color-acento);
 }
-
 
 /* =========================================
    TABLET
@@ -313,7 +213,6 @@
         font-size: 32px;
     }
 }
-
 
 /* =========================================
    CELULAR
@@ -350,7 +249,6 @@
     }
 }
 
-
 /* =========================================
    CELULAR PEQUEÑO
 ========================================= */
@@ -375,9 +273,6 @@
 
     text-align: center;
 
-    color: #2e7d32;
-
     font-size: 14px;
 
-    font-weight: bold;
 }

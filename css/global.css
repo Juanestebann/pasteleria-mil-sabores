@@ -1,0 +1,51 @@
+/* Valores de la identidad visual existente. */
+:root {
+    --color-principal: #3B1F0F;
+    --color-secundario: #5D4037;
+    --color-acento: #D89B2B;
+    --color-acento-hover: #B97818;
+    --color-fondo: #FFF5E1;
+    --color-fondo-suave: #F7F2EA;
+    --color-blanco: #FFFFFF;
+    --color-marca: #8B4513;
+    --color-texto-suave: #795548;
+    --color-borde-panel: #E7C9A9;
+    --color-borde-campo: #D9CBC0;
+    --color-borde-suave: #EEE4DB;
+    --color-secundario-fondo: #F6F0E7;
+    --color-secundario-hover: #E8DCCB;
+    --color-error: #B3261E;
+    --color-error-acceso: #C0392B;
+    --color-error-contacto: #B00020;
+    --color-peligro-hover: #8C1D18;
+    --color-exito: #2E7D32;
+    --color-estado-exito: #397443;
+    --color-fondo-exito: #E9F4E9;
+    --color-fondo-error: #FDE4E4;
+    --color-rol-cliente: #8B5A00;
+    --color-fondo-cliente: #FFF1D7;
+    --color-rol-admin: #24557C;
+    --color-fondo-admin: #DDEBFA;
+    --radio-base: 8px;
+    --radio-panel: 12px;
+    --sombra-panel: 0 3px 10px rgba(0, 0, 0, 0.08);
+    --sombra-foco: 0 0 0 3px rgba(216, 155, 43, 0.10);
+    --sombra-foco-acceso: 0 0 0 3px rgba(216, 155, 43, 0.15);
+}
+
+/* Solo las vistas que ya usaban border-box activan este modelo. */
+.modelo-borde,
+.modelo-borde * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-secundario);
+    font-family: Arial, sans-serif;
+}
+
+.pagina-admin {
+    background-color: var(--color-fondo-suave);
+}

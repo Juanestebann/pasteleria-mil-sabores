@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="modelo-borde">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Producto | Pastelería Mil Sabores</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/componentes.css">
+    <link rel="stylesheet" href="../../css/formularios.css">
     <link rel="stylesheet" href="../../css/admin.css">
     <link rel="stylesheet" href="../../css/admin-editar-producto.css">
+
+
+
+
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="../../js/admin/editar-producto.js" defer></script>
 </head>
-<body>
+<body class="pagina-admin">
     <section id="admin-aplicacion">
         <aside id="menu-admin">
             <section id="marca-admin">
@@ -33,7 +40,7 @@
                     <p>Bienvenido,<span id="nombre-usuario-admin"></span> </p>
                 </section>
                 <section id="sesion-admin">
-                    <span id="rol-usuario-admin"></span>
+                    <span id="rol-usuario-admin" class="badge-sesion"></span>
 
                     <button id="cerrar-sesion-admin" type="button">
                         Cerrar Sesión
@@ -44,7 +51,7 @@
 
             <main id="principal-admin">
 
-                <section id="editar-producto-presentacion">
+                <section id="editar-producto-presentacion" class="panel panel-presentacion presentacion-acciones presentacion-productos">
 
                     <section>
                         <h2>Editar producto</h2>
@@ -54,14 +61,14 @@
                         </p>
                     </section>
 
-                    <a id="volver-productos" href="productos.html">
+                    <a id="volver-productos" href="productos.html" class="btn btn-admin btn-secundario">
                         <i class="fa-solid fa-arrow-left"></i>
                         Volver a productos
                     </a>
 
                 </section>
 
-                <form id="formulario-editar-producto">
+                <form id="formulario-editar-producto" class="panel formulario-producto">
 
                     <section class="campo-formulario">
                         <label for="codigo">
@@ -173,19 +180,19 @@
                         <p class="mensaje-error" id="error-descripcion"></p>
                     </section>
 
-                    <p id="mensaje-producto"></p>
+                    <p id="mensaje-producto" class="mensaje-exito-producto"></p>
 
                     <section id="acciones-formulario">
 
                         <button
                             id="guardar-cambios-producto"
-                            type="submit">
+                            type="submit" class="btn btn-admin btn-principal">
 
                             <i class="fa-solid fa-floppy-disk"></i>
                             Guardar cambios
                         </button>
 
-                        <a href="productos.html"> Cancelar</a>
+                        <a href="productos.html" class="btn btn-admin btn-secundario"> Cancelar</a>
                     </section>
                 </form>
             </main>

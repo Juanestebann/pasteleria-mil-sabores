@@ -7,8 +7,15 @@
 
     <title>Contacto - Pastelería Mil Sabores</title>
 
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+    <link rel="stylesheet" href="../css/formularios.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/contacto.css">
+
+
+
+
 
     <script src="../js/sesion.js" defer></script>
     <script src="../js/contacto.js" defer></script>
@@ -18,7 +25,7 @@
 >
 </head>
 
-<body>
+<body class="sitio-publico">
 
     <!-- BARRA SUPERIOR -->
     <section id="barra-superior">
@@ -33,7 +40,7 @@
 
 
     <!-- ENCABEZADO -->
-    <header>
+    <header class="header-sombra">
 
         <section id="marca">
 
@@ -99,7 +106,7 @@
 
             <article>
 
-                <p class="texto-dorado">
+                <p class="texto-dorado texto-dorado-editorial">
                     Estamos para ayudarte
                 </p>
 
@@ -193,7 +200,7 @@
                 <h2>Envíanos un mensaje</h2>
 
 
-                <form id="formulario" novalidate>
+                <form id="formulario" novalidate class="formulario-contacto">
 
 
                     <!-- NOMBRE -->
@@ -253,12 +260,12 @@
                     </section>
 
 
-                    <button type="submit">
+                    <button type="submit" class="btn btn-oscuro">
                         Enviar mensaje
                     </button>
 
 
-                    <p id="mensaje-exito"></p>
+                    <p id="mensaje-exito" class="mensaje-exito"></p>
 
                 </form>
 
@@ -294,7 +301,7 @@
 
 
     <!-- PIE DE PÁGINA -->
-    <footer>
+    <footer class="footer-publico">
 
         <section id="footer-contenido">
 

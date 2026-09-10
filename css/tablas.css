@@ -1,0 +1,31 @@
+/* Tablas administrativas de usuarios y productos. */
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-admin {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.tabla-admin thead { background-color: var(--color-fondo-suave); }
+
+.tabla-admin th {
+    padding: 14px 12px;
+    color: var(--color-principal);
+    text-align: left;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.tabla-admin td {
+    padding: 13px 12px;
+    color: var(--color-secundario);
+    border-bottom: 1px solid var(--color-borde-suave);
+    vertical-align: middle;
+}
+
+.tabla-admin tbody tr { transition: 0.2s; }
+.tabla-admin tbody tr:hover { background-color: #FFF9F0; }

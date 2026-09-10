@@ -1,0 +1,192 @@
+/* Lenguaje visual comun; las columnas y anchos pertenecen a cada vista. */
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-formulario label {
+    margin-bottom: 7px;
+    color: var(--color-principal);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea,
+.control-formulario {
+    width: 100%;
+    border: 1px solid var(--color-borde-campo);
+    border-radius: var(--radio-base);
+    background-color: var(--color-blanco);
+    color: var(--color-secundario);
+    font-size: 14px;
+    outline: none;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+    border-color: var(--color-acento);
+    box-shadow: var(--sombra-foco);
+}
+
+.formulario-acceso .campo-formulario {
+    margin-bottom: 20px;
+}
+
+.formulario-acceso label {
+    font-weight: 600;
+}
+
+.formulario-acceso input,
+.formulario-acceso select {
+    height: 50px;
+    padding: 0 15px;
+    border-color: #D8CCC3;
+    color: var(--color-principal);
+}
+
+.formulario-acceso input::placeholder {
+    color: #A89C95;
+}
+
+.formulario-acceso input:focus,
+.formulario-acceso select:focus {
+    box-shadow: var(--sombra-foco-acceso);
+}
+
+.formulario-acceso .mensaje-error {
+    color: var(--color-error-acceso);
+}
+
+/* Formularios administrativos de usuarios. */
+.formulario-usuario .campo-formulario {
+    margin-bottom: 20px;
+}
+
+.formulario-usuario input,
+.formulario-usuario select,
+.control-formulario {
+    height: 48px;
+    padding: 0 14px;
+}
+
+.formulario-usuario .fila-formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.acciones-formulario-usuario {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-borde-suave);
+}
+
+/* Los campos de productos conservan sus medidas en el CSS de cada vista. */
+.formulario-producto input,
+.formulario-producto select,
+.formulario-producto textarea {
+    font-family: Arial, sans-serif;
+}
+
+.formulario-producto input::placeholder,
+.formulario-producto textarea::placeholder {
+    color: #9A8D86;
+}
+
+.campo-formulario textarea {
+    resize: vertical;
+}
+
+.campo-formulario input[readonly] {
+    background-color: var(--color-fondo-suave);
+    color: var(--color-texto-suave);
+    cursor: not-allowed;
+}
+
+@media (max-width: 800px) {
+    .formulario-usuario .fila-formulario {
+        grid-template-columns: 1fr;
+    }
+    .acciones-formulario-usuario {
+        flex-direction: column;
+    }
+    .acciones-formulario-usuario .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Busqueda y filtros de los listados. */
+.buscador-admin {
+    flex: 1;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 15px;
+    border: 1px solid var(--color-borde-campo);
+    border-radius: var(--radio-base);
+    background-color: var(--color-blanco);
+}
+
+.buscador-admin i {
+    color: #6D4C41;
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+.buscador-admin input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--color-secundario);
+    font-size: 14px;
+}
+
+.buscador-admin input::placeholder {
+    color: #9A8D86;
+}
+
+.buscador-admin:focus-within,
+.control-formulario:focus {
+    border-color: var(--color-acento);
+    box-shadow: var(--sombra-foco);
+}
+
+.filtro-admin {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.filtro-admin label {
+    color: var(--color-principal);
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.filtro-admin select {
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    .buscador-admin {
+        width: 100%;
+        flex-basis: 100%;
+    }
+    .filtro-admin {
+        flex: 1;
+    }
+}
+
+@media (max-width: 700px) {
+    .filtro-admin {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
