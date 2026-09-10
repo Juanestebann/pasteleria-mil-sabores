@@ -1,171 +1,186 @@
-// =========================================
-// OBTENER ELEMENTOS
-// =========================================
+// Busca el elemento del header donde se muestra la información de sesión.
 
-const sesionHeader =
-    document.getElementById(
-        "sesion-header"
-    );
+const sesionHeader = 
+    document.getElementById( 
+        "sesion-header" 
+    ); 
 
 
-const usuarioActivo =
-    JSON.parse(
-        localStorage.getItem(
-            "usuarioActivo"
-        )
-    );
+// Obtiene el usuario activo guardado en localStorage y lo convierte desde JSON a objeto JavaScript.
+
+const usuarioActivo = 
+    JSON.parse( 
+        localStorage.getItem( 
+            "usuarioActivo" 
+        ) 
+    ); 
 
 
-// =========================================
-// MOSTRAR USUARIO ACTIVO
-// =========================================
+// Verifica que exista el elemento del header y también un usuario con sesión iniciada.
 
-if (
-    sesionHeader &&
-    usuarioActivo
-) {
+if ( 
+    sesionHeader && 
+    usuarioActivo 
+) { 
 
-    // Limpiar botón iniciar sesión
+    // Limpia el contenido anterior del header para reemplazar el botón de iniciar sesión.
 
-    sesionHeader.innerHTML =
-        "";
+    sesionHeader.innerHTML = 
+        ""; 
 
 
-    // =========================================
-    // NOMBRE
-    // =========================================
+    // Crea un elemento span para mostrar el nombre del usuario.
 
-    const nombreUsuario =
-        document.createElement(
-            "span"
-        );
+    const nombreUsuario = 
+        document.createElement( 
+            "span" 
+        ); 
 
 
-    nombreUsuario.classList.add(
-        "nombre-usuario"
-    );
+    // Agrega una clase CSS al elemento que mostrará el nombre.
+
+    nombreUsuario.classList.add( 
+        "nombre-usuario" 
+    ); 
 
 
-    nombreUsuario.textContent =
+    // Muestra el nombre, nombre completo o correo según cuál esté disponible.
 
-        usuarioActivo.nombre ||
+    nombreUsuario.textContent = 
 
-        usuarioActivo.nombreCompleto ||
+        usuarioActivo.nombre || 
 
-        usuarioActivo.correo;
+        usuarioActivo.nombreCompleto || 
 
-
-    sesionHeader.appendChild(
-        nombreUsuario
-    );
+        usuarioActivo.correo; 
 
 
-    // =========================================
-    // PERFIL
-    // =========================================
+    // Agrega el nombre del usuario dentro del header.
 
-    const perfilUsuario =
-
-        usuarioActivo.tipoUsuario ||
-
-        usuarioActivo.perfil ||
-
-        usuarioActivo.rol ||
-
-        "Cliente";
+    sesionHeader.appendChild( 
+        nombreUsuario 
+    ); 
 
 
-    // =========================================
-    // BOTÓN ADMINISTRACIÓN
-    // =========================================
+    // Obtiene el perfil del usuario buscando distintas propiedades posibles.
 
-    if (
-        perfilUsuario === "Administrador" ||
-        perfilUsuario === "Vendedor"
-    ) {
+    const perfilUsuario = 
 
-        const enlaceAdministracion =
-            document.createElement(
-                "a"
-            );
+        usuarioActivo.tipoUsuario || 
+
+        usuarioActivo.perfil || 
+
+        usuarioActivo.rol || 
+
+        "Cliente"; 
 
 
-        enlaceAdministracion.classList.add(
-            "boton-IniciarSesion"
-        );
+    // Verifica si el usuario es Administrador o Vendedor.
+
+    if ( 
+        perfilUsuario === "Administrador" || 
+        perfilUsuario === "Vendedor" 
+    ) { 
+
+        // Crea un enlace para acceder al área de administración.
+
+        const enlaceAdministracion = 
+            document.createElement( 
+                "a" 
+            ); 
 
 
-        enlaceAdministracion.textContent =
-            "Administración";
+        // Agrega una clase CSS al enlace de administración.
+
+        enlaceAdministracion.classList.add( 
+            "boton-IniciarSesion" 
+        ); 
 
 
-        // Saber si estamos en index
-        // o dentro de /pages
+        // Coloca el texto Administración dentro del enlace.
 
-        if (
-            window.location.pathname.includes(
-                "/pages/"
-            )
-        ) {
-
-            enlaceAdministracion.href =
-                "../admin/index.html";
-
-        } else {
-
-            enlaceAdministracion.href =
-                "admin/index.html";
-
-        }
+        enlaceAdministracion.textContent = 
+            "Administración"; 
 
 
-        sesionHeader.appendChild(
-            enlaceAdministracion
-        );
+        // Verifica si la página actual se encuentra dentro de la carpeta pages.
 
-    }
+        if ( 
+            window.location.pathname.includes( 
+                "/pages/" 
+            ) 
+        ) { 
 
+            // Usa una ruta para volver desde pages hacia la carpeta admin.
 
-    // =========================================
-    // BOTÓN CERRAR SESIÓN
-    // =========================================
+            enlaceAdministracion.href = 
+                "../admin/index.html"; 
 
-    const botonCerrarSesion =
-        document.createElement(
-            "button"
-        );
+        } else { 
 
+            // Usa la ruta directa hacia admin cuando estamos fuera de pages.
 
-    botonCerrarSesion.classList.add(
-        "boton-CerrarSesion"
-    );
+            enlaceAdministracion.href = 
+                "admin/index.html"; 
 
-
-    botonCerrarSesion.textContent =
-        "Cerrar Sesión";
+        } 
 
 
-    sesionHeader.appendChild(
-        botonCerrarSesion
-    );
+        // Agrega el enlace de administración dentro del header.
+
+        sesionHeader.appendChild( 
+            enlaceAdministracion 
+        ); 
+
+    } 
 
 
-    // =========================================
-    // CERRAR SESIÓN
-    // =========================================
+    // Crea el botón utilizado para cerrar la sesión.
 
-    botonCerrarSesion.addEventListener(
-        "click",
-        function () {
-
-            localStorage.removeItem(
-                "usuarioActivo"
-            );
+    const botonCerrarSesion = 
+        document.createElement( 
+            "button" 
+        ); 
 
 
-            location.reload();
+    // Agrega una clase CSS al botón de cerrar sesión.
 
-        }
-    );
+    botonCerrarSesion.classList.add( 
+        "boton-CerrarSesion" 
+    ); 
+
+
+    // Coloca el texto Cerrar Sesión dentro del botón.
+
+    botonCerrarSesion.textContent = 
+        "Cerrar Sesión"; 
+
+
+    // Agrega el botón de cerrar sesión dentro del header.
+
+    sesionHeader.appendChild( 
+        botonCerrarSesion 
+    ); 
+
+
+    // Escucha cuando el usuario hace clic en el botón de cerrar sesión.
+
+    botonCerrarSesion.addEventListener( 
+        "click", 
+        function () { 
+
+            // Elimina del localStorage la información del usuario activo.
+
+            localStorage.removeItem( 
+                "usuarioActivo" 
+            ); 
+
+
+            // Recarga la página para actualizar el header después de cerrar sesión.
+
+            location.reload(); 
+
+        } 
+    ); 
 
 }
