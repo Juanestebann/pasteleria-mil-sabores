@@ -3,506 +3,60 @@
    PASTELERÍA MIL SABORES
 ========================================= */
 
-
 /* =========================================
    PRESENTACIÓN
 ========================================= */
 
-#usuarios-presentacion {
-    background-color: #ffffff;
-
-    padding: 28px 30px;
-
-    margin-bottom: 25px;
-
-    border-left: 5px solid #D89B2B;
-
-    border-radius: 12px;
-
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
-
-
-#usuarios-presentacion h2 {
-    margin: 0 0 10px 0;
-
-    color: #3B1F0F;
-
-    font-size: 25px;
-}
-
-
 #usuarios-presentacion p {
-    margin: 0;
-
-    color: #5D4037;
 
     line-height: 1.5;
 }
-
-
-/* =========================================
-   HERRAMIENTAS
-========================================= */
-
-#usuarios-herramientas {
-    display: flex;
-
-    align-items: center;
-
-    gap: 25px;
-
-    background-color: #ffffff;
-
-    padding: 18px 20px;
-
-    margin-bottom: 25px;
-
-    border-radius: 12px;
-
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
-
-
-/* =========================================
-   BUSCADOR
-========================================= */
-
-#usuarios-buscador {
-    flex: 1;
-
-    height: 48px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    padding: 0 15px;
-
-    border: 1px solid #D9CBC0;
-
-    border-radius: 8px;
-
-    background-color: #ffffff;
-}
-
-
-#usuarios-buscador i {
-    color: #6D4C41;
-
-    font-size: 17px;
-
-    flex-shrink: 0;
-}
-
-
-#usuarios-buscador input {
-    flex: 1;
-
-    border: none;
-
-    outline: none;
-
-    background-color: transparent;
-
-    color: #5D4037;
-
-    font-size: 14px;
-}
-
-
-#usuarios-buscador input::placeholder {
-    color: #9A8D86;
-}
-
-
-#usuarios-buscador:focus-within {
-    border-color: #D89B2B;
-
-    box-shadow: 0 0 0 3px rgba(216, 155, 43, 0.10);
-}
-
 
 /* =========================================
    FILTRO
 ========================================= */
 
-#usuarios-filtro {
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-}
-
-
-#usuarios-filtro label {
-    color: #3B1F0F;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    white-space: nowrap;
-}
-
-
 #usuarios-filtro select {
     width: 190px;
 
-    height: 48px;
-
-    padding: 0 14px;
-
-    border: 1px solid #D9CBC0;
-
-    border-radius: 8px;
-
-    background-color: #ffffff;
-
-    color: #5D4037;
-
-    font-size: 14px;
-
-    outline: none;
-
-    cursor: pointer;
 }
-
-
-#usuarios-filtro select:focus {
-    border-color: #D89B2B;
-
-    box-shadow: 0 0 0 3px rgba(216, 155, 43, 0.10);
-}
-
 
 /* =========================================
    BOTÓN NUEVO USUARIO
 ========================================= */
 #boton-nuevo-usuario {
     min-width: 150px;
-    height: 42px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 7px;
-
-    padding: 0 14px;
-
-    background-color: #D89B2B;
-    color: #ffffff;
-
-    border-radius: 8px;
-    text-decoration: none;
-
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
 
     letter-spacing: 0;
     text-transform: none;
-    white-space: nowrap;
 
-    box-shadow: 0 2px 5px rgba(59, 31, 15, 0.12);
-
-    transition: 0.2s;
 }
-
-#boton-nuevo-usuario i {
-    color: #ffffff;
-    font-size: 14px;
-    
-}
-
-#boton-nuevo-usuario:hover {
-    background-color: #B97818;
-    transform: translateY(-1px);
-}
-/* =========================================
-   LISTADO
-========================================= */
-
-#usuarios-listado {
-    background-color: #ffffff;
-
-    padding: 22px;
-
-    margin-bottom: 25px;
-
-    border-radius: 12px;
-
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
-
-
-#usuarios-listado-header {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    margin-bottom: 15px;
-}
-
-
-#usuarios-listado-header h2 {
-    margin: 0;
-
-    color: #3B1F0F;
-
-    font-size: 23px;
-}
-
-
-#usuarios-listado-header p {
-    margin: 0;
-
-    color: #795548;
-
-    font-size: 13px;
-}
-
-
-/* =========================================
-   TABLA
-========================================= */
-
-#tabla-contenedor {
-    width: 100%;
-
-    overflow-x: auto;
-}
-
-
-#tabla-usuarios {
-    width: 100%;
-
-    border-collapse: collapse;
-
-    font-size: 14px;
-}
-
-
-#tabla-usuarios thead {
-    background-color: #F7F2EA;
-}
-
-
-#tabla-usuarios th {
-    padding: 14px 12px;
-
-    color: #3B1F0F;
-
-    text-align: left;
-
-    font-weight: bold;
-
-    white-space: nowrap;
-}
-
-
-#tabla-usuarios td {
-    padding: 13px 12px;
-
-    color: #5D4037;
-
-    border-bottom: 1px solid #EEE4DB;
-
-    vertical-align: middle;
-}
-
-
-#tabla-usuarios tbody tr {
-    transition: 0.2s;
-}
-
-
-#tabla-usuarios tbody tr:hover {
-    background-color: #FFF9F0;
-}
-
-
-/* =========================================
-   ROLES
-========================================= */
-
-.rol {
-    display: inline-block;
-
-    padding: 6px 12px;
-
-    border-radius: 15px;
-
-    font-size: 12px;
-
-    font-weight: bold;
-
-    white-space: nowrap;
-}
-
-
-/* CLIENTE */
-
-.rol-cliente {
-    background-color: #FFF1D7;
-
-    color: #8B5A00;
-}
-
-
-/* VENDEDOR */
-
-.rol-vendedor {
-    background-color: #E9F4E9;
-
-    color: #397443;
-}
-
-
-/* ADMINISTRADOR */
-
-.rol-administrador {
-    background-color: #DDEBFA;
-
-    color: #24557C;
-}
-
-
-/* =========================================
-   BOTONES DE ACCIÓN
-========================================= */
-
-.boton-ver,
-.boton-editar {
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 6px;
-
-    min-height: 36px;
-
-    padding: 8px 12px;
-
-    margin-right: 5px;
-
-    border: none;
-
-    border-radius: 7px;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    text-decoration: none;
-
-    cursor: pointer;
-
-    white-space: nowrap;
-
-    transition: 0.2s;
-}
-
-
-/* VER */
-
-.boton-ver {
-    background-color: #F6F0E7;
-
-    color: #3B1F0F;
-}
-
-
-.boton-ver i {
-    color: #5D4037;
-}
-
-
-.boton-ver:hover {
-    background-color: #E8DCCB;
-
-    transform: translateY(-1px);
-}
-
-
-/* EDITAR */
-
-.boton-editar {
-    background-color: #D89B2B;
-
-    color: #ffffff;
-}
-
-
-.boton-editar i {
-    color: #ffffff;
-}
-
-
-.boton-editar:hover {
-    background-color: #B97818;
-
-    transform: translateY(-1px);
-}
-
-
-/* =========================================
-   SIN USUARIOS
-========================================= */
-
-#mensaje-sin-usuarios {
-    display: none;
-
-    padding: 30px;
-
-    margin: 0;
-
-    text-align: center;
-
-    color: #795548;
-}
-
 
 /* =========================================
    ACCIONES RÁPIDAS
 ========================================= */
 
 #acciones-rapidas {
-    background-color: #ffffff;
 
     padding: 22px;
 
-    border-radius: 12px;
-
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
-
 
 #acciones-rapidas > h2 {
     margin: 0 0 6px;
 
-    color: #3B1F0F;
+    color: var(--color-principal);
 
     font-size: 22px;
 }
 
-
 #acciones-rapidas > p {
     margin: 0 0 20px;
 
-    color: #795548;
+    color: var(--color-texto-suave);
 
     font-size: 14px;
 }
-
 
 #acciones-rapidas-contenedor {
     display: grid;
@@ -511,7 +65,6 @@
 
     gap: 15px;
 }
-
 
 /* =========================================
    TARJETAS DE ACCIÓN
@@ -528,28 +81,26 @@
 
     padding: 17px;
 
-    border: 1px solid #E7C9A9;
+    border: 1px solid var(--color-borde-panel);
 
     border-radius: 10px;
 
-    background-color: #ffffff;
+    background-color: var(--color-blanco);
 
-    color: #3B1F0F;
+    color: var(--color-principal);
 
     text-decoration: none;
 
     transition: 0.2s;
 }
 
-
 .accion-rapida:hover {
     transform: translateY(-2px);
 
-    border-color: #D89B2B;
+    border-color: var(--color-acento);
 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
-
 
 /* =========================================
    ICONOS DE ACCIONES RÁPIDAS
@@ -570,20 +121,18 @@
 
     border-radius: 50%;
 
-    background-color: #FFF1D7;
+    background-color: var(--color-fondo-cliente);
 
     color: #9A5B13;
 
     font-size: 20px;
 }
-
 
 .accion-icono i {
     color: #9A5B13;
 
     font-size: 20px;
 }
-
 
 /* =========================================
    CONTENIDO DE ACCIÓN
@@ -593,42 +142,37 @@
     flex: 1;
 }
 
-
 .accion-rapida h3 {
     margin: 0 0 5px;
 
-    color: #3B1F0F;
+    color: var(--color-principal);
 
     font-size: 15px;
 }
 
-
 .accion-rapida p {
     margin: 0;
 
-    color: #795548;
+    color: var(--color-texto-suave);
 
     font-size: 12px;
 
     line-height: 1.4;
 }
 
-
 .accion-flecha {
-    color: #795548;
+    color: var(--color-texto-suave);
 
     font-size: 25px;
 
     transition: 0.2s;
 }
 
-
 .accion-rapida:hover .accion-flecha {
-    color: #B97818;
+    color: var(--color-acento-hover);
 
     transform: translateX(3px);
 }
-
 
 /* =========================================
    RESPONSIVE
@@ -636,62 +180,16 @@
 
 @media(max-width: 1100px) {
 
-    #usuarios-herramientas {
-        flex-wrap: wrap;
-    }
-
-
-    #usuarios-buscador {
-        width: 100%;
-
-        flex-basis: 100%;
-    }
-
-
-    #usuarios-filtro {
-        flex: 1;
-    }
-
-
     #acciones-rapidas-contenedor {
         grid-template-columns: 1fr;
     }
 
 }
 
-
 @media(max-width: 700px) {
-
-    #usuarios-herramientas {
-        flex-direction: column;
-
-        align-items: stretch;
-    }
-
-
-    #usuarios-filtro {
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
 
     #usuarios-filtro select {
         width: 100%;
-    }
-
-
-    #boton-nuevo-usuario {
-        width: 100%;
-    }
-
-
-    #usuarios-listado-header {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 8px;
     }
 
 }

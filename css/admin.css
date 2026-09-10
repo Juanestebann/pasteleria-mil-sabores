@@ -1,21 +1,5 @@
 /* GENERAL */
 
-* {
-    box-sizing: border-box;
-}
-
-
-body {
-    margin: 0px;
-
-    background-color: #F7F2EA;
-
-    color: #5D4037;
-
-    font-family: Arial, sans-serif;
-}
-
-
 /* APLICACIÓN */
 
 #admin-aplicacion {
@@ -24,9 +8,6 @@ body {
     display: flex;
 }
 
-
-/* ========================================= */
-/* MENÚ LATERAL */
 /* ========================================= */
 
 #menu-admin {
@@ -34,9 +15,9 @@ body {
 
     min-height: 100vh;
 
-    background-color: #3B1F0F;
+    background-color: var(--color-principal);
 
-    color: white;
+    color: var(--color-blanco);
 
     padding: 30px 20px;
 
@@ -47,7 +28,6 @@ body {
     top: 0px;
 }
 
-
 /* MARCA */
 
 #marca-admin {
@@ -55,9 +35,8 @@ body {
 
     padding-bottom: 30px;
 
-    border-bottom: 1px solid #795548;
+    border-bottom: 1px solid var(--color-texto-suave);
 }
-
 
 #marca-admin h1 {
     margin: 0px;
@@ -65,13 +44,11 @@ body {
     font-size: 25px;
 }
 
-
 #marca-admin h1 span {
     display: block;
 
-    color: #D89B2B;
+    color: var(--color-acento);
 }
-
 
 #marca-admin p {
     margin-top: 10px;
@@ -82,7 +59,6 @@ body {
 
     font-size: 14px;
 }
-
 
 /* NAVEGACIÓN */
 
@@ -96,32 +72,26 @@ body {
     gap: 10px;
 }
 
-
 #navegacion-admin a {
-    color: white;
+    color: var(--color-blanco);
 
     text-decoration: none;
 
     padding: 14px 18px;
 
-    border-radius: 8px;
+    border-radius: var(--radio-base);
 
     font-weight: bold;
 }
 
-
 #navegacion-admin a:hover {
-    background-color: #5D4037;
+    background-color: var(--color-secundario);
 }
-
 
 #navegacion-admin .opcion-activa {
-    background-color: #D89B2B;
+    background-color: var(--color-acento);
 }
 
-
-/* ========================================= */
-/* CONTENIDO */
 /* ========================================= */
 
 #contenido-admin {
@@ -132,11 +102,10 @@ body {
     min-height: 100vh;
 }
 
-
 /* CABECERA */
 
 #cabecera-admin {
-    background-color: white;
+    background-color: var(--color-blanco);
 
     display: flex;
 
@@ -151,13 +120,11 @@ body {
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.10);
 }
 
-
 #cabecera-admin h2 {
     margin: 0px;
 
-    color: #3B1F0F;
+    color: var(--color-principal);
 }
-
 
 #cabecera-admin p {
     margin-top: 7px;
@@ -165,11 +132,9 @@ body {
     margin-bottom: 0px;
 }
 
-
 #nombre-usuario-admin {
     font-weight: bold;
 }
-
 
 /* SESIÓN */
 
@@ -181,28 +146,14 @@ body {
     gap: 15px;
 }
 
-
-#perfil-usuario-admin {
-    background-color: #FFF5E1;
-
-    color: #8B4513;
-
-    padding: 8px 15px;
-
-    border-radius: 20px;
-
-    font-weight: bold;
-}
-
-
 #cerrar-sesion-admin {
-    background-color: #3B1F0F;
+    background-color: var(--color-principal);
 
-    color: white;
+    color: var(--color-blanco);
 
     border: none;
 
-    border-radius: 8px;
+    border-radius: var(--radio-base);
 
     padding: 11px 17px;
 
@@ -211,42 +162,31 @@ body {
     cursor: pointer;
 }
 
-
 #cerrar-sesion-admin:hover {
-    background-color: #5D4037;
+    background-color: var(--color-secundario);
 }
 
-
-/* ========================================= */
-/* PRINCIPAL */
 /* ========================================= */
 
 #principal-admin {
     padding: 40px;
 }
 
-
 /* BIENVENIDA */
 
 #bienvenida-admin {
-    background-color: white;
 
     padding: 30px;
 
-    border-radius: 12px;
+    border-left: 5px solid var(--color-acento);
 
-    border-left: 5px solid #D89B2B;
-
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
 }
-
 
 #bienvenida-admin h2 {
     margin-top: 0px;
 
-    color: #3B1F0F;
+    color: var(--color-principal);
 }
-
 
 #bienvenida-admin p {
     margin-bottom: 0px;
@@ -254,9 +194,6 @@ body {
     line-height: 1.6;
 }
 
-
-/* ========================================= */
-/* TARJETAS */
 /* ========================================= */
 
 #tarjetas-admin {
@@ -269,28 +206,13 @@ body {
     gap: 25px;
 }
 
-
-.tarjeta-admin {
-    background-color: white;
-
-    padding: 30px;
-
-    border-radius: 12px;
-
-    border: 1px solid #E7C9A9;
-
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
-}
-
-
 .tarjeta-admin h3 {
     margin-top: 0px;
 
-    color: #8B4513;
+    color: var(--color-marca);
 
     font-size: 23px;
 }
-
 
 .tarjeta-admin p {
     line-height: 1.6;
@@ -298,13 +220,12 @@ body {
     min-height: 50px;
 }
 
-
 .tarjeta-admin a {
     display: inline-block;
 
-    background-color: #D89B2B;
+    background-color: var(--color-acento);
 
-    color: white;
+    color: var(--color-blanco);
 
     text-decoration: none;
 
@@ -317,9 +238,6 @@ body {
     margin-top: 10px;
 }
 
-
-/* ========================================= */
-/* RESPONSIVE */
 /* ========================================= */
 
 @media(max-width: 800px) {
@@ -327,7 +245,6 @@ body {
     #admin-aplicacion {
         display: block;
     }
-
 
     #menu-admin {
         position: static;
@@ -337,13 +254,11 @@ body {
         min-height: auto;
     }
 
-
     #contenido-admin {
         width: 100%;
 
         margin-left: 0px;
     }
-
 
     #navegacion-admin {
         flex-direction: row;
@@ -353,7 +268,6 @@ body {
         justify-content: center;
     }
 
-
     #cabecera-admin {
         flex-direction: column;
 
@@ -362,16 +276,13 @@ body {
         padding: 20px;
     }
 
-
     #sesion-admin {
         flex-wrap: wrap;
     }
 
-
     #principal-admin {
         padding: 25px;
     }
-
 
     #tarjetas-admin {
         grid-template-columns: 1fr;

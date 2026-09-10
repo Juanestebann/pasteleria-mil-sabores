@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="modelo-borde">
 
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,14 @@
 
     <title>Administración | Pastelería Mil Sabores</title>
 
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/componentes.css">
     <link rel="stylesheet" href="../css/admin.css">
 
     <script src="../js/admin/admin.js" defer></script>
 </head>
 
-<body>
+<body class="pagina-admin">
 
     <section id="admin-aplicacion">
 
@@ -94,7 +96,7 @@
 
                 <section id="sesion-admin">
 
-                    <span id="perfil-usuario-admin">
+                    <span id="perfil-usuario-admin" class="badge-sesion">
                     </span>
 
                     <button id="cerrar-sesion-admin" type="button">
@@ -112,7 +114,7 @@
 
             <main id="principal-admin">
 
-                <section id="bienvenida-admin">
+                <section id="bienvenida-admin" class="panel">
 
                     <h2>
                         Resumen
@@ -129,7 +131,7 @@
 
                     <!-- PRODUCTOS -->
 
-                    <article class="tarjeta-admin">
+                    <article class="tarjeta-admin panel panel-con-borde">
 
                         <h3>
                             Productos
@@ -149,7 +151,7 @@
 
                     <!-- USUARIOS -->
 
-                    <article class="tarjeta-admin" id="tarjeta-usuarios">
+                    <article class="tarjeta-admin panel panel-con-borde" id="tarjeta-usuarios">
 
                         <h3>
                             Usuarios

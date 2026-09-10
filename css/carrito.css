@@ -8,28 +8,26 @@
     padding: 0px 25px;
 }
 
-
 #carrito-contenedor h2 {
-    color: #5D4037;
+    color: var(--color-secundario);
 
     font-size: 28px;
 
     margin-bottom: 20px;
 }
 
-
 /* NOTIFICACIÓN */
 
 #notificacion-carrito {
     display: none;
 
-    background-color: #FFF5E1;
+    background-color: var(--color-fondo);
 
-    color: #5D4037;
+    color: var(--color-secundario);
 
-    border: 1px solid #D89B2B;
+    border: 1px solid var(--color-acento);
 
-    border-radius: 8px;
+    border-radius: var(--radio-base);
 
     padding: 14px 18px;
 
@@ -54,7 +52,6 @@
     align-items: start;
 }
 
-
 /* LISTA */
 
 #lista-carrito {
@@ -64,7 +61,6 @@
 
     gap: 30px;
 }
-
 
 /* PRODUCTO */
 
@@ -78,7 +74,6 @@
     align-items: center;
 }
 
-
 /* IMAGEN */
 
 .producto-carrito img {
@@ -91,11 +86,10 @@
     border: none;
 }
 
-
 /* INFORMACIÓN */
 
 .informacion-carrito h3 {
-    color: #5D4037;
+    color: var(--color-secundario);
 
     margin-top: 0px;
 
@@ -103,7 +97,6 @@
 
     font-size: 18px;
 }
-
 
 .informacion-carrito p {
     color: #8B5E3C;
@@ -115,16 +108,14 @@
     line-height: 1.4;
 }
 
-
 /* PRECIO */
 
 .control-producto {
     text-align: center;
 }
 
-
 .precio-producto-carrito {
-    color: #5D4037;
+    color: var(--color-secundario);
 
     font-size: 17px;
 
@@ -132,7 +123,6 @@
 
     margin-bottom: 12px;
 }
-
 
 /* CANTIDAD */
 
@@ -146,19 +136,18 @@
     gap: 8px;
 }
 
-
 .control-cantidad button {
     width: 28px;
 
     height: 28px;
 
-    border: 1px solid #5D4037;
+    border: 1px solid var(--color-secundario);
 
     border-radius: 50%;
 
-    background-color: white;
+    background-color: var(--color-blanco);
 
-    color: #5D4037;
+    color: var(--color-secundario);
 
     font-size: 18px;
 
@@ -167,7 +156,6 @@
     padding: 0px;
 }
 
-
 .control-cantidad span {
     min-width: 45px;
 
@@ -175,20 +163,18 @@
 
     border: 1px solid #8B5E3C;
 
-    background-color: white;
+    background-color: var(--color-blanco);
 }
-
 
 /* RESUMEN */
 
 #resumen-carrito {
-    border-left: 2px solid #5D4037;
+    border-left: 2px solid var(--color-secundario);
 
     padding-left: 25px;
 
     min-height: 300px;
 }
-
 
 /* TOTAL */
 
@@ -204,18 +190,16 @@
     padding-top: 12px;
 }
 
-
 #total-carrito h3 {
-    color: #5D4037;
+    color: var(--color-secundario);
 
     font-size: 18px;
 
     margin: 0px;
 }
 
-
 #precio-total {
-    color: #5D4037;
+    color: var(--color-secundario);
 
     font-size: 22px;
 
@@ -224,13 +208,11 @@
     margin: 0px;
 }
 
-
 /* CUPÓN */
 
 #cupon-carrito {
     margin-top: 70px;
 }
-
 
 #cupon-carrito label {
     display: block;
@@ -242,13 +224,11 @@
     margin-bottom: 7px;
 }
 
-
 #entrada-cupon {
     display: flex;
 
     gap: 5px;
 }
-
 
 #entrada-cupon input {
     width: 100%;
@@ -258,11 +238,10 @@
     border: 1px solid #C89B6D;
 }
 
-
 #entrada-cupon button {
-    background-color: #FFF5E1;
+    background-color: var(--color-fondo);
 
-    color: #5D4037;
+    color: var(--color-secundario);
 
     border: 1px solid #8B5E3C;
 
@@ -271,49 +250,33 @@
     cursor: pointer;
 }
 
-
 #mensaje-cupon {
-    color: #8B4513;
+    color: var(--color-marca);
 
     font-size: 12px;
 }
 
-
 /* PAGAR */
 
 #boton-pagar {
-    width: 100%;
 
     margin-top: 15px;
 
-    padding: 12px;
-
-    background-color: #D89B2B;
-
-    color: white;
-
-    border: none;
-
     font-size: 16px;
 
-    font-weight: bold;
-
-    cursor: pointer;
 }
-
 
 /* VACÍO */
 
 #carrito-vacio {
     text-align: center;
 
-    color: #8B4513;
+    color: var(--color-marca);
 
     font-weight: bold;
 
     margin-top: 30px;
 }
-
 
 /* TABLET */
 
@@ -323,11 +286,10 @@
         grid-template-columns: 1fr;
     }
 
-
     #resumen-carrito {
         border-left: none;
 
-        border-top: 2px solid #5D4037;
+        border-top: 2px solid var(--color-secundario);
 
         padding-left: 0px;
 
@@ -335,7 +297,6 @@
     }
 
 }
-
 
 /* CELULAR */
 
@@ -345,13 +306,11 @@
         grid-template-columns: 100px 1fr;
     }
 
-
     .producto-carrito img {
         width: 100px;
 
         height: 90px;
     }
-
 
     .control-producto {
         grid-column: 1 / 3;

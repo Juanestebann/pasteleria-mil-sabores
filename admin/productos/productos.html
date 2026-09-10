@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="modelo-borde">
 
 <head>
 
@@ -15,15 +15,19 @@
 
 
     <!-- CSS ORIGINAL DEL PANEL -->
-    <link
-        rel="stylesheet"
-        href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/componentes.css">
+    <link rel="stylesheet" href="../../css/formularios.css">
+    <link rel="stylesheet" href="../../css/tablas.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/admin-productos.css">
+
+
+
 
 
     <!-- CSS SOLO DE PRODUCTOS -->
-    <link
-        rel="stylesheet"
-        href="../../css/admin-productos.css">
+
 
 
     <!-- ICONOS -->
@@ -48,7 +52,7 @@
 </head>
 
 
-<body>
+<body class="pagina-admin">
 
 
     <section id="admin-aplicacion">
@@ -158,7 +162,7 @@
                 <section id="sesion-admin">
 
 
-                    <span id="rol-usuario-admin">
+                    <span id="rol-usuario-admin" class="badge-sesion">
                     </span>
 
 
@@ -188,7 +192,7 @@
                      PRESENTACIÓN
                 ================================== -->
 
-                <section id="productos-presentacion">
+                <section id="productos-presentacion" class="panel panel-presentacion">
 
 
                     <h2>
@@ -213,7 +217,7 @@
                 <section id="productos-resumen">
 
 
-                    <article class="producto-resumen">
+                    <article class="producto-resumen panel">
 
 
                         <section class="resumen-icono">
@@ -239,7 +243,7 @@
                     </article>
 
 
-                    <article class="producto-resumen">
+                    <article class="producto-resumen panel">
 
 
                         <section class="resumen-icono">
@@ -272,12 +276,12 @@
                      HERRAMIENTAS
                 ================================== -->
 
-                <section id="productos-herramientas">
+                <section id="productos-herramientas" class="panel herramientas-admin">
 
 
                     <!-- BUSCADOR -->
 
-                    <section id="productos-buscador">
+                    <section id="productos-buscador" class="buscador-admin">
 
 
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -294,7 +298,7 @@
 
                     <!-- FILTRO -->
 
-                    <section id="productos-filtro">
+                    <section id="productos-filtro" class="filtro-admin">
 
 
                         <label for="filtro-categoria-admin">
@@ -304,7 +308,7 @@
                         </label>
 
 
-                        <select id="filtro-categoria-admin">
+                        <select id="filtro-categoria-admin" class="control-formulario">
 
 
                             <option value="todos">
@@ -350,7 +354,7 @@
                     <!-- NUEVO PRODUCTO -->
                     <a
                         id="boton-nuevo-producto"
-                        href="nuevo-producto.html">
+                        href="nuevo-producto.html" class="btn btn-principal btn-listado btn-elevable">
                         <i class="fa-solid fa-plus"></i>
                         Nuevo producto
                     </a>
@@ -359,8 +363,8 @@
                 <!-- =================================
                      LISTADO
                 ================================== -->
-                <section id="productos-listado">
-                    <section id="productos-listado-header">
+                <section id="productos-listado" class="panel listado-admin">
+                    <section id="productos-listado-header" class="listado-cabecera">
                         <section>
                             <h2>
                                 Productos registrados
@@ -372,8 +376,8 @@
                     </section>
 
                     <!-- TABLA -->
-                    <section id="tabla-contenedor-productos">
-                        <table id="tabla-productos">
+                    <section id="tabla-contenedor-productos" class="tabla-contenedor">
+                        <table id="tabla-productos" class="tabla-admin">
                             <thead>
                                 <tr>
                                     <th>
@@ -412,7 +416,7 @@
                             </tbody>
                         </table>
                     </section>
-                    <p id="mensaje-sin-productos">
+                    <p id="mensaje-sin-productos" class="mensaje-listado-vacio">
                         No existen productos registrados.
                     </p>
                 </section>

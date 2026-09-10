@@ -71,7 +71,6 @@ pasteleria-mil-sabores/
 │       └── editar-usuario.html
 │
 ├── css/
-│   ├── estilos.css
 │   ├── formularios.css
 │   └── admin.css
 │

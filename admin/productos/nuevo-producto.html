@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="modelo-borde">
 
 <head>
 
@@ -15,13 +15,16 @@
 
 
     <!-- CSS ORIGINAL DEL PANEL -->
-    <link
-        rel="stylesheet"
-        href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/componentes.css">
+    <link rel="stylesheet" href="../../css/formularios.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/admin-nuevo-producto.css">
+
+
+
     <!-- CSS SOLO DE NUEVO PRODUCTO -->
-    <link
-        rel="stylesheet"
-        href="../../css/admin-nuevo-producto.css">
+
     <!-- ICONOS -->
     <link
         rel="stylesheet"
@@ -32,7 +35,7 @@
         defer>
     </script>
 </head>
-<body>
+<body class="pagina-admin">
     <section id="admin-aplicacion">
         <aside id="menu-admin">
             <section id="marca-admin">
@@ -54,7 +57,7 @@
                     <p>Bienvenido,<span id="nombre-usuario-admin"></span></p>
                 </section>
                 <section id="sesion-admin">
-                    <span id="rol-usuario-admin">
+                    <span id="rol-usuario-admin" class="badge-sesion">
                     </span>
                     <button
                         id="cerrar-sesion-admin"
@@ -76,7 +79,7 @@
                      PRESENTACIÓN
                 ================================== -->
 
-                <section id="nuevo-producto-presentacion">
+                <section id="nuevo-producto-presentacion" class="panel panel-presentacion presentacion-acciones presentacion-productos">
 
 
                     <section>
@@ -96,7 +99,7 @@
 
                     <a
                         id="volver-productos"
-                        href="productos.html">
+                        href="productos.html" class="btn btn-admin btn-secundario btn-elevable">
 
                         <i class="fa-solid fa-arrow-left"></i>
 
@@ -112,7 +115,7 @@
                      FORMULARIO
                 ================================== -->
 
-                <form id="formulario-nuevo-producto">
+                <form id="formulario-nuevo-producto" class="panel formulario-producto">
 
 
                     <!-- CÓDIGO -->
@@ -342,7 +345,7 @@
 
                     <!-- MENSAJE -->
 
-                    <p id="mensaje-producto">
+                    <p id="mensaje-producto" class="mensaje-exito-producto">
                     </p>
 
                     <!-- BOTONES -->
@@ -351,14 +354,14 @@
 
                         <button
                             id="guardar-producto"
-                            type="submit">
+                            type="submit" class="btn btn-admin btn-principal btn-elevable">
 
                             <i class="fa-solid fa-floppy-disk"></i>
 
                             Guardar producto
                         </button>
 
-                        <a href="productos.html">Cancelar</a>
+                        <a href="productos.html" class="btn btn-admin btn-secundario btn-elevable">Cancelar</a>
                     </section>
                 </form>
             </main>
